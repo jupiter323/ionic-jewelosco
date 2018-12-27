@@ -1,0 +1,42 @@
+page-home {
+    ion-content{
+        background-color: #e9ebed !important;
+    }   
+
+    .button-primary{
+        background-color: #1eb8e3;
+        color: white;
+        border-radius: 5px;
+        font-size: 12px;
+        vertical-align: middle;
+        height: 20px;
+        line-height: 20px;
+        margin-top: 5px;
+        margin-bottom: 5px
+    }
+    
+    .button-secondary{
+        background-color: #ff2116;
+        color: white;
+        border-radius: 5px;
+        font-size: 12px;
+        vertical-align: middle;
+        height: 20px;
+        line-height: 20px;
+        margin-top: 5px;
+        margin-bottom: 5px
+    }
+
+    .button-third{
+        background-color: #fc8f3b;
+        color: white;
+        border-radius: 5px;
+        font-size: 12px;
+        vertical-align: middle;
+        height:30px;
+        line-height: 30px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        width: 100%;
+    }
+}

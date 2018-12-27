@@ -1,0 +1,235 @@
+<ion-header>
+  <ion-row class="header-row">
+    <ion-row class="header-title">
+      <span>
+        DASHBOARD
+      </span>
+    </ion-row>
+
+    <ion-row class="header-tab">
+      <mat-tab-group>
+        <mat-tab label="Contracts that need attention" class="contracts-tab" (click)="selectContracts()"></mat-tab>
+        <mat-tab label="Alerts" class="alert-tab" (click)="selectAlerts()"> </mat-tab>
+      </mat-tab-group>
+    </ion-row>
+  </ion-row>
+</ion-header>
+
+<ion-content padding>
+  <!-- first card start -->
+  <ion-row class="tab-contacts">
+    <mat-accordion>
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            <ion-row>
+              <ion-row class="card-title">
+                <Strong>Jewel OSCO - Electricity - COMED - Low bidding Supplier spotted!</Strong>
+              </ion-row>
+              <ion-row class="card-expiration">
+                7:50 PM, 10/11/2018 -- 37 days until expiration
+              </ion-row>
+
+              <button mat-raised-button class="button-primary">Bid Opportunity</button>
+            </ion-row>
+          </mat-panel-title>
+
+        </mat-expansion-panel-header>
+
+        <ion-row class="card-panel">
+          <ion-row class="panel-border-content">
+            <ion-col col-7>
+              <ion-row class="content-title">
+                Contract number
+              </ion-row>
+              <ion-row class="content-des">
+                <strong>#TX0000345697-00</strong>
+              </ion-row>
+
+              <ion-row class="content-title">
+                Supplier
+              </ion-row>
+              <ion-row class="content-des">
+                <strong> Dominion Resources</strong>
+              </ion-row>
+            </ion-col>
+
+            <ion-col col-5>
+              <ion-row class="content-title">
+                Service type
+              </ion-row>
+              <ion-row class="content-des">
+                <strong>Electricity</strong>
+              </ion-row>
+
+              <ion-row class="content-title">
+                Current rate
+              </ion-row>
+              <ion-row class="content-des">
+                <strong>51 420 000</strong>
+              </ion-row>
+
+            </ion-col>
+          </ion-row>
+          <ion-row class="panel-des">
+            There is 50% chance that today will be the lowest price day for your Electricity contract in Centerpoint.
+            Start an auction as soon as you can to take advantage of this opportunity.
+          </ion-row>
+
+          <button mat-raised-button class="button-third">Get Bids</button>
+
+          <ion-row>
+            <span class="panel-des-s">
+              Date action needed by 12:00 AM, 11/11/2018
+            </span>
+          </ion-row>
+        </ion-row>
+
+      </mat-expansion-panel>
+    </mat-accordion>
+  </ion-row>
+  <!-- first card end -->
+
+  <!-- second card start -->
+  <ion-row class="tab-contacts">
+    <mat-accordion>
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            <ion-row>
+              <ion-row class="card-title">
+                <strong>Jewel OSCO - Electricity - COMED - 50% chance of lower price</strong>
+              </ion-row>
+              <ion-row class="card-expiration">
+                2:14 PM, 10/11/2018 -- 24 days until expiration
+              </ion-row>
+            </ion-row>
+          </mat-panel-title>
+
+        </mat-expansion-panel-header>
+
+        <ion-row class="card-panel">
+          <ion-row class="panel-border-content">
+            <ion-col col-7>
+              <ion-row class="content-title">
+                Contract number
+              </ion-row>
+              <ion-row class="content-des">
+                <strong>#TX0000345697-00</strong>
+              </ion-row>
+
+              <ion-row class="content-title">
+                Supplier
+              </ion-row>
+              <ion-row class="content-des">
+                <strong> Dominion Resources</strong>
+              </ion-row>
+            </ion-col>
+
+            <ion-col col-5>
+              <ion-row class="content-title">
+                Service type
+              </ion-row>
+              <ion-row class="content-des">
+                <strong>Electricity</strong>
+              </ion-row>
+
+              <ion-row class="content-title">
+                Current rate
+              </ion-row>
+              <ion-row class="content-des">
+                <strong>51 420 000</strong>
+              </ion-row>
+
+            </ion-col>
+          </ion-row>
+          <ion-row class="panel-des">
+            There is 50% chance that today will be the lowest price day for your Electricity contract in Centerpoint.
+            Start an auction as soon as you can to take advantage of this opportunity.
+          </ion-row>
+
+          <button mat-raised-button class="button-third">Get Bids</button>
+
+          <ion-row>
+            <span class="panel-des-s">
+              Date action needed by 12:00 AM, 11/11/2018
+            </span>
+          </ion-row>
+        </ion-row>
+      </mat-expansion-panel>
+    </mat-accordion>
+  </ion-row>
+  <!-- second card end -->
+
+  <!-- third card start -->
+  <ion-row class="tab-contacts">
+    <mat-accordion>
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            <ion-row>
+              <ion-row class="card-title">
+                <Strong>Jewel OSCO - Electricity - COMED - Contract expiring</Strong>
+              </ion-row>
+              <ion-row class="card-expiration">
+                4:37 PM, 10/11/2018 -- 11 days until expiration
+              </ion-row>
+
+              <button mat-raised-button class="button-secondary">Contract Expiring</button>
+            </ion-row>
+          </mat-panel-title>
+
+        </mat-expansion-panel-header>
+        <ion-row class="card-panel">
+          <ion-row class="panel-border-content">
+            <ion-col col-7>
+              <ion-row class="content-title">
+                Contract number
+              </ion-row>
+              <ion-row class="content-des">
+                <strong>#TX0000345697-00</strong>
+              </ion-row>
+
+              <ion-row class="content-title">
+                Supplier
+              </ion-row>
+              <ion-row class="content-des">
+                <strong> Dominion Resources</strong>
+              </ion-row>
+            </ion-col>
+
+            <ion-col col-5>
+              <ion-row class="content-title">
+                Service type
+              </ion-row>
+              <ion-row class="content-des">
+                <strong>Electricity</strong>
+              </ion-row>
+
+              <ion-row class="content-title">
+                Current rate
+              </ion-row>
+              <ion-row class="content-des">
+                <strong>51 420 000</strong>
+              </ion-row>
+
+            </ion-col>
+          </ion-row>
+          <ion-row class="panel-des">
+            There is 50% chance that today will be the lowest price day for your Electricity contract in Centerpoint.
+            Start an auction as soon as you can to take advantage of this opportunity.
+          </ion-row>
+
+          <button mat-raised-button class="button-third">Get Bids</button>
+
+          <ion-row>
+            <span class="panel-des-s">
+              Date action needed by 12:00 AM, 11/11/2018
+            </span>
+          </ion-row>
+        </ion-row>
+      </mat-expansion-panel>
+    </mat-accordion>
+  </ion-row>
+  <!-- third card end -->
+</ion-content>
