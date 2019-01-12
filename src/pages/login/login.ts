@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, Platform } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, Platform, AlertController } from 'ionic-angular';
+import { TabsPage } from '../tabs/tabs';
+import { ForgotPage } from '../forgot/forgot';
 
 
 /**
@@ -21,10 +23,12 @@ export class LoginPage {
   rememberMe: boolean = false;
   isIosPlatform: boolean = false;
   isFocusEmail: boolean = false;
-  isFocusPass: boolean
+  isFocusPass: boolean = false;
 
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public plt: Platform) {
+  constructor(
+    private altCtrl: AlertController,
+    public navCtrl: NavController, public navParams: NavParams, public plt: Platform) {
     if (plt.is('ios')) {
       // This will only print when on iOS
 
@@ -38,11 +42,29 @@ export class LoginPage {
   }
 
   forgot() {
-
+    let alert = this.altCtrl.create({
+      title: 'Choose an option',
+      message: 'A message should be a short, complete sentence.',
+      buttons: [
+        {
+          text: 'Forgot Username',         
+          handler: data => {
+            this.navCtrl.push(ForgotPage, {isForgotUsername:true});
+          }
+        },
+        {
+          text: 'Forgot Username + Password',         
+          handler: data => {
+            this.navCtrl.push(ForgotPage, {isForgotUsername:false});
+          }
+        }
+      ]
+    });
+    alert.present();
   }
 
   signIn() {
-
+    this.navCtrl.setRoot(TabsPage);
   }
 
   createAccount() {

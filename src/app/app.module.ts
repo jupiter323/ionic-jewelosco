@@ -17,6 +17,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { EntitiesPage } from '../pages/entities/entities';
 import { BillingPage } from './../pages/billing/billing';
 import { LoginPage } from '../pages/login/login';
+import { ForgotPage } from '../pages/forgot/forgot';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { LoginPage } from '../pages/login/login';
     TabsPage,
     EntitiesPage,
     BillingPage,
+    ForgotPage
 
   ],
   imports: [
@@ -48,6 +50,7 @@ import { LoginPage } from '../pages/login/login';
     TabsPage,
     EntitiesPage,
     BillingPage,
+    ForgotPage
   ],
   providers: [
     StatusBar,

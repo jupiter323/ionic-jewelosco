@@ -44,7 +44,7 @@
           <ion-label>Email</ion-label>
         </ion-col>
         <ion-col col-8>
-          <ion-input type="text" placeholder="mail@example.com" [(ngModel)]="user.name"></ion-input>
+          <ion-input type="text" placeholder="mail@example.com" [(ngModel)]="user.email"></ion-input>
         </ion-col>
       </ion-row>
       <ion-row class="input-password">
@@ -84,7 +84,7 @@
       </ion-row>
 
 
-      <button class="sign-button" ion-button color=primary (click)="signIn()">Sign In</button>
+      <button class="normal-button" ion-button color=primary (click)="signIn()">Sign In</button>
 
       <ion-row class="or-style">
         <div class="or-dash">

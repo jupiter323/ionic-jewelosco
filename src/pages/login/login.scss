@@ -94,7 +94,7 @@ page-login {
         }
     }
     ion-content {}
-    .content-md {
+    .content-md {        
         background-color: #19264d !important;
         .logo {
             -webkit-animation: slideInBothWaysScaleLogo ease-in 1;
@@ -332,6 +332,7 @@ page-login {
                         text-align: center;
                         font-family: Montserrat-Bold;
                         font-size: 12px;
+                        margin: 15px 8px 11px 0;
                     }
                     ion-input {
                         font-family: Montserrat-Medium;
