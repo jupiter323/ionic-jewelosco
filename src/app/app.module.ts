@@ -16,15 +16,18 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { MatButtonModule } from '@angular/material/button';
 import { EntitiesPage } from '../pages/entities/entities';
 import { BillingPage } from './../pages/billing/billing';
+import { LoginPage } from '../pages/login/login';
 
 @NgModule({
   declarations: [
     MyApp,
+    LoginPage,
     ContactPage,
     HomePage,
     TabsPage,
     EntitiesPage,
     BillingPage,
+
   ],
   imports: [
     BrowserModule,
@@ -33,12 +36,13 @@ import { BillingPage } from './../pages/billing/billing';
     MatTabsModule,
     MatButtonModule,
     // BrowserAnimationsModule,
-    MatExpansionModule,
+    MatExpansionModule,   
     IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
+    LoginPage,
     ContactPage,
     HomePage,
     TabsPage,

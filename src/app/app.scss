@@ -16,6 +16,16 @@
 // automatically applied to the <body> element in the app.
 
 // Gloabl scss
+@font-face {
+    font-family: 'Montserrat-Bold';
+    src: url('../assets/fonts/Montserrat-Bold.ttf') format("truetype");
+}
+
+@font-face {
+    font-family: 'Montserrat-Medium';
+    src: url('../assets/fonts/Montserrat-Medium.ttf') format("truetype");
+}
+
 ion-row {
     width: 100%;
 }
