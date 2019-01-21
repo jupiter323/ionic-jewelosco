@@ -186,31 +186,19 @@ page-login {
             .go-block {
                 .remember-forgot {
                     margin-top: 5px;
-                    .remember-range.toggle-ios {
-                        margin-top: auto;
-                        margin-bottom: auto;
-                        margin-left: 0;
-                        padding-left: 0;
-                        .toggle-icon {
-                            background-color: #19264d;
-                            border: 1px solid #465070;
-                        }
-                        .toggle-inner {
-                            background-color: white;
-                            top: 1px;
-                        }
+                    ion-row {
+                        align-items: center;
                     }
-                    .remember-range.toggle-md {
-                        margin-top: auto;
-                        margin-bottom: auto;
+                    align-items: center;
+                    .toggle-md.toggle-checked .toggle-icon {
+                        background-color: #8fdcf1!important;
+                    }
+                    .remember-range.toggle-md {                     
                         margin-left: 0;
                         padding-left: 0;
                         .toggle-icon {
                             background-color: #555e7b;
-                        }
-                        .toggle-inner {
-                            background-color: white; // top:1px;
-                        }
+                        }                                     
                     }
                     .remember-label {
                         margin-left: 10px;
@@ -367,32 +355,33 @@ page-login {
             .go-block {
                 .remember-forgot {
                     margin-top: 5px;
-                    .remember-range.toggle-ios {
-                        margin-top: auto;
-                        margin-bottom: auto;
+                    ion-row {
+                        align-items: center;
+                    }
+                    align-items: center;
+                    .toggle-ios.toggle-checked .toggle-icon {
+                        background-color: #1EB8E3!important;
+                    }
+                    .remember-range.toggle-ios {                    
                         margin-left: 0;
                         padding-left: 0;
                         .toggle-icon {
-                            background-color: #19264d;
+                            background: none;
+                        }                     
+                        .toggle-icon::before {
+                            background: #19264d;
+                            bottom: 0px;
+                            top: 0px;
+                            right: 0px;
+                            left: 0px;
                             border: 1px solid #465070;
-                        }
+                        }                    
                         .toggle-inner {
-                            background-color: white;
-                            top: 1px;
+                            // background-color: white;
+                            // top: 1px;
                         }
                     }
-                    .remember-range.toggle-md {
-                        margin-top: auto;
-                        margin-bottom: auto;
-                        margin-left: 0;
-                        padding-left: 0;
-                        .toggle-icon {
-                            background-color: #555e7b;
-                        }
-                        .toggle-inner {
-                            background-color: white; // top:1px;
-                        }
-                    }
+               
                     .remember-label {
                         margin-left: 10px;
                         text-align: left;
@@ -458,5 +447,17 @@ page-login {
                 }
             }
         }
+    }
+}
+.alert-md .alert-wrapper {
+    text-align: center;
+    border-radius: 10px!important;
+    .alert-head {
+        text-align: center;
+
+    }
+    .alert-button {
+        margin: auto;      
+        
     }
 }

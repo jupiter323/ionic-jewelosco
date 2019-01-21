@@ -8,10 +8,13 @@
 
   <ion-row class="header-row">
     <ion-row class="header-title">
-      <ion-icon name="ios-arrow-back" (click)="navCtrl.pop()"></ion-icon>
+      <ion-col col-1>
+        <ion-icon name="ios-arrow-back" (click)="navCtrl.pop()"></ion-icon>
+      </ion-col>
       <span>
         {{navTitle}}
       </span>
+      <ion-col col-1></ion-col>
     </ion-row>
   </ion-row>
 </ion-header>
@@ -47,8 +50,7 @@
   <ion-row *ngIf="!isIosPlatform" class="input-box">
     <ion-row [ngClass]="isFocusEmail?'input-email active':'input-email'">
       <ion-col col-12>
-        <ion-input type="text" placeholder="mail@example.com" [(ngModel)]="user.email" (ionFocus)='isFocus()'
-          (ionBlur)='isBlur()'></ion-input>
+        <ion-input type="text" placeholder="mail@example.com" [(ngModel)]="user.email" (ionFocus)='isFocus()' (ionBlur)='isBlur()'></ion-input>
       </ion-col>
     </ion-row>
   </ion-row>

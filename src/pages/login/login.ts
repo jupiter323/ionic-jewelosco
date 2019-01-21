@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, Platform, AlertController } from 'ionic-angular';
 import { TabsPage } from '../tabs/tabs';
 import { ForgotPage } from '../forgot/forgot';
+import { RegistrationPage } from '../registration/registration';
 
 
 /**
@@ -68,7 +69,7 @@ export class LoginPage {
   }
 
   createAccount() {
-
+    this.navCtrl.push(RegistrationPage);
   }
   isFocus(kind: string) {
     switch (kind) {

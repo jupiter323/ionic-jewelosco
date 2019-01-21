@@ -16,220 +16,167 @@
 </ion-header>
 
 <ion-content padding>
-  <!-- first card start -->
   <ion-row class="tab-contacts">
     <mat-accordion>
-      <mat-expansion-panel>
-        <mat-expansion-panel-header>
-          <mat-panel-title>
-            <ion-row>
-              <ion-row class="card-title">
-                <Strong>Jewel OSCO - Electricity - COMED - Low bidding Supplier spotted!</Strong>
-              </ion-row>
-              <ion-row class="card-expiration">
-                7:50 PM, 10/11/2018 -- 37 days until expiration
+      <ion-list>
+        <ion-item-sliding #itemId *ngFor="let item of items;let index=index">
+          <ion-item no-lines text-wrap>
+            <!-- first card start -->
+            <mat-expansion-panel (opened)="item.opened=true" (closed)="item.opened=false">
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+
+                  <!-- response image start -->
+                  <ion-row *ngIf="item.img&&!item.opened" class="response-card">
+                    <img *ngIf="item.img" [src]="item.img">
+                  </ion-row>
+                  <!-- response image end -->
+
+                  <ion-row>
+                    <ion-row class="card-title">
+                      <span *ngIf="item.title">{{item.title}}</span>
+                    </ion-row>
+                    <ion-row *ngIf="item.expiration" class="card-expiration">
+                      {{item.expiration}} -- {{37-index}} days until expiration
+                    </ion-row>
+
+                    <button *ngIf="!item.opened&&item.kind=='marketdrop'" mat-raised-button class="button-marketdrop">Market
+                      Drop</button>
+                    <button *ngIf="!item.opened&&item.kind=='new'" mat-raised-button class="button-new">Bid
+                      Opportunity</button>
+                    <button *ngIf="!item.opened&&item.kind=='expiring'" mat-raised-button class="button-expiring">Contract
+                      Expiring</button>
+                  </ion-row>
+                </mat-panel-title>
+
+              </mat-expansion-panel-header>
+
+              <ion-row class="card-panel">
+
+                <!-- response image start -->
+                <ion-row *ngIf="item.img" class="response-card panel">
+                  <img *ngIf="item.img" [src]="item.img">
+                </ion-row>
+                <!-- response image end -->
+                <ion-row *ngIf="item.detail" class="panel-border-content">
+                  <ion-col col-7>
+                    <ion-row class="content-title">
+                      {{item.detail[0].title}}
+                    </ion-row>
+                    <ion-row class="content-des">
+                      <strong>#{{item.detail[0].det}}</strong>
+                    </ion-row>
+
+                    <ion-row class="content-title">
+                      {{item.detail[1].title}}
+                    </ion-row>
+                    <ion-row class="content-des">
+                      <strong>{{item.detail[1].det}}</strong>
+                    </ion-row>
+                  </ion-col>
+
+                  <ion-col col-5>
+                    <ion-row class="content-title">
+                      {{item.detail[2].title}}
+                    </ion-row>
+                    <ion-row class="content-des">
+                      <span>{{item.detail[2].det}}</span>
+                    </ion-row>
+
+                    <ion-row class="content-title">
+                      {{item.detail[3].title}}
+                    </ion-row>
+                    <ion-row class="content-des">
+                      <strong>{{item.detail[3].det}}</strong>
+                    </ion-row>
+
+                  </ion-col>
+                </ion-row>
+                <ion-row *ngIf="item.des" class="panel-des">
+                  {{item.des}}
+                </ion-row>
+
+                <button *ngIf="item.btntitle" mat-raised-button class="button-third">{{item.btntitle}}</button>
+
+                <ion-row>
+                  <span class="panel-des-s">
+                    Date action needed by 12:00 AM, 11/11/2018
+                  </span>
+                </ion-row>
               </ion-row>
 
-              <button mat-raised-button class="button-primary">Bid Opportunity</button>
-            </ion-row>
-          </mat-panel-title>
+            </mat-expansion-panel>
+            <!-- first card end -->
+          </ion-item>
+          <ion-item-options side="right">
+            <button ion-button color=grayback>
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="258" height="104"
+                viewBox="0 0 258 104">
+                <defs>
+                  <clipPath id="clip-path">
+                    <rect id="Rectangle_19" data-name="Rectangle 19" width="258" height="104" transform="translate(101 443)"
+                      fill="#fff" />
+                  </clipPath>
+                </defs>
 
-        </mat-expansion-panel-header>
+                <g id="Group_2" data-name="Group 2" transform="translate(-101 -443)" clip-path="url(#clip-path)">
+                  <!-- dismiss btn -->
+                  <g (click)="dismiss(itemId, index)" id="Dismiss" transform="translate(0 -104)">
+                    <rect id="Rectangle_9" data-name="Rectangle 9" width="86" height="104" transform="translate(101 547)"
+                      fill="rgba(255,255,255,0.01)" />
+                    <g id="Group_5" data-name="Group 5" transform="translate(-4.606 94)">
+                      <text id="Dismiss-2" data-name="Dismiss" transform="translate(148.606 522.5)" fill="#19264d"
+                        font-size="10" font-family="Montserrat-Medium, Montserrat" font-weight="500">
+                        <tspan x="-19.72" y="0">Dismiss</tspan>
+                      </text>
+                      <path id="Path_6" data-name="Path 6" d="M88.939,18.142,88.2,17.4a3.807,3.807,0,0,1-1.168-2.829V7.933a7.616,7.616,0,0,0-.8-3.382l2.952-3.382a.747.747,0,0,0-.062-.984.747.747,0,0,0-.984.061L85.5,3.321A7.587,7.587,0,0,0,79.284,0a7.916,7.916,0,0,0-7.749,7.933v6.642A3.807,3.807,0,0,1,70.367,17.4l-.738.738a1.414,1.414,0,0,0-.307,1.6,1.338,1.338,0,0,0,1.23.861l-1.107,1.23a.747.747,0,0,0,.061.984.664.664,0,0,0,.43.184.559.559,0,0,0,.492-.246l1.845-2.091h4.059a3.033,3.033,0,0,0,5.9,0h5.658a1.468,1.468,0,0,0,1.353-.922A1.394,1.394,0,0,0,88.939,18.142ZM70.613,19.249s-.062,0-.123-.123v-.061l.738-.738a5.217,5.217,0,0,0,1.6-3.751V7.933a6.592,6.592,0,0,1,6.4-6.58A6.41,6.41,0,0,1,84.573,4.3L71.658,19.249Zm8.671,2.4a1.721,1.721,0,0,1-1.537-.984h3.075A1.8,1.8,0,0,1,79.284,21.647Zm8.733-2.46c0,.061-.061.061-.123.061H73.442L85.249,5.658a7.109,7.109,0,0,1,.43,2.275v6.642a5.2,5.2,0,0,0,1.537,3.751l.738.738C88.017,19.126,88.017,19.126,88.017,19.187Z"
+                        transform="translate(69.606 484)" fill="#19264d" />
+                    </g>
+                  </g>
 
-        <ion-row class="card-panel">
-          <ion-row class="panel-border-content">
-            <ion-col col-7>
-              <ion-row class="content-title">
-                Contract number
-              </ion-row>
-              <ion-row class="content-des">
-                <strong>#TX0000345697-00</strong>
-              </ion-row>
-
-              <ion-row class="content-title">
-                Supplier
-              </ion-row>
-              <ion-row class="content-des">
-                <strong> Dominion Resources</strong>
-              </ion-row>
-            </ion-col>
-
-            <ion-col col-5>
-              <ion-row class="content-title">
-                Service type
-              </ion-row>
-              <ion-row class="content-des">
-                <strong>Electricity</strong>
-              </ion-row>
-
-              <ion-row class="content-title">
-                Current rate
-              </ion-row>
-              <ion-row class="content-des">
-                <strong>51 420 000</strong>
-              </ion-row>
-
-            </ion-col>
-          </ion-row>
-          <ion-row class="panel-des">
-            There is 50% chance that today will be the lowest price day for your Electricity contract in Centerpoint.
-            Start an auction as soon as you can to take advantage of this opportunity.
-          </ion-row>
-
-          <button mat-raised-button class="button-third">Get Bids</button>
-
-          <ion-row>
-            <span class="panel-des-s">
-              Date action needed by 12:00 AM, 11/11/2018
-            </span>
-          </ion-row>
-        </ion-row>
-
-      </mat-expansion-panel>
+                  <g id="Group_969" data-name="Group 969">
+                    <g id="Group_968" data-name="Group 968">
+                      <!-- snooze btn -->
+                      <g (click)="snooze(itemId, index)" id="Snooze" transform="translate(0 -208)">
+                        <rect id="Rectangle_10" data-name="Rectangle 10" width="86" height="104" transform="translate(187 651)"
+                          fill="rgba(255,255,255,0.01)" />
+                        <g id="Group_6" data-name="Group 6" transform="translate(81.394 198)">
+                          <text id="Snooze-2" data-name="Snooze" transform="translate(148.606 522.5)" fill="#19264d"
+                            font-size="10" font-family="Montserrat-Medium, Montserrat" font-weight="500">
+                            <tspan x="-18.46" y="0">Snooze</tspan>
+                          </text>
+                          <g id="Group_10" data-name="Group 10" transform="translate(137.606 484)">
+                            <path id="Path_1" data-name="Path 1" d="M14.567,6.3a5.223,5.223,0,0,0-5.175,5.244v4.2a2.242,2.242,0,0,1-.678,1.6l-.431.494a1.069,1.069,0,0,0-.246,1.234,1.217,1.217,0,0,0,1.109.74h3.388a2.186,2.186,0,0,0,2.033,1.481A2.127,2.127,0,0,0,16.6,19.811h3.388a1.107,1.107,0,0,0,1.047-.679,1.146,1.146,0,0,0-.246-1.3l-.431-.432a2.242,2.242,0,0,1-.678-1.6v-4.2A5.186,5.186,0,0,0,14.567,6.3Zm-.493,13.572H15A.837.837,0,0,1,14.074,19.872Zm1.971-1.357H9.577l.123-.123A3.492,3.492,0,0,0,10.748,15.8v-4.2a3.9,3.9,0,0,1,3.82-3.887,3.9,3.9,0,0,1,3.82,3.887v4.2a3.747,3.747,0,0,0,1.047,2.591l.123.123H16.046Z"
+                              transform="translate(-3.038 -2.419)" fill="#19264d" />
+                            <path id="Path_2" data-name="Path 2" d="M24.85,9a.749.749,0,0,0-.987,0l-.987.987A11.489,11.489,0,1,0,11.531,23a11.656,11.656,0,0,0,9.188-4.563.66.66,0,0,0-1.048-.8,10.187,10.187,0,1,1,1.973-7.091l-2.035-.678a.682.682,0,0,0-.432,1.295l2.96.987c.062,0,.123.062.247.062a.371.371,0,0,0,.247-.062.133.133,0,0,0,.123-.123.06.06,0,0,0,.062-.062L24.85,9.928A.578.578,0,0,0,24.85,9Z"
+                              fill="#19264d" />
+                          </g>
+                        </g>
+                      </g>
+                    </g>
+                  </g>
+                  <!-- delete btn -->
+                  <g (click)="delete(itemId, index)" id="Delete" transform="translate(0 -312)">
+                    <rect id="Rectangle_11" data-name="Rectangle 11" width="86" height="104" transform="translate(273 755)"
+                      fill="rgba(255,255,255,0.01)" />
+                    <g id="Group_7" data-name="Group 7" transform="translate(-1 309)">
+                      <text id="Delete-2" data-name="Delete" transform="translate(317 515.5)" fill="#ff2116" font-size="10"
+                        font-family="Montserrat-Medium, Montserrat" font-weight="500">
+                        <tspan x="-16.685" y="0">Delete</tspan>
+                      </text>
+                      <path id="Path_5" data-name="Path 5" d="M146.643,2.152h-3.382A2.4,2.4,0,0,0,140.863,0H140a2.453,2.453,0,0,0-2.4,2.152h-3.382A3.307,3.307,0,0,0,130.9,5.473V7.687a.682.682,0,0,0,.676.676h1.168V19.679A3.307,3.307,0,0,0,136.066,23h8.794a3.307,3.307,0,0,0,3.321-3.321V8.364h1.168a.682.682,0,0,0,.676-.676V5.473A3.485,3.485,0,0,0,146.643,2.152Zm-6.7-.8h.861a1.126,1.126,0,0,1,1.045.8h-2.952A1.126,1.126,0,0,1,139.94,1.353ZM146.7,19.679a1.982,1.982,0,0,1-1.968,1.968h-8.794a1.982,1.982,0,0,1-1.968-1.968V8.364h12.668V19.679ZM148.55,7.011H132.191V5.473a1.982,1.982,0,0,1,1.968-1.968h12.484a1.982,1.982,0,0,1,1.968,1.968V7.011Z"
+                        transform="translate(177 477)" fill="#ff2116" />
+                    </g>
+                  </g>
+                </g>
+              </svg>
+            </button>
+          </ion-item-options>
+        </ion-item-sliding>
+      </ion-list>
     </mat-accordion>
+
+    <button *ngIf="ableRemainContracts" mat-raised-button class="remain-contracts" (click)="remainContracts();ableRemainContracts=false">{{1}}
+      contracts</button>
   </ion-row>
-  <!-- first card end -->
-
-  <!-- second card start -->
-  <ion-row class="tab-contacts">
-    <mat-accordion>
-      <mat-expansion-panel>
-        <mat-expansion-panel-header>
-          <mat-panel-title>
-            <ion-row>
-              <ion-row class="card-title">
-                <strong>Jewel OSCO - Electricity - COMED - 50% chance of lower price</strong>
-              </ion-row>
-              <ion-row class="card-expiration">
-                2:14 PM, 10/11/2018 -- 24 days until expiration
-              </ion-row>
-            </ion-row>
-          </mat-panel-title>
-
-        </mat-expansion-panel-header>
-
-        <ion-row class="card-panel">
-          <ion-row class="panel-border-content">
-            <ion-col col-7>
-              <ion-row class="content-title">
-                Contract number
-              </ion-row>
-              <ion-row class="content-des">
-                <strong>#TX0000345697-00</strong>
-              </ion-row>
-
-              <ion-row class="content-title">
-                Supplier
-              </ion-row>
-              <ion-row class="content-des">
-                <strong> Dominion Resources</strong>
-              </ion-row>
-            </ion-col>
-
-            <ion-col col-5>
-              <ion-row class="content-title">
-                Service type
-              </ion-row>
-              <ion-row class="content-des">
-                <strong>Electricity</strong>
-              </ion-row>
-
-              <ion-row class="content-title">
-                Current rate
-              </ion-row>
-              <ion-row class="content-des">
-                <strong>51 420 000</strong>
-              </ion-row>
-
-            </ion-col>
-          </ion-row>
-          <ion-row class="panel-des">
-            There is 50% chance that today will be the lowest price day for your Electricity contract in Centerpoint.
-            Start an auction as soon as you can to take advantage of this opportunity.
-          </ion-row>
-
-          <button mat-raised-button class="button-third">Get Bids</button>
-
-          <ion-row>
-            <span class="panel-des-s">
-              Date action needed by 12:00 AM, 11/11/2018
-            </span>
-          </ion-row>
-        </ion-row>
-      </mat-expansion-panel>
-    </mat-accordion>
-  </ion-row>
-  <!-- second card end -->
-
-  <!-- third card start -->
-  <ion-row class="tab-contacts">
-    <mat-accordion>
-      <mat-expansion-panel>
-        <mat-expansion-panel-header>
-          <mat-panel-title>
-            <ion-row>
-              <ion-row class="card-title">
-                <Strong>Jewel OSCO - Electricity - COMED - Contract expiring</Strong>
-              </ion-row>
-              <ion-row class="card-expiration">
-                4:37 PM, 10/11/2018 -- 11 days until expiration
-              </ion-row>
-
-              <button mat-raised-button class="button-secondary">Contract Expiring</button>
-            </ion-row>
-          </mat-panel-title>
-
-        </mat-expansion-panel-header>
-        <ion-row class="card-panel">
-          <ion-row class="panel-border-content">
-            <ion-col col-7>
-              <ion-row class="content-title">
-                Contract number
-              </ion-row>
-              <ion-row class="content-des">
-                <strong>#TX0000345697-00</strong>
-              </ion-row>
-
-              <ion-row class="content-title">
-                Supplier
-              </ion-row>
-              <ion-row class="content-des">
-                <strong> Dominion Resources</strong>
-              </ion-row>
-            </ion-col>
-
-            <ion-col col-5>
-              <ion-row class="content-title">
-                Service type
-              </ion-row>
-              <ion-row class="content-des">
-                <strong>Electricity</strong>
-              </ion-row>
-
-              <ion-row class="content-title">
-                Current rate
-              </ion-row>
-              <ion-row class="content-des">
-                <strong>51 420 000</strong>
-              </ion-row>
-
-            </ion-col>
-          </ion-row>
-          <ion-row class="panel-des">
-            There is 50% chance that today will be the lowest price day for your Electricity contract in Centerpoint.
-            Start an auction as soon as you can to take advantage of this opportunity.
-          </ion-row>
-
-          <button mat-raised-button class="button-third">Get Bids</button>
-
-          <ion-row>
-            <span class="panel-des-s">
-              Date action needed by 12:00 AM, 11/11/2018
-            </span>
-          </ion-row>
-        </ion-row>
-      </mat-expansion-panel>
-    </mat-accordion>
-  </ion-row>
-  <!-- third card end -->
 </ion-content>

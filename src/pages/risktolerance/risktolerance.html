@@ -1,0 +1,87 @@
+<!--
+  Generated template for the RisktolerancePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-row class="header-row">
+    <ion-row class="header-title">
+      <ion-col col-1>
+        <ion-icon name="ios-arrow-back" (click)="navCtrl.pop()"></ion-icon>
+      </ion-col>
+      <span>
+        Risk Tolerance
+      </span>
+      <ion-col col-1></ion-col>
+    </ion-row>
+  </ion-row>
+</ion-header>
+
+
+<ion-content>
+
+  <ion-row class="question-row"*ngFor="let question of questions;let index=index" (click)="goAnswer(index)">
+    <ion-col col-9>
+      <ion-label class="question">Question {{index+1}}</ion-label>
+      <p class="que-des">{{question.des}}</p>
+    </ion-col>
+    <ion-col col-3>
+      <ion-row class="dot-arrow">    
+        <svg *ngIf="question.answerindex==0" xmlns="http://www.w3.org/2000/svg" width="27" height="7" viewBox="0 0 27 7">
+          <g id="Group_833" data-name="Group 833" transform="translate(-239 -371.25)">
+            <g id="Ellipse_11" data-name="Ellipse 11" transform="translate(249 371.25)" fill="#fff" stroke="#1eb8e3" stroke-width="1">
+              <circle cx="3.5" cy="3.5" r="3.5" stroke="none"/>
+              <circle cx="3.5" cy="3.5" r="3" fill="none"/>
+            </g>
+            <g id="Ellipse_13" data-name="Ellipse 13" transform="translate(239 371.25)" fill="#1eb8e3" stroke="#1eb8e3" stroke-width="1">
+              <circle cx="3.5" cy="3.5" r="3.5" stroke="none"/>
+              <circle cx="3.5" cy="3.5" r="3" fill="none"/>
+            </g>
+            <g id="Ellipse_12" data-name="Ellipse 12" transform="translate(259 371.25)" fill="#fff" stroke="#1eb8e3" stroke-width="1">
+              <circle cx="3.5" cy="3.5" r="3.5" stroke="none"/>
+              <circle cx="3.5" cy="3.5" r="3" fill="none"/>
+            </g>
+          </g>
+        </svg>        
+
+        <svg *ngIf="question.answerindex==1" xmlns="http://www.w3.org/2000/svg" width="27" height="7" viewBox="0 0 27 7">
+          <g id="Group_832" data-name="Group 832" transform="translate(-239 -390.75)">
+            <g id="Ellipse_11" data-name="Ellipse 11" transform="translate(249 390.75)" fill="#1eb8e3" stroke="#1eb8e3" stroke-width="1">
+              <circle cx="3.5" cy="3.5" r="3.5" stroke="none"/>
+              <circle cx="3.5" cy="3.5" r="3" fill="none"/>
+            </g>
+            <g id="Ellipse_13" data-name="Ellipse 13" transform="translate(239 390.75)" fill="#fff" stroke="#1eb8e3" stroke-width="1">
+              <circle cx="3.5" cy="3.5" r="3.5" stroke="none"/>
+              <circle cx="3.5" cy="3.5" r="3" fill="none"/>
+            </g>
+            <g id="Ellipse_12" data-name="Ellipse 12" transform="translate(259 390.75)" fill="#fff" stroke="#1eb8e3" stroke-width="1">
+              <circle cx="3.5" cy="3.5" r="3.5" stroke="none"/>
+              <circle cx="3.5" cy="3.5" r="3" fill="none"/>
+            </g>
+          </g>
+        </svg>   
+       
+        <svg *ngIf="question.answerindex==2" xmlns="http://www.w3.org/2000/svg" width="27" height="7" viewBox="0 0 27 7">
+          <g id="Group_831" data-name="Group 831" transform="translate(-239 -381)">
+            <g id="Ellipse_11" data-name="Ellipse 11" transform="translate(249 381)" fill="#fff" stroke="#1eb8e3" stroke-width="1">
+              <circle cx="3.5" cy="3.5" r="3.5" stroke="none"/>
+              <circle cx="3.5" cy="3.5" r="3" fill="none"/>
+            </g>
+            <g id="Ellipse_13" data-name="Ellipse 13" transform="translate(239 381)" fill="#fff" stroke="#1eb8e3" stroke-width="1">
+              <circle cx="3.5" cy="3.5" r="3.5" stroke="none"/>
+              <circle cx="3.5" cy="3.5" r="3" fill="none"/>
+            </g>
+            <g id="Ellipse_12" data-name="Ellipse 12" transform="translate(259 381)" fill="#1eb8e3" stroke="#1eb8e3" stroke-width="1">
+              <circle cx="3.5" cy="3.5" r="3.5" stroke="none"/>
+              <circle cx="3.5" cy="3.5" r="3" fill="none"/>
+            </g>
+          </g>
+        </svg>
+
+        <ion-icon name="ios-arrow-forward" (click)="navCtrl.pop()"></ion-icon>      
+
+      </ion-row>
+    </ion-col>
+  </ion-row>
+</ion-content>

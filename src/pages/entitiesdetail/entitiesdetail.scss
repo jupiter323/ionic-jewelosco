@@ -1,0 +1,87 @@
+page-entitiesdetail {
+    .menus {
+        ion-header {
+            .right-icon {
+                color: #40D4FD;
+                font-size: 12px;
+                font-family: Montserrat-SemiBold;
+            }
+        }
+        ion-content {
+            background: #19264D !important;
+        }
+    }
+ 
+    ion-content {
+        background: #E9EBED !important;
+    }
+    .big {
+        height: 200px !important;
+        padding: 15px !important;
+        .item-mark {
+            width: 100%;
+            text-align: center;
+            svg {
+                margin: 0;
+            }
+        }
+        .item-count {
+            background: #B6C0C9;
+            color: white;
+            width: 38px;
+            text-align: center;
+            height: 24px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-family: Montserrat-Bold;
+            padding-top: 4px;
+        }
+        .des-arrow {
+            justify-content: space-between;
+            align-items: center;
+            span {
+                font-size: 16px;
+                font-family: Montserrat-Bold;
+                color: #43535F;
+            }
+            ion-icon {
+                color: #43535F;
+            }
+        }
+    }
+    .item-row {
+        background: white;
+        border-radius: 10px;
+        height: 68px;
+        padding-left: 15px;
+        padding-right: 15px;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 20px;
+        .item-des {
+            width: 80%;
+            .loc-row {
+                color: #43535F;
+                font-size: 12px;
+                font-family: Montserrat-Bold;
+            }
+            .note-row {
+                color: #43535F;
+                font-size: 12px;
+                font-family: Montserrat-Medium;
+            }
+        }
+        ion-icon {
+            color: #43535F;
+        }
+        svg {
+            margin-right: 20px;
+        }
+    }
+    .content-md {
+        .item-row {
+            border-radius: 4px;
+            box-shadow: 0px 1px #888888 !important;
+        }
+    }
+}

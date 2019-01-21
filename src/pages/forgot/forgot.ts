@@ -19,6 +19,7 @@ export class ForgotPage {
   navTitle: string
   isFocusEmail:boolean
   user: any = {
+    email:""
 
   }
 
