@@ -1,0 +1,57 @@
+<!--
+  Generated template for the BillingdetailPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-row class="header-row">
+    <ion-row class="header-title">
+      <ion-col col-1>
+        <ion-icon name="ios-arrow-back" (click)="navCtrl.pop()"></ion-icon>
+      </ion-col>
+      <span>
+        {{billingitem.loc}}
+      </span>
+      <ion-col col-1 (click)="openMenu('filter')">
+        <div class="right-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="19.007" height="22.999" viewBox="0 0 19.007 22.999">
+            <g id="Group_909" data-name="Group 909" transform="translate(-327 -52)">
+              <path id="Op_component_1" data-name="Op component 1" d="M1246.733,2247.01h-12.484a3.271,3.271,0,0,0-3.261,3.273v12.129a3.245,3.245,0,0,0,.851,2.225l3.986,4.334a3.285,3.285,0,0,0,1.78.977,1.569,1.569,0,0,0,.41.061.581.581,0,0,0,.064-.013c.043,0,.084.013.128.013h8.526a3.271,3.271,0,0,0,3.261-3.274v-16.452A3.271,3.271,0,0,0,1246.733,2247.01Zm-13.637,17.083h1.362a1.976,1.976,0,0,1,1.97,1.977v1.646Zm15.607,2.642a2,2,0,0,1-1.97,1.977h-8.526a2.047,2.047,0,0,1-.321-.031.292.292,0,0,1-.167-.266v-2.345a3.271,3.271,0,0,0-3.261-3.273H1232.7a.425.425,0,0,1-.418-.42v-12.094a1.976,1.976,0,0,1,1.97-1.977h12.484a1.976,1.976,0,0,1,1.97,1.977Z"
+                transform="translate(1576.994 2322.009) rotate(180)" fill="#fff" />
+              <line id="Line_51" data-name="Line 51" y1="6" transform="translate(336.5 63.5)" fill="none" stroke="#fff"
+                stroke-linecap="round" stroke-width="1.5" />
+              <path id="Path_134" data-name="Path 134" d="M0,0V.153" transform="translate(336.5 60.5)" fill="#fff"
+                stroke="#fff" stroke-linecap="round" stroke-width="1.5" />
+            </g>
+          </svg>
+
+        </div>
+
+      </ion-col>
+    </ion-row>
+  </ion-row>
+  <ion-row class="header-detail-wrap">
+    <ion-row class="header-detail">
+      <ion-col no-padding col-5>
+        <span class="header-detail-title" no-padding>Invoice Total</span><br>
+        <span class="header-detail-des invoice" no-padding>${{billingitem.invoice}}</span>
+        <p></p>
+        <span class="header-detail-title" no-padding>Payment Total</span><br>
+        <span class="header-detail-des" no-padding>${{billingitem.payment}}</span>
+
+      </ion-col>
+      <ion-col no-padding col-7>
+        <span class="header-detail-title" no-padding>Balance Due</span><br>
+        <ion-row class="header-detail-des">
+          <span class="big" no-padding>${{billingitem?billingitem.balance.split(".")[0]:"0"}}</span>
+          <div class="top">.{{billingitem?billingitem.balance.split(".")[1]:"00"}}</div>
+        </ion-row>
+      </ion-col>
+    </ion-row>
+  </ion-row>
+</ion-header>
+
+<ion-content padding>
+
+</ion-content>

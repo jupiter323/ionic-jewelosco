@@ -27,12 +27,13 @@ export class UserInfo {
 
 @Injectable()
 export class ChatServiceProvider {
-
+ 
   constructor(public http: Http,
     public events: Events) {
-  }
+     
+  }  
 
-  mockNewMsg(msg) {
+  mockNewMsg(msg) {  
     const mockMsg: ChatMessage = {
       messageId: Date.now().toString(),
       userId: '210000198410281948',

@@ -1,0 +1,133 @@
+<!--
+  Generated template for the ProfilePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+<ion-header>
+  <ion-row class="header-row">
+    <ion-row class="header-title">
+      <ion-col col-1>
+      </ion-col>
+      <span>
+        PROFILE
+      </span>
+      <ion-col col-1>
+      </ion-col>
+      <div class="right-icon">
+        Edit
+      </div>
+    </ion-row>
+  </ion-row>
+  <ion-row class="first-block">
+    <ion-row class="img-row">
+      <div class="profile-img">
+        <img [src]="profile.img?profile.img:'assets/imgs/profilePlaceholder.svg'">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+          <g id="Group_838" data-name="Group 838" transform="translate(8.788 8.253)">
+            <circle id="Ellipse_15" data-name="Ellipse 15" cx="16" cy="16" r="16" transform="translate(-8.788 -8.253)"
+              fill="#1eb8e3" />
+            <path id="Path_15" data-name="Path 15" d="M1.366,10.343.3,14.52a.45.45,0,0,0,.113.446.425.425,0,0,0,.435.116l3.9-1.023,9.633-9.871a1.375,1.375,0,0,0,.4-1.007,1.326,1.326,0,0,0-.419-.99L12.8.637a1.338,1.338,0,0,0-1.9.017Z"
+              transform="translate(0 0)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round"
+              stroke-miterlimit="10" stroke-width="1.5" />
+          </g>
+        </svg>
+      </div>
+    </ion-row>
+    <span class="name">{{profile.name||"User Name"}}</span>
+    <span class="email">{{profile.email||"example@email.com"}}</span>
+  </ion-row>
+</ion-header>
+
+
+<ion-content padding>
+  <ion-card>
+    <ion-row class="card-first-row small-row-padding">
+      <ion-col col-10>
+        <ion-row>
+          <ion-col no-padding col-5>
+            <ion-row class="full-height">
+            <svg xmlns="http://www.w3.org/2000/svg" width="64" height="32" viewBox="0 0 64 32">
+              <g id="Group_845" data-name="Group 845" transform="translate(-33 -298)">
+                <rect id="Rectangle_1_copy_27" data-name="Rectangle 1 copy 27" width="64" height="32" rx="6" transform="translate(33 298)"
+                  fill="#fc8f3b" />
+                <text id="_10_" data-name="10%" transform="translate(44 322.147)" fill="#fff" font-size="22"
+                  font-family="Montserrat-Bold, Montserrat" font-weight="700">
+                  <tspan x="0" y="0">10%</tspan>
+                </text>
+              </g>
+            </svg>
+          </ion-row>
+          </ion-col>
+          <ion-col col-7>
+            <ion-row class="subscription">Subscription</ion-row>
+            <ion-row class="premium">Premium</ion-row>
+          </ion-col>
+        </ion-row>
+      </ion-col>
+      <ion-col class="arrow-icon" col-2>
+        <ion-icon name="ios-arrow-forward"></ion-icon>
+      </ion-col>
+    </ion-row>
+    <ion-row class="card-second-row">
+      <ion-col col-10>
+        <ion-row class="title">
+          Billing Info
+        </ion-row>
+      </ion-col>
+      <ion-col class="arrow-icon" col-2>
+        <ion-icon name="ios-arrow-forward"></ion-icon>
+      </ion-col>
+    </ion-row>
+  </ion-card>
+
+  <ion-card>
+    <ion-row class="card-first-row">
+      <ion-col col-10>
+        <ion-row class="title">
+          Change password
+        </ion-row>
+      </ion-col>
+      <ion-col class="arrow-icon" col-2>
+        <ion-icon name="ios-arrow-forward"></ion-icon>
+      </ion-col>
+    </ion-row>
+    <ion-row class="card-second-row">
+      <ion-col col-10>
+        <ion-row class="title">
+          Security Settings
+        </ion-row>
+      </ion-col>
+      <ion-col class="arrow-icon" col-2>
+        <ion-icon name="ios-arrow-forward"></ion-icon>
+      </ion-col>
+    </ion-row>
+  </ion-card>
+
+  <ion-card>
+    <ion-row class="card-first-row">
+      <ion-col col-10>
+        <ion-row class="title">
+          Message Center
+        </ion-row>
+      </ion-col>
+      <ion-col class="arrow-icon" col-2>
+        <ion-icon name="ios-arrow-forward"></ion-icon>
+      </ion-col>
+    </ion-row>
+    <ion-row class="card-second-row">
+      <ion-col col-10>
+        <ion-row class="title">
+          Troubleshoot
+        </ion-row>
+      </ion-col>
+      <ion-col class="arrow-icon" col-2>
+        <ion-icon name="ios-arrow-forward"></ion-icon>
+      </ion-col>
+    </ion-row>
+  </ion-card>
+
+  <button ion-button class="normal-button" (click)="logOut()">Sign Out</button>
+
+</ion-content>

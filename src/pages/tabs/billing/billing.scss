@@ -1,0 +1,62 @@
+page-billing {
+    ion-content {
+        background: #E9EBED!important;
+    }
+    ion-card {
+        .top-row {
+            align-items: center;
+            justify-content: space-between;
+            .item-des {
+                .loc-row {
+                    color: #43535F;
+                    font-size: 12px;
+                    font-family: Montserrat-Bold;
+                }
+                .note-row {
+                    color: #43535F;
+                    font-size: 12px;
+                    font-family: Montserrat-Medium;
+                }
+               
+            }
+            ion-icon {
+                color: #B6C0C9;
+                margin: auto;
+                font-weight: bold;
+                
+            }
+            svg {
+                // margin-right: 20px;
+                margin: auto;
+            }
+        }
+        .detail-block {
+            border: 1px solid #E5E9EC;
+            padding: 5px 10px 10px 10px;
+            .detail-title {
+                font-size: 10px;
+                font-family: Montserrat-SemiBold;
+                color: #A3ADB7;
+            }
+            .detail-des {
+                font-size: 12px;
+                color: #43535F;
+                font-family: Montserrat-Bold
+            }
+            .detail-des.invoice {
+                color: #1EB8E3!important;
+            }
+            .detail-des .big {
+                font-family: Montserrat-Medium!important;
+                font-size: 42px!important;
+            }
+            .detail-des .top {
+                padding-top: 10px;
+            }
+
+        }
+    }
+    .card-ios .detail-block {
+        border-radius: 10px;
+    }
+}

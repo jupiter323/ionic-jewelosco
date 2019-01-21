@@ -1,0 +1,92 @@
+page-profile {
+    ion-header {
+        .right-icon {
+            color: white;
+            font-size: 12px;
+            font-family: Montserrat-Medium;
+            position: absolute;
+            right: 20px;
+        }
+        .first-block {
+            background: #19264D;
+            padding-top: 15px;
+            align-items: center;
+            flex-direction: column;
+            .img-row {
+                justify-content: center;
+                .profile-img {
+                    position: relative;
+                    svg {
+                        position: absolute;
+                        right: 0;
+                        bottom: 0;
+                    }
+                }
+            }
+            .name {
+                margin-top: 20px;
+                color: white;
+                font-size: 16px;
+                font-family: Montserrat-Bold;
+            }
+            .email {
+                font-size: 12px;
+                font-family: Montserrat-Medium;
+                color: white;
+                margin-top: 5px;
+            }
+        }
+        padding-bottom: 25px;
+    }
+    ion-content {
+        background: #E9EBED !important;
+        ion-card {
+            padding: 0!important;
+          
+            .small-row-padding {
+                padding-top: 8px!important;
+                padding-bottom: 8px!important;
+            }
+            .card-first-row {
+                padding: 15px;
+                border-bottom: 1px solid #E5E9EC;
+                align-items: center;
+            
+                .full-height {
+                    align-items: center;
+                }
+                .subscription {
+                    font-size: 10px;
+                    font-family: #43535F;
+                    color: #A3ADB7;                    
+                }
+                .premium {
+                    font-size: 18px;
+                    font-family: Montserrat-Bold;
+                    color: #43535F;
+                }
+            }
+
+            .card-second-row {
+                padding: 15px;
+
+            }
+            .arrow-icon {
+                text-align: right;
+                color: #B6C0C9;
+                font-weight: bold;
+                font-size: 18px;
+            }
+            .title {
+                color: #43535F;
+                font-size: 16px;
+                font-family: Montserrat-Medium;
+            }
+        }
+
+        .normal-button {
+            background-color: #A3ADB7!important;
+            margin-top: 0px!important;
+        }
+    }
+}

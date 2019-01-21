@@ -1,0 +1,70 @@
+<!--
+  Generated template for the ContracthistoryPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-row class="header-row">
+    <ion-row class="header-title">
+      <ion-col col-1>
+        <ion-icon name="ios-arrow-back" (click)="navCtrl.pop()"></ion-icon>
+      </ion-col>
+      <span>
+        Contract History
+      </span>
+      <ion-col col-1></ion-col>
+    </ion-row>
+  </ion-row>
+</ion-header>
+
+<ion-content>
+  <div class="content-wraper">
+    <ion-row class="history-item" *ngFor="let history of contractHistories;let index=index">
+      <ion-row>
+        <ion-col col-2 no-padding>
+          <!-- ellipse -->
+          <ion-row class="step-image">
+            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 13 13">
+              <g id="Ellipse_4" data-name="Ellipse 4" fill="#fff" stroke="#1eb8e3" stroke-width="1.5">
+                <circle cx="6.5" cy="6.5" r="6.5" stroke="none" />
+                <circle cx="6.5" cy="6.5" r="5.75" fill="none" />
+              </g>
+            </svg>
+          </ion-row>
+
+          <!-- dot line -->
+          <ion-row *ngIf="index+1<contractHistories.length" [ngClass]="history.signed?'step-image':'step-image small'">
+            <svg xmlns="http://www.w3.org/2000/svg" width="1.5" height="110.5" viewBox="0 0 1.5 110.5">
+              <path id="Path_134" data-name="Path 134" d="M0,0V109" transform="translate(0.75 0.75)" fill="none" stroke="#1eb8e3"
+                stroke-linecap="round" stroke-width="1.5" stroke-dasharray="1 5" />
+            </svg>
+          </ion-row>
+
+        </ion-col>
+        <ion-col col-10 no-padding>
+          <ion-row *ngIf="history.signed" class="signed-row">
+            <ion-col class="signed-des" col-6 no-padding>
+              <span>{{history.signed.des}}</span>
+            </ion-col>
+            <ion-col col-6 no-padding>
+              <ion-row class="signed-logo">
+                <img [src]="history.signed.logo">
+              </ion-row>
+            </ion-col>
+          </ion-row>
+
+          <div class="detail-block">
+            <span class="detail-title">{{history.title}}</span><br>
+            <div class="detail-des">Rate of {{history.rate}} cents<br>
+              {{history.dur}} months term<br>
+              {{history.startdate}} - {{history.enddate}}</div>
+            <p></p>
+          </div>
+        </ion-col>
+
+      </ion-row>
+    </ion-row>
+  </div>
+
+</ion-content>

@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
+import { HomePage } from './home/home';
+import { EntitiesPage } from './entities/entities';
+import { BillingPage } from './billing/billing';
+import { ProfilePage } from './profile/profile';
 
-import { ContactPage } from '../contact/contact';
-import { HomePage } from '../home/home';
-import { EntitiesPage } from '../entities/entities';
-import { BillingPage } from './../billing/billing';
-import { ProfilePage } from '../profile/profile';
+
 
 @Component({
   templateUrl: 'tabs.html'

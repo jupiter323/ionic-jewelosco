@@ -1,9 +1,9 @@
 import { Component, ViewChild } from '@angular/core';
 import { IonicPage, NavController, NavParams, Platform } from 'ionic-angular';
 import { SignaturePad } from 'angular2-signaturepad/signature-pad';
-import { RisktolerancePage } from '../risktolerance/risktolerance';
-import { TermsandconditionsPage } from '../termsandconditions/termsandconditions';
 import { TabsPage } from '../tabs/tabs';
+import { RisktolerancePage } from './risktolerance/risktolerance';
+import { TermsandconditionsPage } from './termsandconditions/termsandconditions';
 
 /**
  * Generated class for the RegistrationPage page.

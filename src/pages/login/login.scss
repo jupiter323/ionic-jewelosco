@@ -94,7 +94,7 @@ page-login {
         }
     }
     ion-content {}
-    .content-md {        
+    .content-md {
         background-color: #19264d !important;
         .logo {
             -webkit-animation: slideInBothWaysScaleLogo ease-in 1;
@@ -191,14 +191,14 @@ page-login {
                     }
                     align-items: center;
                     .toggle-md.toggle-checked .toggle-icon {
-                        background-color: #8fdcf1!important;
+                        background-color: #8fdcf1 !important;
                     }
-                    .remember-range.toggle-md {                     
+                    .remember-range.toggle-md {
                         margin-left: 0;
                         padding-left: 0;
                         .toggle-icon {
                             background-color: #555e7b;
-                        }                                     
+                        }
                     }
                     .remember-label {
                         margin-left: 10px;
@@ -360,14 +360,14 @@ page-login {
                     }
                     align-items: center;
                     .toggle-ios.toggle-checked .toggle-icon {
-                        background-color: #1EB8E3!important;
+                        background-color: #1EB8E3 !important;
                     }
-                    .remember-range.toggle-ios {                    
+                    .remember-range.toggle-ios {
                         margin-left: 0;
                         padding-left: 0;
                         .toggle-icon {
                             background: none;
-                        }                     
+                        }
                         .toggle-icon::before {
                             background: #19264d;
                             bottom: 0px;
@@ -375,13 +375,12 @@ page-login {
                             right: 0px;
                             left: 0px;
                             border: 1px solid #465070;
-                        }                    
+                        }
                         .toggle-inner {
                             // background-color: white;
                             // top: 1px;
                         }
                     }
-               
                     .remember-label {
                         margin-left: 10px;
                         text-align: left;
@@ -449,15 +448,18 @@ page-login {
         }
     }
 }
+
+.alert-ios .alert-button:last-child {
+    font-weight: normal;
+}
+
 .alert-md .alert-wrapper {
     text-align: center;
-    border-radius: 10px!important;
+    border-radius: 10px !important;
     .alert-head {
         text-align: center;
-
     }
     .alert-button {
-        margin: auto;      
-        
+        margin: auto;
     }
 }

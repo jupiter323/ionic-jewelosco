@@ -1,0 +1,73 @@
+.md .action-sheet-group {
+    border-radius: 10px;
+    margin: 10px;
+    .action-sheet-button {
+        // border-bottom: 1px solid rgba($color: #707070, $alpha: 0.4);
+        .button-inner {
+            color: #007AFF;           
+            font-size: 20px;
+            justify-content: center !important;
+        }
+    }
+}
+
+page-entitiesmoredetail {
+    ion-header {
+        .round {
+            margin: 0 15px 15px 15px !important;
+            width: calc(100% - 30px) !important;
+            height: 30px !important;
+            background: rgba($color: white, $alpha: 0.2) !important;
+            font-family: Montserrat-Medium !important;
+        }
+        .call-history {
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 15px;
+            border-top: 1px solid rgba($color: white, $alpha: 0.1);
+            font-size: 12px;
+            font-family: Montserrat-Medium;
+        }
+    }
+    .header-ios .round {
+        border-radius: 15px !important;
+    }
+    ion-content {
+        background: #E9EBED !important;
+        ion-card {
+            .title-edit {
+                justify-content: space-between;
+                align-items: center;
+                span {
+                    font-size: 12px;
+                    color: #43535F;
+                    font-family: Montserrat-Bold
+                }
+            }
+            p.location-detail {
+                width: 50%;
+                font-size: 12px;
+                color: #43535F;
+                font-family: Montserrat-Medium;
+            }
+            .detail-block {
+                border: 1px solid #E5E9EC;
+                margin-top: 20px;
+                padding: 15px;
+                .detail-title {
+                    font-size: 10px;
+                    font-family: Montserrat-SemiBold;
+                    color: #A3ADB7;
+                }
+                .detail-des {
+                    font-size: 12px;
+                    color: #43535F;
+                    font-family: Montserrat-Bold
+                }
+            }
+        }
+        .card-ios .detail-block {
+            border-radius: 10px;
+        }
+    }
+}

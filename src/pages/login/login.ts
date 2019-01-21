@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams, Platform, AlertController } from '
 import { TabsPage } from '../tabs/tabs';
 import { ForgotPage } from '../forgot/forgot';
 import { RegistrationPage } from '../registration/registration';
+import { GlobaldataProvider } from '../../providers/globaldata/globaldata';
 
 
 /**
@@ -28,6 +29,7 @@ export class LoginPage {
 
 
   constructor(
+    public globalService:GlobaldataProvider,
     private altCtrl: AlertController,
     public navCtrl: NavController, public navParams: NavParams, public plt: Platform) {
     if (plt.is('ios')) {
@@ -40,6 +42,7 @@ export class LoginPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad LoginPage');
+
   }
 
   forgot() {
