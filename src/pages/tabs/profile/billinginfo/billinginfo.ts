@@ -3,7 +3,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { GlobaldataProvider } from '../../../../providers/globaldata/globaldata';
 
 /**
- * Generated class for the ProfilechangepassPage page.
+ * Generated class for the billinginfo page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -11,19 +11,19 @@ import { GlobaldataProvider } from '../../../../providers/globaldata/globaldata'
 
 @IonicPage()
 @Component({
-  selector: 'page-profilechangepass',
-  templateUrl: 'profilechangepass.html',
+  selector: 'page-billinginfo',
+  templateUrl: 'billinginfo.html',
 })
-export class ProfilechangepassPage { 
+export class BillinginfoPage { 
   public user: any = {};
   constructor(public navCtrl: NavController, public navParams: NavParams, public gs: GlobaldataProvider) {
   
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad ProfilechangepassPage');
+  
   }
-  submit() {
+  save() {
     this.navCtrl.pop();
   }
 

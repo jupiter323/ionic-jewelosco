@@ -1,0 +1,58 @@
+<!--
+  Generated template for the SecuritysettingsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-row class="header-row">
+    <ion-row class="header-title">
+      <ion-col col-1>
+        <ion-icon name="ios-arrow-back" (click)="navCtrl.pop()"></ion-icon>
+      </ion-col>
+      <span>
+        Proile edit
+      </span>
+      <ion-col col-1>
+      </ion-col>
+      <div class="right-icon" (click)="save()">
+        Save
+      </div>
+    </ion-row>
+  </ion-row>
+
+</ion-header>
+
+
+<ion-content>
+  <ion-row class="go-arrow" (click)="goRisk()">
+    <span>Risk Tolerance</span>
+    <ion-icon name="ios-arrow-forward"></ion-icon>
+  </ion-row>
+
+  <div class="e-signature">
+    <span [ngClass]="{'drawing-active': isDrawing}">E-Signature</span>
+    <div class="sig-panel">
+      <signature-pad [options]="signaturePadOptions" (onBeginEvent)="drawStart()" (onEndEvent)="drawComplete()"></signature-pad>
+
+    </div>
+    <p (click)="clearPad()" class="clear-span">Clear</p>
+  </div>
+  <div [ngClass]="isIosPlatform?'line-edge-ios':'line-edge-md'"></div>
+  <div class="sig-initial">
+    <span>Initials</span>
+    <p *ngIf="isIosPlatform">ZM</p>
+  </div>
+  <div [ngClass]="isIosPlatform?'line-edge-ios':'line-edge-md'"></div>
+  <div class="toggle-box">
+    <ion-row>
+      <ion-toggle [(ngModel)]="autoRenew"></ion-toggle>
+      <span>Auto Renew</span>
+    </ion-row>
+    <ion-row>
+      <ion-toggle [(ngModel)]="actNot"></ion-toggle>
+      <span>Activate Notifications</span>
+    </ion-row>
+  </div>
+</ion-content>

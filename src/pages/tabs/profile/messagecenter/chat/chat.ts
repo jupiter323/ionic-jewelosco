@@ -1,7 +1,7 @@
 import { Component, ViewChild } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Events, Content, TextInput } from 'ionic-angular';
-import { ChatServiceProvider, ChatMessage, UserInfo } from "../../../../providers/chat-service/chat-service";
+import { ChatServiceProvider, ChatMessage, UserInfo } from "../../../../../providers/chat-service/chat-service";
 /**
  * Generated class for the ChatPage page.
  *

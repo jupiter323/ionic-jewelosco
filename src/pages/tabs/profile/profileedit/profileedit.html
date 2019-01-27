@@ -6,13 +6,49 @@
 -->
 <ion-header>
 
-  <ion-navbar>
-    <ion-title>profileedit</ion-title>
-  </ion-navbar>
+  <ion-row class="header-row">
+    <ion-row class="header-title">
+      <ion-col col-1>
+        <ion-icon name="ios-arrow-back" (click)="navCtrl.pop()"></ion-icon>
+      </ion-col>
+      <span>
+        Proile edit
+      </span>
+      <ion-col col-1>
+      </ion-col>
+      <div class="right-icon" (click)="save()">
+        Save
+      </div>
+    </ion-row>
+  </ion-row>
 
 </ion-header>
 
 
-<ion-content padding>
+<ion-content>
+  <div class="input-box-ios" *ngIf="gs.isIosPlatform">
+    <span>Name</span>
+    <ion-input type="text" placeholder="Zaid Marsala" [(ngModel)]="user.name"></ion-input>
+    <span>Email</span>
+    <ion-input type="text" placeholder="zaid.marsala@amli.com" [(ngModel)]="user.email"></ion-input>
+    <span>Cell Phone</span>
+    <ion-input type="text" placeholder="(203) 283-2849" [(ngModel)]="user.cphone"></ion-input>
+    <span>Company / Organization Phone</span>
+    <ion-input type="text" placeholder="(312) 340-5720" [(ngModel)]="user.ophone"></ion-input>
+  </div>
 
+  <div class="input-box-md" *ngIf="!gs.isIosPlatform">
+    <mat-form-field class="full-width">
+      <input matInput type="text" placeholder="Name" [(ngModel)]="user.name">
+    </mat-form-field>
+    <mat-form-field class="full-width">
+      <input matInput type="text" placeholder="Email" [(ngModel)]="user.email">
+    </mat-form-field>
+    <mat-form-field class="full-width">
+      <input matInput type="text" placeholder="Cell Phone" [(ngModel)]="user.cphone">
+    </mat-form-field>
+    <mat-form-field class="full-width">
+      <input matInput type="text" placeholder="Company / Organization Phone" [(ngModel)]="user.ophone">
+    </mat-form-field>
+  </div>
 </ion-content>

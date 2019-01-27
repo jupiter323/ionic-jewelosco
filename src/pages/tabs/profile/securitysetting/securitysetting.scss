@@ -1,61 +1,6 @@
-page-registration {
+page-securitysetting {
     ion-content {
         background: white !important;
-    }
-    .step {
-        margin-top: 15px;
-        margin-bottom: 15px;
-        text-align: center;
-        .step-line {
-            justify-content: center;
-            align-items: center;
-          
-        }
-        .step-des {
-            width: 330px;
-            margin-left: auto;
-            margin-right: auto;
-            position: relative;
-            font-size: 10px;
-            color: rgba($color: white, $alpha: 0.4);
-            padding: 20px;
-            .active {
-                color: #40D4FD;
-            }
-            span {
-                margin: auto;
-                padding-top: 10px;
-                padding-bottom: 10px;
-                text-align: center;
-            }
-            svg {
-                margin: auto;
-                text-align: center;
-            }
-            ion-col {
-                padding: unset;
-            }
-            .dash-line {
-                position: absolute;
-                left: 0;
-                top: 25px; // width: 96%;
-                // margin-left: 2%;
-            }
-        }
-    }
-    .step-btn {
-        background: #E9EBED;
-        padding: 0px 10px 20px 10px;
-        margin-bottom: 0;
-    }
-    .visa-icon {
-        position: absolute;
-        right: 20px;
-    }
-    .cvv {
-        padding-left: 10px;
-    }
-    .third-step {
         color: #43535F;
         font-family: Montserrat-Bold;
         font-size: 12px;
@@ -73,13 +18,12 @@ page-registration {
             border-top: 1px solid #E5E9EC;
         }
         .e-signature {
-            padding: 15px;           
+            padding: 15px;
             span.drawing-active {
                 color: #A3ADB7;
                 font-size: 10px;
                 font-family: Montserrat-Medium;
             }
-
             .sig-panel {
                 margin-left: -15px;
                 margin-top: 15px;
@@ -113,7 +57,14 @@ page-registration {
                 }
             }
         }
-        
+    }
+    ion-header {
+        .right-icon {
+            color: white;
+            font-size: 12px;
+            font-family: Montserrat-Medium;
+            position: absolute;
+            right: 20px;
+        }
     }
 }
-

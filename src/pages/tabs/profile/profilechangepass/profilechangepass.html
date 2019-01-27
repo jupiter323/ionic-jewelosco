@@ -6,13 +6,45 @@
 -->
 <ion-header>
 
-  <ion-navbar>
-    <ion-title>profilechangepass</ion-title>
-  </ion-navbar>
+  <ion-row class="header-row">
+    <ion-row class="header-title">
+      <ion-col col-1>
+        <ion-icon name="ios-arrow-back" (click)="navCtrl.pop()"></ion-icon>
+      </ion-col>
+      <span>
+        Proile edit
+      </span>
+      <ion-col col-1>
+      </ion-col>
+      <div class="right-icon" (click)="submit()">
+        Submit
+      </div>
+    </ion-row>
+  </ion-row>
 
 </ion-header>
 
 
-<ion-content padding>
+<ion-content>
+  <div class="input-box-ios" *ngIf="gs.isIosPlatform">
+    <span>Old Password</span>
+    <ion-input type="password" placeholder="●●●●●●●●●●" [(ngModel)]="user.oldpass"></ion-input>
+    <span>New Password</span>
+    <ion-input type="password" placeholder="●●●●●●●●●●" [(ngModel)]="user.newpass"></ion-input>
+    <span>Retype New Password</span>
+    <ion-input type="password" placeholder="●●●●●●●●●●" [(ngModel)]="user.cnewpass"></ion-input>
+  </div>
+
+  <div class="input-box-md" *ngIf="!gs.isIosPlatform">
+    <mat-form-field class="full-width">
+      <input matInput type="password" placeholder="Old Password" [(ngModel)]="user.oldpass">
+    </mat-form-field>
+    <mat-form-field class="full-width">
+      <input matInput type="password" placeholder="New Password" [(ngModel)]="user.newpass">
+    </mat-form-field>
+    <mat-form-field class="full-width">
+      <input matInput type="password" placeholder="Retype New Password" [(ngModel)]="user.cnewpass">
+    </mat-form-field>
+  </div>
 
 </ion-content>

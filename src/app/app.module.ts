@@ -24,13 +24,20 @@ import { TermsandconditionsPage } from '../pages/registration/termsandconditions
 import { EntitiesdetailPage } from '../pages/tabs/entities/entitiesdetail/entitiesdetail';
 import { EntitiesmoredetailPage } from '../pages/tabs/entities/entitiesmoredetail/entitiesmoredetail';
 import { ProfilePage } from '../pages/tabs/profile/profile';
-import { ChatPage } from '../pages/tabs/profile/chat/chat';
+import { ChatPage } from '../pages/tabs/profile/messagecenter/chat/chat';
 import { ChatServiceProvider } from '../providers/chat-service/chat-service';
 import { ContracthistoryPage } from '../pages/tabs/entities/contracthistory/contracthistory';
 import { PipesModule } from '../pipes/pipes.module';
 import { GlobaldataProvider } from '../providers/globaldata/globaldata';
 import { ApiProvider } from '../providers/api/api';
 import { BillingdetailPage } from '../pages/tabs/billing/billingdetail/billingdetail';
+import { ProfileeditPage } from '../pages/tabs/profile/profileedit/profileedit';
+import { ProfilechangepassPage } from '../pages/tabs/profile/profilechangepass/profilechangepass';
+import { MessagecenterPage } from '../pages/tabs/profile/messagecenter/messagecenter';
+import { BillinginfoPage } from '../pages/tabs/profile/billinginfo/billinginfo';
+import { SecuritysettingsPage } from '../pages/tabs/profile/securitysetting/securitysetting';
+import { EmailsupportPage } from '../pages/tabs/profile/messagecenter/emailsupport/emailsupport';
+import { CallsupportPage } from '../pages/tabs/profile/messagecenter/callsupport/callsupport';
 
 @NgModule({
   declarations: [
@@ -50,8 +57,14 @@ import { BillingdetailPage } from '../pages/tabs/billing/billingdetail/billingde
     ProfilePage,
     ChatPage,
     ContracthistoryPage,
-    BillingdetailPage
-
+    BillingdetailPage,
+    ProfileeditPage,
+    ProfilechangepassPage,
+    MessagecenterPage,
+    BillinginfoPage,
+    SecuritysettingsPage,
+    EmailsupportPage,
+    CallsupportPage
   ],
   imports: [
     BrowserModule,
@@ -86,7 +99,14 @@ import { BillingdetailPage } from '../pages/tabs/billing/billingdetail/billingde
     ProfilePage,
     ChatPage,
     ContracthistoryPage,
-    BillingdetailPage
+    BillingdetailPage,
+    ProfileeditPage,
+    ProfilechangepassPage,
+    MessagecenterPage,
+    BillinginfoPage,
+    SecuritysettingsPage,
+    EmailsupportPage,
+    CallsupportPage
   ],
   providers: [
     StatusBar,

@@ -15,7 +15,7 @@
       </span>
       <ion-col col-1>
       </ion-col>
-      <div class="right-icon">
+      <div class="right-icon" (click)="goEdit()">
         Edit
       </div>
     </ion-row>
@@ -70,7 +70,7 @@
         <ion-icon name="ios-arrow-forward"></ion-icon>
       </ion-col>
     </ion-row>
-    <ion-row class="card-second-row">
+    <ion-row class="card-second-row" (click)="goBillingInfo()">
       <ion-col col-10>
         <ion-row class="title">
           Billing Info
@@ -83,7 +83,7 @@
   </ion-card>
 
   <ion-card>
-    <ion-row class="card-first-row">
+    <ion-row class="card-first-row" (click)="goPassChange()">
       <ion-col col-10>
         <ion-row class="title">
           Change password
@@ -93,7 +93,7 @@
         <ion-icon name="ios-arrow-forward"></ion-icon>
       </ion-col>
     </ion-row>
-    <ion-row class="card-second-row">
+    <ion-row class="card-second-row" (click)="goSecuritySetting()">
       <ion-col col-10>
         <ion-row class="title">
           Security Settings
@@ -106,7 +106,7 @@
   </ion-card>
 
   <ion-card>
-    <ion-row class="card-first-row">
+    <ion-row class="card-first-row" (click)="goMessageCenter()">
       <ion-col col-10>
         <ion-row class="title">
           Message Center

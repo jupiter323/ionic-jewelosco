@@ -1,4 +1,4 @@
-page-profilechangepass {
+page-billinginfo {
     ion-header {
         .right-icon {
             color: white;
@@ -10,6 +10,13 @@ page-profilechangepass {
     }
     ion-content {
         background: white!important;
+        .visa-icon {
+            position: absolute;
+            right: 20px;
+        }
+        .cvv {
+            padding-left: 10px;
+        }
     }
 
 }

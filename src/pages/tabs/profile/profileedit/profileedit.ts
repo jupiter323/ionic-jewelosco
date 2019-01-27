@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { GlobaldataProvider } from '../../../../providers/globaldata/globaldata';
 
 /**
  * Generated class for the ProfileeditPage page.
@@ -14,12 +15,18 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'profileedit.html',
 })
 export class ProfileeditPage {
+  public user: any = {};
+  constructor(public navCtrl: NavController, public navParams: NavParams, public gs: GlobaldataProvider) {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
+  
     console.log('ionViewDidLoad ProfileeditPage');
+  }
+
+  save() {
+    this.navCtrl.pop();
   }
 
 }

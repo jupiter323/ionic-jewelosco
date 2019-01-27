@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { ChatPage } from '../chat/chat';
+import { ChatPage } from './chat/chat';
+import { EmailsupportPage } from './emailsupport/emailsupport';
+import { CallsupportPage } from './callsupport/callsupport';
 
 /**
  * Generated class for the MessagecenterPage page.
@@ -22,9 +24,18 @@ export class MessagecenterPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad MessagecenterPage');
   }
+  goEmailSupport() {
+    this.navCtrl.push(EmailsupportPage);
+  }
+  goCallCenter() {
+    this.navCtrl.push(CallsupportPage);
+
+  }
   goChat() {
     // this.app.getRootNav().setRoot(ChatPage);
     this.navCtrl.push(ChatPage);
   }
+  ProvideFeedback() {
 
+  }
 }

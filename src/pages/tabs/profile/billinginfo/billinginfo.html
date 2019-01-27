@@ -1,0 +1,121 @@
+<!--
+  Generated template for the BillinginfoPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-row class="header-row">
+    <ion-row class="header-title">
+      <ion-col col-1>
+        <ion-icon name="ios-arrow-back" (click)="navCtrl.pop()"></ion-icon>
+      </ion-col>
+      <span>
+        Billing Info
+      </span>
+      <ion-col col-1>
+      </ion-col>
+      <div class="right-icon" (click)="save()">
+        Save
+      </div>
+    </ion-row>
+  </ion-row>
+
+</ion-header>
+
+
+<ion-content>
+  <div class="input-box-ios" *ngIf="gs.isIosPlatform">
+    <!-- card number -->
+    <span>Card Number</span>
+    <ion-row>
+      <ion-input type="text" placeholder="1928-1849-4729-1928" [(ngModel)]="user.cardnumber"></ion-input>
+      <!-- visa icon -->
+      <div class="visa-icon">
+        <svg id="Icons_1_" xmlns="http://www.w3.org/2000/svg" width="52" height="34" viewBox="0 0 52 34">
+          <g id="Group_829" data-name="Group 829">
+            <path id="Path_53" data-name="Path 53" d="M24.37,8.36c-.539,1.465-1.061,2.93-1.6,4.428h2.576c-.32-1.5-.623-2.963-.926-4.428Z"
+              transform="translate(16.36 5.963)" fill="#b5bec5" />
+            <path id="Path_54" data-name="Path 54" d="M47.863,0H4.137A4.131,4.131,0,0,0,0,4.12V29.88A4.131,4.131,0,0,0,4.137,34H47.863A4.131,4.131,0,0,0,52,29.88V4.12A4.153,4.153,0,0,0,47.863,0ZM30.627,18.752a6.811,6.811,0,0,0-1.064-.65,10.478,10.478,0,0,1-1.768-1.094,3.064,3.064,0,0,1-.5-4.274,4.628,4.628,0,0,1,2.815-1.795c.361-.085.738-.12,1.116-.188a.5.5,0,0,1,.155-.034H32.6c.361.051.7.1,1.064.171.343.068.687.171,1.03.274a1.007,1.007,0,0,1,.258.1c-.189.855-.361,1.692-.549,2.53-.412-.137-.807-.274-1.219-.376a4.489,4.489,0,0,0-2.232-.051,1.923,1.923,0,0,0-.755.41.681.681,0,0,0-.017,1.077,4.167,4.167,0,0,0,.79.564c.549.325,1.133.6,1.682.94a3.362,3.362,0,0,1,1.6,1.9,3.668,3.668,0,0,1-1.442,3.932,5.7,5.7,0,0,1-2.7,1.009,9.736,9.736,0,0,1-4.481-.462c-.086-.034-.155-.068-.258-.1.189-.889.378-1.761.567-2.65.12.051.223.1.326.137a6.346,6.346,0,0,0,2.85.615,2.72,2.72,0,0,0,1.322-.291A.944.944,0,0,0,30.627,18.752ZM25.545,12.12c-.755,3.556-1.528,7.111-2.283,10.667-.052.222-.137.291-.361.291-.858-.017-1.717,0-2.575,0h-.275c.876-4.068,1.734-8.1,2.609-12.12H25.8C25.717,11.35,25.631,11.744,25.545,12.12Zm-4.429-.752c-1.614,3.846-3.227,7.675-4.841,11.521a.267.267,0,0,1-.292.188H13.047c-.155,0-.206-.034-.24-.188-.824-3.162-1.648-6.308-2.455-9.47a1.617,1.617,0,0,0-.979-1.2,14.292,14.292,0,0,0-2.781-.906.438.438,0,0,1-.12-.034V11.2c.034-.239.189-.256.395-.256,1.648.017,3.313,0,4.961,0a1.467,1.467,0,0,1,1.545,1.265c.429,2.222.841,4.444,1.27,6.684a.486.486,0,0,0,.1.239q1.6-4.1,3.227-8.171h3.3A2.9,2.9,0,0,1,21.116,11.368ZM42.609,23.06c-.086-.427-.189-.872-.275-1.3-.1-.513-.1-.513-.635-.513H38.386a.248.248,0,0,0-.275.188c-.172.5-.343.974-.532,1.453-.034.068-.12.154-.189.154-1.047.017-2.094,0-3.159,0a1.3,1.3,0,0,0,.069-.188c1.545-3.658,3.09-7.333,4.618-10.991a1.429,1.429,0,0,1,1.408-.94h2.627c.841,4.034,1.7,8.068,2.541,12.12C44.532,23.06,43.571,23.06,42.609,23.06Z"
+              fill="#b5bec5" />
+          </g>
+        </svg>
+      </div>
+    </ion-row>
+    <!-- expires -->
+    <span>Expires</span>
+    <ion-row>
+      <ion-col col-6 no-padding>
+        <ion-input matInput type="text" placeholder="Expires" [(ngModel)]="user.expires"></ion-input>
+      </ion-col>
+      <ion-col col-6 class="cvv" no-padding>
+        <ion-input matInput type="text" placeholder="CVV" [(ngModel)]="user.cvv"></ion-input>
+      </ion-col>
+    </ion-row>
+    <!-- account -->
+    <span>Account #</span>
+    <ion-input matInput type="text" placeholder="192034820" [(ngModel)]="user.account"></ion-input>
+    <!-- routing -->
+    <span>Routing #</span>
+    <ion-input matInput type="text" placeholder="572930284" [(ngModel)]="user.routing"></ion-input>
+    <!-- bill -->
+    <span>Billing address</span>
+    <ion-input matInput type="text" placeholder="141 W Jackson Blvd, #300, Chicago, IL" [(ngModel)]="user.billaddress"></ion-input>
+    <!-- mail -->
+    <span>Mailing address</span>
+    <ion-input matInput type="text" placeholder="141 W Jackson Blvd, #300, Chicago, IL" [(ngModel)]="user.mailaddress"></ion-input>
+  </div>
+
+  <div class="input-box-md" *ngIf="!gs.isIosPlatform">
+    <!-- card number -->
+    <ion-row>
+      <mat-form-field class="full-width">
+        <input matInput type="text" placeholder="Card Number" [(ngModel)]="user.cardnumber">
+      </mat-form-field>
+      <!-- visa icon -->
+      <div class="visa-icon">
+        <svg id="Icons_1_" xmlns="http://www.w3.org/2000/svg" width="52" height="34" viewBox="0 0 52 34">
+          <g id="Group_829" data-name="Group 829">
+            <path id="Path_53" data-name="Path 53" d="M24.37,8.36c-.539,1.465-1.061,2.93-1.6,4.428h2.576c-.32-1.5-.623-2.963-.926-4.428Z"
+              transform="translate(16.36 5.963)" fill="#b5bec5" />
+            <path id="Path_54" data-name="Path 54" d="M47.863,0H4.137A4.131,4.131,0,0,0,0,4.12V29.88A4.131,4.131,0,0,0,4.137,34H47.863A4.131,4.131,0,0,0,52,29.88V4.12A4.153,4.153,0,0,0,47.863,0ZM30.627,18.752a6.811,6.811,0,0,0-1.064-.65,10.478,10.478,0,0,1-1.768-1.094,3.064,3.064,0,0,1-.5-4.274,4.628,4.628,0,0,1,2.815-1.795c.361-.085.738-.12,1.116-.188a.5.5,0,0,1,.155-.034H32.6c.361.051.7.1,1.064.171.343.068.687.171,1.03.274a1.007,1.007,0,0,1,.258.1c-.189.855-.361,1.692-.549,2.53-.412-.137-.807-.274-1.219-.376a4.489,4.489,0,0,0-2.232-.051,1.923,1.923,0,0,0-.755.41.681.681,0,0,0-.017,1.077,4.167,4.167,0,0,0,.79.564c.549.325,1.133.6,1.682.94a3.362,3.362,0,0,1,1.6,1.9,3.668,3.668,0,0,1-1.442,3.932,5.7,5.7,0,0,1-2.7,1.009,9.736,9.736,0,0,1-4.481-.462c-.086-.034-.155-.068-.258-.1.189-.889.378-1.761.567-2.65.12.051.223.1.326.137a6.346,6.346,0,0,0,2.85.615,2.72,2.72,0,0,0,1.322-.291A.944.944,0,0,0,30.627,18.752ZM25.545,12.12c-.755,3.556-1.528,7.111-2.283,10.667-.052.222-.137.291-.361.291-.858-.017-1.717,0-2.575,0h-.275c.876-4.068,1.734-8.1,2.609-12.12H25.8C25.717,11.35,25.631,11.744,25.545,12.12Zm-4.429-.752c-1.614,3.846-3.227,7.675-4.841,11.521a.267.267,0,0,1-.292.188H13.047c-.155,0-.206-.034-.24-.188-.824-3.162-1.648-6.308-2.455-9.47a1.617,1.617,0,0,0-.979-1.2,14.292,14.292,0,0,0-2.781-.906.438.438,0,0,1-.12-.034V11.2c.034-.239.189-.256.395-.256,1.648.017,3.313,0,4.961,0a1.467,1.467,0,0,1,1.545,1.265c.429,2.222.841,4.444,1.27,6.684a.486.486,0,0,0,.1.239q1.6-4.1,3.227-8.171h3.3A2.9,2.9,0,0,1,21.116,11.368ZM42.609,23.06c-.086-.427-.189-.872-.275-1.3-.1-.513-.1-.513-.635-.513H38.386a.248.248,0,0,0-.275.188c-.172.5-.343.974-.532,1.453-.034.068-.12.154-.189.154-1.047.017-2.094,0-3.159,0a1.3,1.3,0,0,0,.069-.188c1.545-3.658,3.09-7.333,4.618-10.991a1.429,1.429,0,0,1,1.408-.94h2.627c.841,4.034,1.7,8.068,2.541,12.12C44.532,23.06,43.571,23.06,42.609,23.06Z"
+              fill="#b5bec5" />
+          </g>
+        </svg>
+      </div>
+    </ion-row>
+
+    <!-- expires -->
+    <ion-row>
+      <ion-col col-6 no-padding>
+        <mat-form-field class="full-width">
+          <input matInput type="text" placeholder="Expires" [(ngModel)]="user.expires">
+        </mat-form-field>
+      </ion-col>
+      <ion-col col-6 class="cvv" no-padding>
+        <mat-form-field class="full-width">
+          <input matInput type="text" placeholder="CVV" [(ngModel)]="user.cvv">
+        </mat-form-field>
+      </ion-col>
+    </ion-row>
+    <!-- account -->
+    <mat-form-field class="full-width">
+      <input matInput type="text" placeholder="Account #" [(ngModel)]="user.account">
+    </mat-form-field>
+    <!-- routing -->
+    <mat-form-field class="full-width">
+      <input matInput type="text" placeholder="Routing #" [(ngModel)]="user.routing">
+    </mat-form-field>
+    <!-- bill -->
+    <mat-form-field class="full-width">
+      <input matInput type="text" placeholder="Billing address" [(ngModel)]="user.billaddress">
+    </mat-form-field>
+    <!-- mail -->
+    <mat-form-field class="full-width">
+      <input matInput type="text" placeholder="Mailing address" [(ngModel)]="user.mailaddress">
+    </mat-form-field>
+  </div>
+
+
+</ion-content>

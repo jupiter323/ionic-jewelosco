@@ -13,7 +13,7 @@
       <span>
         {{billingitem.loc}}
       </span>
-      <ion-col col-1 (click)="openMenu('filter')">
+      <ion-col col-1>
         <div class="right-icon">
           <svg xmlns="http://www.w3.org/2000/svg" width="19.007" height="22.999" viewBox="0 0 19.007 22.999">
             <g id="Group_909" data-name="Group 909" transform="translate(-327 -52)">
@@ -25,9 +25,7 @@
                 stroke="#fff" stroke-linecap="round" stroke-width="1.5" />
             </g>
           </svg>
-
         </div>
-
       </ion-col>
     </ion-row>
   </ion-row>
@@ -53,5 +51,60 @@
 </ion-header>
 
 <ion-content padding>
+  <ion-card *ngFor="let billingdetail of billingdetails;let index = index" (click)="clickBillingDetail(index)">
+    <ion-row class="top-row">
+      <ion-col col-6>
+        <div class="item-des" text-wrap>
+          <ion-label class="loc-row">{{billingdetail.address}}</ion-label>
+        </div>
+      </ion-col>
+      <!-- unpaid icon -->
+      <ion-col col-5 *ngIf="billingdetail.status=='unpaid'">
+        <ion-row>
+          <button ion-button class="unpaid-button" color=unpaid>{{billingdetail.status}}</button>
+        </ion-row>
+      </ion-col>
+      <!--arrow  -->
+      <ion-col col-1>
+        <ion-row *ngIf="billingdetail.selected">
+          <ion-icon name="ios-checkmark"></ion-icon>
+        </ion-row>
+      </ion-col>
+    </ion-row>
 
+    <ion-row class="detail-block">
+      <ion-col col-6>
+        <span class="detail-title" no-padding>Account</span><br>
+        <span class="detail-des" no-padding>{{billingdetail.account}}</span>
+        <p></p>
+        <span class="detail-title" no-padding>Bill Period Start</span><br>
+        <span class="detail-des" no-padding>{{billingdetail.billstart}}</span>
+      </ion-col>
+      <ion-col col-6>
+        <span class="detail-title" no-padding>Due Date</span><br>
+        <span class="detail-des" no-padding>{{billingdetail.due}}</span>
+        <p></p>
+        <span class="detail-title" no-padding>Bill Period End</span><br>
+        <span class="detail-des" no-padding>{{billingdetail.billend}}</span>
+      </ion-col>
+    </ion-row>
+
+    <ion-row class="under-detail">
+      <ion-col col-6>
+        <span class="detail-title" no-padding>Usage</span><br>
+        <span class="detail-des" no-padding>{{billingdetail.usage}}kWh</span>
+      </ion-col>
+      <ion-col col-6>
+        <span class="detail-title" no-padding>Amount</span><br>
+        <span class="detail-des amount" no-padding>${{billingdetail.amount}}</span>
+      </ion-col>
+    </ion-row>
+
+  </ion-card>
+
+  <div class="pay-des">
+    If you want to pay partially,<br>
+    please deselect a required item.
+  </div>
+  <button ion-button class="normal-button">{{buttonTitle}}</button>
 </ion-content>
