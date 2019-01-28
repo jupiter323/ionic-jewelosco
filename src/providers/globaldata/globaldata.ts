@@ -12,6 +12,7 @@ import { LoadingController, Loading, Platform } from 'ionic-angular';
 @Injectable()
 export class GlobaldataProvider {
 
+  public isTabHidden:boolean;
   public loading: Loading;
   public isIosPlatform:boolean;
   
@@ -26,7 +27,15 @@ export class GlobaldataProvider {
     console.log('Hello GlobaldataProvider Provider');
   }
 
+  // tab hidden start
+  settingTabHidden(value:boolean) {
+    this.isTabHidden = value;
+  }
+  getTabHiddenStatus(){
+    return this.isTabHidden;
+  }
 
+  // tab hidden end
   presentLoading() {
 
     this.loading = this.loadingCtrl.create({

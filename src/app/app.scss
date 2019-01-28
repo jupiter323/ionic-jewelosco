@@ -32,11 +32,18 @@
     font-family: 'Montserrat-SemiBold';
     src: url('../assets/fonts/Montserrat-SemiBold.ttf') format("truetype");
 }
+@font-face {
+    font-family: 'Montserrat-Light';
+    src: url('../assets/fonts/Montserrat-Light.ttf') format("truetype");
+}
 
 ion-row {
     width: 100%;
 }
 
+ion-tabs.hidden div.tabbar {
+    display: none
+}
 .full-height {
     height: 100%;
 }
@@ -44,7 +51,19 @@ ion-row {
 .full-width {
     width: 100%;
 }
+.avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 24px;
+    overflow: hidden;
+    img {
+        width: 48px;
+        height: 48px;
+        // transform-origin: top;
+        // transform: scale(2,2);
+    }
 
+}
 .ios .normal-button {
     width: 100%;
     height: 38px;
@@ -362,7 +381,11 @@ ion-content {
 .header-ios {
     padding-top: 5%;
 }
-
+.btn-wrap {
+    padding:0 20px 20px 20px;
+    background: #E9EBED;
+    margin-bottom: 0px;
+}
 ion-tabs {
     .tab-button {
         color: #1EB8E3 !important;
@@ -410,8 +433,13 @@ ion-icon {
     &[class*="custom-icon-profile"] {
         mask-image: url(../assets/imgs/profileIcon.svg);
     }
-}
 
+}
+.mat-area.mat-input-element.mat-form-field-autofill-control {
+    font-size: 16px!important;
+    color: #43535F!important;
+    font-family: Montserrat-Medium!important;
+}
 .mat-elevation-z0 {
     box-shadow: 0 0 0 0 rgba(0, 0, 0, .2), 0 0 0 0 rgba(0, 0, 0, .14), 0 0 0 0 rgba(0, 0, 0, .12)
 }

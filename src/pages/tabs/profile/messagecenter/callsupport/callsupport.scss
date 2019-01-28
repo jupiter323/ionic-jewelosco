@@ -1,3 +1,72 @@
 page-callsupport {
+    ion-content {
+        .input-box {
+            margin-top: 0px !important;
+        }
+        .input-box.input-des {
+            margin-top: 15px !important;
+            height: 138px;
+            textarea {
+                height: 120px;
+            }
+            ion-textarea {
+                font-family: Montserrat-Medium;
+                font-size: 16px;
+                padding-left: 25px;
+            }
+        }
+    }
+    .content-md {
+        .active {
+            border-bottom: 1px solid #1EB8E3 !important;
+        }
+        .input-box {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+            color: white;
+        }
+        .input-box.input-des {
+            border-radius: 0px !important;
+            ion-textarea {
+                font-family: Montserrat-Medium;
+                font-size: 16px;
+                padding-left: 0px !important;
+            }
+        }
+    }
+    .note {
+        width: 100%;
+        margin-top: 20px;
+        p {
+            font-size: 16px;
+            color: white;
+            text-align: center;
+            width: 80%;
+            margin: auto;
+            font-family: Montserrat-Light;
+        }
+    }
+    .requested {
+        text-align: center;
+        .requested-logo {
+            justify-content: center;
+        }
+        .requested-des {
+            color: #40D4FD;
+            font-size: 16px;
+            font-family: Montserrat-Bold;
+        }
+        .phone {
+            color: #FFFFFF;
+            font-size: 34px;
+            font-family: Montserrat-Bold;
+        }
+        .requested-sub-des {
+            font-size: 16px;
+            font-family: Montserrat-Light;
+            color: white;
+            width: 80%;
+            margin: auto;
 
+        }
+    }
 }

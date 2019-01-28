@@ -20,37 +20,61 @@
 
 
 <ion-content padding>
-  <div *ngIf="gs.isIosPlatform">
-    <ion-row class="input-box">
-      <ion-row class="input-email">
-        <ion-col col-4>
-          <ion-label>Phone</ion-label>
-        </ion-col>
-        <ion-col col-8>
-          <ion-input type="number" placeholder="mail@example.com" [(ngModel)]="supportFormData.phone"></ion-input>
-        </ion-col>
+  <div class="unrequested" *ngIf="!isRequested">
+    <div *ngIf="gs.isIosPlatform">
+      <ion-row class="input-box">
+        <ion-row class="input-email">
+          <ion-col col-4>
+            <ion-label>Phone</ion-label>
+          </ion-col>
+          <ion-col col-8>
+            <ion-input type="number" placeholder="(2) 345 4533 3423" [(ngModel)]="supportFormData.phone"></ion-input>
+          </ion-col>
+        </ion-row>
       </ion-row>
-    </ion-row>
-    <ion-row class="input-box input-des">
-      <ion-textarea type="text" placeholder="Describe your issue in details" [(ngModel)]="supportFormData.des"></ion-textarea>
-    </ion-row>
-  </div>
-
-  <div *ngIf="!gs.isIosPlatform">
-    <ion-row class="input-box">
-      <ion-row [ngClass]="isFocusEmail?'input-email active':'input-email'">
-        <ion-col col-12>
-          <ion-input type="number" placeholder="mail@example.com" [(ngModel)]="supportFormData.email" (ionFocus)='isFocus("input")'
-            (ionBlur)='isBlur("input")'></ion-input>
-        </ion-col>
+      <ion-row class="input-box input-des">
+        <ion-textarea type="text" placeholder="Describe your issue in details" [(ngModel)]="supportFormData.des"></ion-textarea>
       </ion-row>
-    </ion-row>
-    <ion-row [ngClass]="isFocusDes?'input-box input-des active':'input-box input-des'">
-      <ion-textarea type="text" placeholder="Describe your issue in details" [(ngModel)]="supportFormData.des"
-        (ionFocus)='isFocus("text")' (ionBlur)='isBlur("text")'></ion-textarea>
-    </ion-row>
+    </div>
+
+    <div *ngIf="!gs.isIosPlatform">
+      <ion-row class="input-box">
+        <ion-row [ngClass]="isFocusEmail?'input-email active':'input-email'">
+          <ion-col col-12>
+            <ion-input type="number" placeholder="(2) 345 4533 3423" [(ngModel)]="supportFormData.email" (ionFocus)='isFocus("input")'
+              (ionBlur)='isBlur("input")'></ion-input>
+          </ion-col>
+        </ion-row>
+      </ion-row>
+      <ion-row [ngClass]="isFocusDes?'input-box input-des active':'input-box input-des'">
+        <ion-textarea type="text" placeholder="Describe your issue in details" [(ngModel)]="supportFormData.des"
+          (ionFocus)='isFocus("text")' (ionBlur)='isBlur("text")'></ion-textarea>
+      </ion-row>
+    </div>
+
+    <button ion-button class="normal-button" (click)="request()">Request</button>
+    <div class="note">
+      <p>Once your request has been received, you will be contacted by the next available agent</p>
+    </div>
   </div>
-
-  <button ion-button class="normal-button" (click)="request()">Request</button>
-
+  <div class="requested" *ngIf="isRequested">
+    <ion-row class="requested-logo">
+      <svg xmlns="http://www.w3.org/2000/svg" width="96" height="96" viewBox="0 0 96 96">
+        <g id="Group_965" data-name="Group 965" transform="translate(-132 -104)">
+          <g id="Ellipse_18" data-name="Ellipse 18" transform="translate(132 104)" fill="none" stroke="rgba(255,255,255,0.2)"
+            stroke-width="1">
+            <circle cx="48" cy="48" r="48" stroke="none" />
+            <circle cx="48" cy="48" r="47.5" fill="none" />
+          </g>
+          <path id="Path_19" data-name="Path 19" d="M308.036,69.357,320.81,84.331l23.1-30.871" transform="translate(-146.97 83.549)"
+            fill="none" stroke="#40d4fd" stroke-linecap="round" stroke-linejoin="round" stroke-width="6" />
+        </g>
+      </svg>
+    </ion-row>
+    <p class="requested-des">Call requested</p>
+    <p class="requested-sub-des">Custommer Support will call you at</p>
+    <p class="phone">{{phone}}</p>
+    <p class="requested-sub-des">as soon as the first agent becomes available.</p>
+    <button ion-button class="normal-button" color=opacity (click)="cancelCall()">Cancel call</button>
+  </div>
 </ion-content>

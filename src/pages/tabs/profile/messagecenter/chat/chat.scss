@@ -1,35 +1,65 @@
 page-chat {
-    $userBackgroundColor: #387ef5;
-    $toUserBackgroundColor: #fff;
+    $userBackgroundColor: #1EB8E3;
+    $toUserBackgroundColor: #A3ADB7;
+    ion-header {
+        .support-info {
+            margin-top: 0;
+            margin-bottom: 10px;
+            .support-inner {
+                width: 170px;
+                margin: auto;
+                .user-img {
+                    border-radius: 24px;
+                    width: 48px;
+                    height: 48px;
+                    overflow: hidden; // display: block;               
+                }
+                .title {
+                    padding: 10px 0 0px 5px;
+                    .agent {
+                        font-size: 11px;
+                        font-family: Montserrat-SemiBold;
+                        color: rgba($color: white, $alpha: 0.4)
+                    }
+                    .support-name {
+                        margin-top: 5px;
+                        font-size: 16px;
+                        font-family: Montserrat-Bold;
+                        color: white
+                    }
+                }
+            }
+        }
+    }
     ion-content .scroll-content {
-        background-color: #f5f5f5;
+        background-color: #E9EBED;
     }
     ion-footer {
-        box-shadow: 0 0 4px rgba(0, 0, 0, 0.11);
-        background-color: #fff;
+        background-color: #E9EBED;
         height: 255px;
     }
     .line-breaker {
         white-space: pre-line;
     }
     .input-wrap {
-        padding: 0 5px;
-        ion-textarea {
-            position: static;
+        .detail-up {
+            margin: 5px 12px;
         }
-        ion-col.col {
-            padding: 0;
-        }
-        button {
-            width: 100%;
-            height: 55px;
-            font-size: 1.3em;
-            margin: 0;
-        }
-        textarea {
-            border-bottom: 1px $userBackgroundColor;
-            border-style: solid;
-        }
+        .send-text-area {
+            border: 1px solid #B5BEC5;
+            height: 36px;
+            border-radius: 18px;
+            background: white;
+            input {
+                font-size: 16px;
+                padding-left: 10px;
+                height: 20px;
+                font-family: Montserrat-Medium;
+            }
+            svg {
+                margin: 2.5px 2.5px;
+            }
+        } 
     }
     .message-wrap {
         padding: 0 10px;
@@ -58,11 +88,13 @@ page-chat {
                 .msg-content {
                     position: relative;
                     margin-top: 5px;
-                    border-radius: 5px;
-                    padding: 8px;
+                    border-radius: 23px;
+                    padding: 8px 10px 8px 10px;
                     border: 1px solid #ddd;
                     color: #fff;
                     width: auto;
+                    font-family: Montserrat-Medium;
+                    font-size: 14px;
                     span.triangle {
                         background-color: #fff;
                         border-radius: 2px;
@@ -86,14 +118,14 @@ page-chat {
                 float: left;
             }
             .msg-detail {
-                padding-left: 60px;
+                padding-right: 60px;
             }
             .user-img {
                 left: 0;
             }
             .msg-content {
-                color: #343434;
                 span.triangle {
+                    background: $toUserBackgroundColor;
                     border-top-width: 0;
                     border-right-width: 0;
                     left: -5px;
@@ -102,7 +134,7 @@ page-chat {
         }
         .message.right {
             .msg-detail {
-                padding-right: 60px;
+                padding-left: 60px;
                 .msg-info {
                     text-align: right;
                 }

@@ -1,0 +1,14 @@
+page-troublshoot {
+    ion-content {
+        background: white !important;
+        .row-item {
+            border-bottom: 1px solid #E5E9EC;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 15px;
+            font-size: 12px;
+            font-family: Montserrat-Medium;
+            color: #43535F;
+        }
+    }
+}

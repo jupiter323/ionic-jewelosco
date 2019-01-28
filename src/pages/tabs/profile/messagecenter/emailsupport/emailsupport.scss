@@ -10,6 +10,9 @@ page-emailsupport {
                 font-family: Montserrat-Medium;
                 font-size: 16px;
                 padding-left: 25px;
+                textarea {
+                    height: 250px;
+                }
             }
         }
     }

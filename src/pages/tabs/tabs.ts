@@ -3,6 +3,7 @@ import { HomePage } from './home/home';
 import { EntitiesPage } from './entities/entities';
 import { BillingPage } from './billing/billing';
 import { ProfilePage } from './profile/profile';
+import { GlobaldataProvider } from '../../providers/globaldata/globaldata';
 
 
 
@@ -16,7 +17,7 @@ export class TabsPage {
   tab3Root = BillingPage;
   tab4Root = ProfilePage;
 
-  constructor() {
-
+  constructor(public gs:GlobaldataProvider) {
+  
   }
 }

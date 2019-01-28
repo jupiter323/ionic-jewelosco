@@ -1,0 +1,23 @@
+page-trainingvideos {
+    ion-content {
+        background: #E9EBED !important;
+        ion-card {
+            .bottom-row {
+                padding: 10px;
+                .top-des {
+                    color: #43535F;
+                    font-size: 12px;
+                    font-family: Montserrat-Bold;
+                }
+                .dur {
+                    color: #A3ADB7;
+                    font-size: 12px;
+                    font-family: Montserrat-Medium;
+                }
+                .play-btn {
+                    margin: auto;
+                }
+            }
+        }
+    }
+}

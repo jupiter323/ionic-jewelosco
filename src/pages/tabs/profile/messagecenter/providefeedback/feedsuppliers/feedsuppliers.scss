@@ -1,0 +1,43 @@
+page-feedsuppliers {
+    ion-content {
+        background: white !important;
+        .top-row {
+            padding: 0 0px 20px 20px;
+            align-items: center;
+            justify-content: space-between;
+            .item-des {
+                .loc-row {//ios
+                    color: #43535F;
+                    font-size: 12px;
+                    font-family: Montserrat-Bold;
+                }
+                .note-row {
+                    color: #43535F;
+                    font-size: 16px;
+                    font-family: Montserrat-Medium;
+                }
+            }
+            ion-icon {
+                color: #B6C0C9;
+                margin: auto;
+                font-weight: bold;
+            }
+            svg {
+                // margin-right: 20px;
+                margin: auto;
+            }
+        }
+        .des {
+            padding-left: 20px;
+            padding-right: 20px;
+            font-size: 16px;
+            font-family: Montserrat-Medium;
+            color: #43535F;
+        }
+    }
+}
+.md .loc-row {
+    font-size: 10px !important;
+    font-family: Montserrat-Medium!important;
+    color: #A3ADB7 !important;
+}

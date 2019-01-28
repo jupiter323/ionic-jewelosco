@@ -1,0 +1,34 @@
+page-feedexperience {
+    ion-content {
+        background: white !important;
+        .input-box-md,
+        .input-box-ios {
+            padding-bottom: 0 !important;
+            .mat-area,
+            ion-textarea {
+                height: 100px;
+                textarea {
+                    height: 90px;
+                    font-family: Montserrat-Medium;
+                    font-size: 15px;
+                    color: #43535F;
+                }
+            }
+            ion-textarea {
+                border-bottom: 1px solid #E5E9EC !important;
+                margin-bottom: 20px;
+            }
+        }
+        .btn-wrap {
+            p {
+                color: #A3ADB7;
+                font-size: 12px;
+                font-family: Montserrat-Medium;
+                text-align: center;
+            }
+            .normal-button {
+                margin-top: 0 !important;
+            }
+        }
+    }
+}

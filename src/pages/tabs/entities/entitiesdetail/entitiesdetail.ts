@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams, MenuController } from 'ionic-angul
 import { EntitiesmoredetailPage } from '../entitiesmoredetail/entitiesmoredetail';
 import { capitals } from './capitals';
 import { CalendarModal, CalendarModalOptions, DayConfig, CalendarResult, CalendarComponentOptions } from "ion2-calendar";
+import { GlobaldataProvider } from '../../../../providers/globaldata/globaldata';
 
 /**
  * Generated class for the EntitiesdetailPage page.
@@ -196,6 +197,7 @@ export class EntitiesdetailPage {
 
 
   constructor(
+    public gs: GlobaldataProvider,
     private menuCtl: MenuController,
     public navCtrl: NavController, public navParams: NavParams) {
     this.locationItem = navParams.data.locationItem;
@@ -204,6 +206,9 @@ export class EntitiesdetailPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad EntitiesdetailPage');
     this.filterKind();
+  }
+  ionViewWillLeave() {
+    this.gs.settingTabHidden(false);
   }
   // body
   filterKind() {
@@ -230,21 +235,26 @@ export class EntitiesdetailPage {
       this.menuCtl.enable(false, menu.menuid);
     }
   }
+  mainMenuClosed() {
+    // this.gs.settingTabHidden(false);
+  }
   closeMenu() {
+    this.gs.settingTabHidden(false);
     this.menuCtl.close();
   }
+  closeSelectedMenu() {
+    this.initMenus();
+    this.menuCtl.enable(true, "filter");
+    this.menuCtl.toggle("filter");
+  }
   openMenu(menuId: string) {
+    this.gs.settingTabHidden(true);
     this.initMenus();
     this.menuCtl.enable(true, menuId);
     this.menuCtl.toggle(menuId);
   }
 
-  closeSelectedMenu() {
-    this.initMenus();
-    this.menuCtl.enable(true, "filter");
-    this.menuCtl.toggle("filter");
 
-  }
   selectAnswerItem(menuKind, answerindex) {
     this.menus[menuKind].selecteddetailitem = answerindex;
     this.menus[menuKind].subtitle = this.menus[menuKind].items[answerindex];

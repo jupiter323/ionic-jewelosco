@@ -1,4 +1,4 @@
-<ion-tabs>
+<ion-tabs [ngClass]="{'hidden': gs.getTabHiddenStatus()}">
   <ion-tab [root]="tab1Root" tabTitle="Home" tabIcon="custom-icon-home"></ion-tab>
   <ion-tab [root]="tab2Root" tabTitle="Entities" tabIcon="custom-icon-entity"></ion-tab>
   <ion-tab [root]="tab3Root" tabTitle="Billing" tabIcon="custom-icon-billing"></ion-tab>

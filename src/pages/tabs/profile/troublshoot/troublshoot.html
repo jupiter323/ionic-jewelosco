@@ -1,0 +1,34 @@
+<!--
+  Generated template for the TroublshootPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-row class="header-row">
+    <ion-row class="header-title">
+      <ion-col col-1>
+        <ion-icon name="ios-arrow-back" (click)="navCtrl.pop()"></ion-icon>
+      </ion-col>
+      <span>
+        Troubleshoot
+      </span>
+      <ion-col col-1>
+      </ion-col>
+    </ion-row>
+  </ion-row>
+  <ion-row class="header-item" (click)="goTrainningvideo()">
+    <ion-label>Training videos</ion-label>
+    <ion-icon name="ios-arrow-forward"></ion-icon>
+  </ion-row>
+
+</ion-header>
+
+
+<ion-content>
+  <ion-row class="row-item" *ngFor="let troubleshoot of troubleshoots;let index = index" (click)="goDetail(index)">
+    <ion-label text-wrap>{{troubleshoot}}</ion-label>
+    <ion-icon name="ios-arrow-forward"></ion-icon>
+  </ion-row>
+</ion-content>

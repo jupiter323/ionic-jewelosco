@@ -6,6 +6,7 @@ import { ProfilechangepassPage } from './profilechangepass/profilechangepass';
 import { BillinginfoPage } from './billinginfo/billinginfo';
 import { SecuritysettingsPage } from './securitysetting/securitysetting';
 import { MessagecenterPage } from './messagecenter/messagecenter';
+import { TroublshootPage } from './troublshoot/troublshoot';
 
 
 /**
@@ -51,6 +52,10 @@ export class ProfilePage {
   goMessageCenter() {
     this.navCtrl.push(MessagecenterPage);
   }
+  goTroubleshoot() {
+    this.navCtrl.push(TroublshootPage);
+  }
+
   logOut() {
     // this.navCtrl.setRoot(LoginPage);
     this.app.getRootNav().setRoot(LoginPage);

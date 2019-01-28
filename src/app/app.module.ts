@@ -38,6 +38,14 @@ import { BillinginfoPage } from '../pages/tabs/profile/billinginfo/billinginfo';
 import { SecuritysettingsPage } from '../pages/tabs/profile/securitysetting/securitysetting';
 import { EmailsupportPage } from '../pages/tabs/profile/messagecenter/emailsupport/emailsupport';
 import { CallsupportPage } from '../pages/tabs/profile/messagecenter/callsupport/callsupport';
+import { EmojiProvider } from '../providers/chat-service/emoji';
+import { EmojiPickerComponentModule } from '../components/emoji-picker/emoji-picker.module';
+import { ProvidefeedbackPage } from '../pages/tabs/profile/messagecenter/providefeedback/providefeedback';
+import { FeedexperiencePage } from '../pages/tabs/profile/messagecenter/providefeedback/feedexperience/feedexperience';
+import { FeedsuppliersPage } from '../pages/tabs/profile/messagecenter/providefeedback/feedsuppliers/feedsuppliers';
+import { RateuppliersPage } from '../pages/tabs/profile/messagecenter/providefeedback/rateuppliers/rateuppliers';
+import { TroublshootPage } from '../pages/tabs/profile/troublshoot/troublshoot';
+import { TrainingvideosPage } from '../pages/tabs/profile/trainingvideos/trainingvideos';
 
 @NgModule({
   declarations: [
@@ -64,7 +72,13 @@ import { CallsupportPage } from '../pages/tabs/profile/messagecenter/callsupport
     BillinginfoPage,
     SecuritysettingsPage,
     EmailsupportPage,
-    CallsupportPage
+    CallsupportPage,
+    ProvidefeedbackPage,
+    FeedexperiencePage,
+    FeedsuppliersPage,
+    RateuppliersPage,
+    TroublshootPage,
+    TrainingvideosPage
   ],
   imports: [
     BrowserModule,
@@ -79,6 +93,7 @@ import { CallsupportPage } from '../pages/tabs/profile/messagecenter/callsupport
     PipesModule,
     HttpModule,
     CalendarModule,
+    EmojiPickerComponentModule,
     IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
@@ -106,7 +121,13 @@ import { CallsupportPage } from '../pages/tabs/profile/messagecenter/callsupport
     BillinginfoPage,
     SecuritysettingsPage,
     EmailsupportPage,
-    CallsupportPage
+    CallsupportPage,
+    ProvidefeedbackPage,
+    FeedexperiencePage,
+    FeedsuppliersPage,
+    RateuppliersPage,
+    TroublshootPage,
+    TrainingvideosPage
   ],
   providers: [
     StatusBar,
@@ -114,7 +135,8 @@ import { CallsupportPage } from '../pages/tabs/profile/messagecenter/callsupport
     { provide: ErrorHandler, useClass: IonicErrorHandler },
     ChatServiceProvider,
     GlobaldataProvider,
-    ApiProvider
+    ApiProvider,
+    EmojiProvider
   ],
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA,

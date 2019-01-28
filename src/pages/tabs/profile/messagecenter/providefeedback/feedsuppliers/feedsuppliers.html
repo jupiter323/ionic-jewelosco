@@ -1,0 +1,67 @@
+<!--
+  Generated template for the FeedsuppliersPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-row class="header-row">
+    <ion-row class="header-title">
+      <ion-col col-1>
+        <ion-icon name="ios-arrow-back" (click)="navCtrl.pop()"></ion-icon>
+      </ion-col>
+      <span>
+        Feedback on suppliers
+      </span>
+      <ion-col col-1></ion-col>
+    </ion-row>
+  </ion-row>
+</ion-header>
+
+<ion-content>
+  <ion-row class="top-row">
+    <ion-col col-9>
+      <div class="item-des">
+        <ion-label class="loc-row">Supplier</ion-label>
+        <ion-label class="note-row">Green Mountain Energy</ion-label>
+      </div>
+      <img src="assets/imgs/GreenMountainEnergy.svg">
+    </ion-col>
+
+    <!-- electricity icon -->
+    <ion-col col-2>
+      <ion-row>
+        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28">
+          <g id="Group_688" data-name="Group 688" transform="translate(-917 -1945)">
+            <g id="Icon-28_placeholder" transform="translate(452 1054)">
+              <rect id="Rectangle_307" data-name="Rectangle 307" width="28" height="28" transform="translate(465 891)"
+                fill="none" />
+            </g>
+            <g id="Group_683" data-name="Group 683" transform="translate(925.023 1947.012)">
+              <path id="Path_12" data-name="Path 12" d="M2.3,24.485,12.5,11.458a.64.64,0,0,0,.074-.684A.61.61,0,0,0,12,10.409H9.467a.6.6,0,0,1-.494-.251A.655.655,0,0,1,8.854,9.6L11.06.529a.439.439,0,0,0-.221-.494.4.4,0,0,0-.509.114L.119,13.183a.657.657,0,0,0-.081.684.61.61,0,0,0,.568.365H3.137a.6.6,0,0,1,.494.251.649.649,0,0,1,.118.555L1.565,24.1a.435.435,0,0,0,.221.494.4.4,0,0,0,.509-.114Z"
+                transform="translate(0 0)" fill="#ffb300" fill-rule="evenodd" />
+              <path id="Path_13" data-name="Path 13" d="M35.164.3,29.707,10.7a1.311,1.311,0,0,0,.022,1.277,1.208,1.208,0,0,0,1.077.631h2.08a.392.392,0,0,1,.361.22.448.448,0,0,1-.007.441L26.3,24.925a.4.4,0,0,0,.376-.16l10.2-13.027a.641.641,0,0,0,.074-.684.61.61,0,0,0-.568-.365H33.844a.6.6,0,0,1-.494-.251.655.655,0,0,1-.118-.555L35.437.817a.439.439,0,0,0-.221-.494A.354.354,0,0,0,35.164.3Z"
+                transform="translate(-24.376 -0.288)" fill="#fc8f3b" fill-rule="evenodd" />
+            </g>
+          </g>
+        </svg>
+      </ion-row>
+    </ion-col>
+    <!--arrow  -->
+    <ion-col col-1>
+      <ion-row>
+        <ion-icon name="ios-arrow-forward"></ion-icon>
+      </ion-row>
+    </ion-col>
+  </ion-row>
+  <div [ngClass]="gs.isIosPlatform?'line-edge-ios':'line-edge-md'"> </div>
+  <p class="des">Green Mountain is awesome. Their
+    bills are easy to read and understand
+    (and a little more affordable than
+    everyone else, too). Their CSRs are cool.
+    They have cool incentives, and they
+    don't suck.</p>
+  <ion-row class="btn-wrap">
+    <button ion-button class="normal-button" color=secondary>Next step</button>
+  </ion-row>
+</ion-content>

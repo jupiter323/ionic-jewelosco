@@ -1,0 +1,67 @@
+page-rateuppliers {
+    ion-content {
+        background: white !important;
+        .top-row {
+            padding: 0 0px 20px 20px;
+            align-items: center;
+            justify-content: space-between;
+            .item-des {
+                .loc-row {//ios
+                    color: #43535F;
+                    font-size: 12px;
+                    font-family: Montserrat-Bold;
+                }
+                .note-row {
+                    color: #43535F;
+                    font-size: 16px;
+                    font-family: Montserrat-Medium;
+                }
+            }
+            ion-icon {
+                color: #B6C0C9;
+                margin: auto;
+                font-weight: bold;
+            }
+            svg {
+                // margin-right: 20px;
+                margin: auto;
+            }
+        }
+        .des {
+            padding-left: 20px;
+            padding-right: 20px;
+            font-size: 16px;
+            font-family: Montserrat-Medium;
+            color: #43535F;
+        }
+        .sub-title {
+            font-size: 12px;
+            font-family: Montserrat-Bold;
+            padding-left: 20px;
+            color: #43535F;
+        }
+        .sub-des {
+            text-align: center;
+            width: 60%;
+            margin: auto;
+            font-size: 12px;
+            color: #A3ADB7;
+            font-family: Montserrat-Medium;
+            margin-bottom: 20px;
+        }
+        .star-rate {
+            padding-top: 20px;
+            padding-bottom: 20px;
+            justify-content: space-between;
+            width: 65%;
+            margin: auto;
+        }
+    }
+}
+
+.md .loc-row,
+.md .sub-title {
+    font-size: 10px !important;
+    font-family: Montserrat-Medium!important;
+    color: #A3ADB7 !important;
+}

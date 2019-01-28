@@ -9,7 +9,7 @@
 
 <div class="menus">
   <!-- filter Menu start -->
-  <ion-menu side="right" type="overlay" swipeEnabled=false [content]="mycontent" id="filter">
+  <ion-menu side="right" type="overlay" swipeEnabled=false [content]="mycontent" id="filter" (ionClose)="mainMenuClosed()">
     <ion-header>
       <ion-row class="header-row">
         <ion-row class="header-title">
