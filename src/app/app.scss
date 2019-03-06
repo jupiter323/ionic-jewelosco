@@ -32,6 +32,7 @@
     font-family: 'Montserrat-SemiBold';
     src: url('../assets/fonts/Montserrat-SemiBold.ttf') format("truetype");
 }
+
 @font-face {
     font-family: 'Montserrat-Light';
     src: url('../assets/fonts/Montserrat-Light.ttf') format("truetype");
@@ -44,6 +45,23 @@ ion-row {
 ion-tabs.hidden div.tabbar {
     display: none
 }
+
+.align-center {
+    align-items: center;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.justify-space {
+    justify-content: space-between;
+}
+
+.justify-right {
+    justify-content: flex-end;
+}
+
 .full-height {
     height: 100%;
 }
@@ -51,6 +69,7 @@ ion-tabs.hidden div.tabbar {
 .full-width {
     width: 100%;
 }
+
 .avatar {
     width: 48px;
     height: 48px;
@@ -58,12 +77,19 @@ ion-tabs.hidden div.tabbar {
     overflow: hidden;
     img {
         width: 48px;
-        height: 48px;
-        // transform-origin: top;
+        height: 48px; // transform-origin: top;
         // transform: scale(2,2);
     }
-
 }
+
+.border-top {
+    border-top: 1px solid rgba($color: white, $alpha: 0.1);
+}
+
+.hide {
+    display: none;
+}
+
 .ios .normal-button {
     width: 100%;
     height: 38px;
@@ -74,6 +100,7 @@ ion-tabs.hidden div.tabbar {
     color: white;
     border-radius: 10px;
 }
+
 .ios .unpaid-button {
     width: 55px;
     height: 25px;
@@ -83,6 +110,7 @@ ion-tabs.hidden div.tabbar {
     color: white;
     border-radius: 5px;
 }
+
 .md .normal-button {
     width: 100%;
     height: 38px;
@@ -92,6 +120,7 @@ ion-tabs.hidden div.tabbar {
     font-size: 12px;
     color: white;
 }
+
 .md .unpaid-button {
     width: 55px;
     height: 25px;
@@ -99,20 +128,20 @@ ion-tabs.hidden div.tabbar {
     font-size: 10px;
     font-family: Montserrat-Bold;
     color: white;
-
-
 }
+
 ion-card {
-    margin: 0!important;
-    width: 100%!important;
+    margin: 0 !important;
+    width: 100% !important;
     padding: 15px;
-    margin-bottom: 20px!important;
+    margin-bottom: 20px !important;
 }
+
 .ios ion-card {
     border-radius: 10px;
     -webkit-box-shadow: none;
     box-shadow: none;
-    margin-bottom: 20px!important;
+    margin-bottom: 20px !important;
 }
 
 ion-header.header-md {
@@ -121,8 +150,8 @@ ion-header.header-md {
             width: 100%;
         }
         .header-title {
-            padding-top: 20px;
-            padding-bottom: 20px;
+            padding-top: 10px;
+            padding-bottom: 10px;
             align-items: center;
             ion-icon {
                 margin-left: 15px;
@@ -144,8 +173,8 @@ ion-header.header-ios {
             width: 100%;
         }
         .header-title {
-            padding-top: 20px;
-            padding-bottom: 20px;
+            padding-top: 10px;
+            padding-bottom: 10px;
             align-items: center;
             ion-icon {
                 margin-left: 15px;
@@ -181,13 +210,13 @@ ion-header {
                 margin-top: 0 !important;
                 margin-bottom: 0 !important;
                 color: white;
-                font-size: 14px;
+                font-size: 12px;
                 font-family: Montserrat-Bold;
             }
             .header-detail-des.hilited {
                 margin-top: 0 !important;
                 margin-bottom: 0 !important;
-                font-size: 14px;
+                font-size: 12px;
                 font-family: Montserrat-Bold;
                 color: #40D4FD !important;
             }
@@ -224,13 +253,193 @@ ion-header {
         font-size: 12px;
         font-family: Montserrat-Medium;
     }
+    .prent-entity {
+        border-top: 1px solid rgba($color: white, $alpha: 0.1);
+        border-bottom: 1px solid rgba($color: white, $alpha: 0.1);
+        .title {
+            font-size: 10px;
+            color: rgba($color: white, $alpha: 0.4);
+            font-family: Montserrat-SemiBold;
+        }
+        .detail {
+            font-size: 16px;
+            color: #40D4FD;
+            font-family: Montserrat-Medium;
+        }
+        ion-icon {
+            font-size: 27px;
+        }
+    }
 }
 
 ion-content {
     background-color: #19264d !important;
+    .question-row {
+        border-top: 1px solid #E5E9EC;
+        padding: 15px;
+        padding-top: 0px;
+        align-items: center;
+        .question {
+            font-size: 12px;
+            font-family: Montserrat-Bold;
+            color: #43535F
+        }
+        .sub-question {
+            color: #A3ADB7;
+            font-size: 12px;
+            font-family: Montserrat-Medium;
+        }
+        .que-des {
+            // height: 10px;
+            font-size: 16px;
+            font-family: Montserrat-Medium;
+            color: #43535F
+        }
+        .dot-arrow {
+            align-items: center;
+            justify-content: space-between;
+            ion-icon {
+                font-size: 23px;
+                color: #B5BEC5;
+                font-weight: bold;
+            }
+        }
+    }
 }
 
-.content-ios {
+.alert-ios .alert-button:last-child {
+    font-weight: normal;
+}
+
+.alert-md .alert-wrapper {
+    text-align: center;
+    border-radius: 10px !important;
+    .alert-head {
+        text-align: center;
+    }
+    .alert-button {
+        margin: auto;
+    }
+}
+
+.menus {
+    ion-header {
+        .right-icon {
+            color: #40D4FD;
+            font-size: 12px;
+            font-family: Montserrat-SemiBold;
+        }
+        .header-row .header-title ion-icon {
+            margin-left: 100%;
+        }
+        .header-date {
+            justify-content: center;
+            color: #40D4FD !important;
+            font-size: 12px;
+            font-family: Montserrat-Medium;
+            padding-bottom: 15px;
+        }
+        border-bottom: 1px solid rgba($color: white,
+        $alpha: 0.1);
+    }
+    .header.header-md {
+        box-shadow: unset !important;
+        span {
+            margin-left: 0 !important;
+        }
+        span.other-menu {
+            margin-left: 50px !important;
+        }
+    }
+    ion-content {
+        background: #19264D !important;
+        ion-calendar {
+            background: #19264D !important;
+            .title .switch-btn {
+                //title
+                color: white;
+                font-size: 16px;
+                font-family: Montserrat-Medium;
+                text-transform: capitalize;
+            }
+            ion-calendar-month button.days-btn p {
+                //normal days
+                color: white;
+                font-size: 12px;
+                font-family: Montserrat-Medium;
+            }
+            ion-calendar-month .primary .days .on-selected p {
+                //selected font
+                font-size: 12px;
+                font-family: Montserrat-Medium;
+            }
+            ion-calendar-week .week-title li {
+                //week 
+                font-size: 10px;
+                font-family: Montserrat-SemiBold;
+                color: rgba($color: white, $alpha: 0.4)
+            }
+            ion-calendar-month .primary .between button.days-btn {
+                //between
+                background: rgba($color: #1EB8E3, $alpha: 0.4)
+            }
+            ion-calendar-month .primary .startSelection:after {
+                //between
+                background: rgba($color: #1EB8E3, $alpha: 0.4)
+            }
+            ion-calendar-month .primary .endSelection:after {
+                //between
+                background: rgba($color: #1EB8E3, $alpha: 0.4)
+            }
+            ion-calendar-month-picker .month-packer-item button {
+                // month picker
+                color: white !important;
+                font-family: Montserrat-Medium;
+            }
+        }
+        .question-row {
+            border-bottom: 1px solid rgba($color: white, $alpha: 0.1) !important;
+            padding-left: 8.3% !important;
+            .que-title {
+                color: white !important;
+                font-size: 12px !important;
+                font-family: Montserrat-Bold !important;
+            }
+            .que-des {
+                font-family: Montserrat-Medium !important;
+                font-size: 12px !important;
+                color: rgba($color: white, $alpha: 0.4) !important;
+            }
+            .que-des.checked {
+                font-family: Montserrat-Medium !important;
+                font-size: 12px !important;
+                color: #40D4FD !important;
+            }
+        }
+        .answer-row {
+            border-bottom: 1px solid rgba($color: white, $alpha: 0.1);
+            padding-left: 6%;
+            .que-title {
+                color: white;
+                font-size: 12px;
+                font-family: Montserrat-Medium;
+            }
+            .que-title.checked {
+                color: #40D4FD;
+                font-size: 12px;
+                font-family: Montserrat-Medium;
+            }
+            .check-row {
+                color: #40D4FD;
+                font-size: 30px;
+                font-weight: bold;
+            }
+        }
+    }
+}
+
+.content-ios,
+.header-ios {
     .input-box {
         background-color: white;
         border-radius: 7px;
@@ -275,7 +484,8 @@ ion-content {
     }
 }
 
-.content-md {
+.content-md,
+.header-md {
     .input-box {
         // border-radius: 7px;
         margin-top: 100px;
@@ -288,8 +498,7 @@ ion-content {
         }
         .input-email,
         .input-password {
-            border-bottom: 1px solid rgba(255, 255, 255, 0.12);
-            // ion-label {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.12); // ion-label {
             //     // opacity: 0;
             // }
             ion-input {
@@ -381,11 +590,13 @@ ion-content {
 .header-ios {
     padding-top: 5%;
 }
+
 .btn-wrap {
-    padding:0 20px 20px 20px;
+    padding: 0 20px 20px 20px;
     background: #E9EBED;
     margin-bottom: 0px;
 }
+
 ion-tabs {
     .tab-button {
         color: #1EB8E3 !important;
@@ -433,13 +644,14 @@ ion-icon {
     &[class*="custom-icon-profile"] {
         mask-image: url(../assets/imgs/profileIcon.svg);
     }
+}
 
-}
 .mat-area.mat-input-element.mat-form-field-autofill-control {
-    font-size: 16px!important;
-    color: #43535F!important;
-    font-family: Montserrat-Medium!important;
+    font-size: 16px !important;
+    color: #43535F !important;
+    font-family: Montserrat-Medium !important;
 }
+
 .mat-elevation-z0 {
     box-shadow: 0 0 0 0 rgba(0, 0, 0, .2), 0 0 0 0 rgba(0, 0, 0, .14), 0 0 0 0 rgba(0, 0, 0, .12)
 }

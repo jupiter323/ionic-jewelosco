@@ -1,0 +1,60 @@
+<!--
+  Generated template for the AuctioninprogressdetailPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-row class="header-row">
+    <ion-row class="header-title">
+      <ion-col col-1>
+        <ion-icon name="ios-arrow-back" (click)="navCtrl.pop()"></ion-icon>
+      </ion-col>
+      <span>
+        {{auction.title}}
+      </span>
+      <ion-col col-1></ion-col>
+    </ion-row>
+  </ion-row>
+</ion-header>
+
+
+<ion-content>
+  <ion-row class="detail-block">
+    <ion-col col-5>
+      <span class="detail-title" no-padding>Rate per kWh</span><br>
+      <span class="current-rate-des" no-padding>{{auction.rate}}¢</span><br>
+      <span class="current-rate" no-padding>7.23¢ <span>current rate</span></span>
+    </ion-col>
+    <ion-col col-6>
+      <span class="detail-title" no-padding>Est.Savings/Month</span><br>
+      <span class="fee-des" no-padding>${{auction.fee}}</span>
+      <img [src]="auction.supplier">
+    </ion-col>
+    <ion-col col-1>
+      <ion-row class="full-height">
+        <ion-icon name="ios-arrow-forward"></ion-icon>
+      </ion-row>
+    </ion-col>
+  </ion-row>
+  <div class="card-wrap">
+    <ion-card *ngFor="let auctionDetail of auctionDetails;let index=index" (click)="goMoredetail(index)">
+      <ion-row class="detail-block">
+        <ion-col col-5>
+          <span class="detail-title" no-padding>Rate per kWh</span><br>
+          <span class="rate-des" no-padding>{{auctionDetail.rate}}¢</span>
+        </ion-col>
+        <ion-col col-6>
+          <span class="detail-title" no-padding>Est.Savings/Month</span><br>
+          <span class="fee-des" no-padding>${{auctionDetail.fee}}</span>
+          <img [src]="auctionDetail.supplier">
+        </ion-col>
+        <ion-col col-1>
+          <ion-row class="full-height">
+            <ion-icon name="ios-arrow-forward"></ion-icon>
+          </ion-row>
+        </ion-col>
+      </ion-row>
+    </ion-card>
+  </div>
+</ion-content>

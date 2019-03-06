@@ -1,0 +1,79 @@
+page-newentity {
+    ion-header {
+        .inputbox-wrap {
+            padding: 0 10px 10px 10px;
+        }
+        .input-box {
+            margin-top: 0px !important;
+            .input-email {
+                color: #43535F !important;
+                ion-label {
+                    color: #000000;
+                    font-size: 12px;
+                    font-family: Montserrat-Medium;
+                }
+            }
+        }
+        .input-box.input-des {
+            margin-top: 15px !important;
+            height: 270px;
+        }
+    }
+    ion-content {
+        background: white !important;
+        .contracts {
+            text-align: center;
+            margin-top: 0;
+            font-size: 16px;
+            font-family: Montserrat-Bold;
+            color: #43535F;
+        }
+        .card-wrap {
+            margin-bottom: 15px;
+            ion-card {
+                padding: 0;
+                margin-bottom: 0 !important;
+                border: 1px solid #19264D;
+                .left-col {
+                    background: #19264D;
+                    ion-row {
+                        justify-content: center;
+                        align-items: center;
+                    }
+                }
+            }
+            .go-arrow-configure {
+                color: #43535F;
+                font-size: 12px;
+                font-family: Montserrat-Bold;
+                padding: 15px 10px;
+                justify-content: space-between;
+                align-items: center;
+                ion-icon {
+                    color: #B5BEC5;
+                    font-size: 19px;
+                    font-weight: 800;
+                    margin-right: 0;
+                }
+                .des {
+                    font-size: 12px;
+                    color: #43535F;
+                    font-family: Montserrat-Medium;
+                }
+                border-bottom: 1px solid #B6C0C9;
+            }
+        }
+    }
+    .header-md {
+        .active {
+            border-bottom: 1px solid #1EB8E3 !important;
+        }
+        .input-box {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+            color: white;
+        }
+        .input-box.input-des {
+            border-radius: 0px !important;
+        }
+    }
+}

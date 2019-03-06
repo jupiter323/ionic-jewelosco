@@ -46,11 +46,25 @@ import { FeedsuppliersPage } from '../pages/tabs/profile/messagecenter/providefe
 import { RateuppliersPage } from '../pages/tabs/profile/messagecenter/providefeedback/rateuppliers/rateuppliers';
 import { TroublshootPage } from '../pages/tabs/profile/troublshoot/troublshoot';
 import { TrainingvideosPage } from '../pages/tabs/profile/trainingvideos/trainingvideos';
+import { AuctionPage } from '../pages/auction/auction';
+import { AuctioninprogressPage } from '../pages/auctioninprogress/auctioninprogress';
+import { AuctioninprogressdetailPage } from '../pages/auctioninprogressdetail/auctioninprogressdetail';
+import { AuctioninprogressmoredetailPage } from '../pages/auctioninprogressmoredetail/auctioninprogressmoredetail';
+import { AuctionincreatecontractPage } from '../pages/auctionincreatecontract/auctionincreatecontract';
+import { AuctionextendPage } from '../pages/auctionextend/auctionextend';
+import { AuctioninvitedPage } from '../pages/auctioninvited/auctioninvited';
+import { BillingfirstPage } from '../pages/tabs/billing/billingfirst/billingfirst';
+import { BillingmethodPage } from '../pages/tabs/billing/billingmethod/billingmethod';
+import { NewentityPage } from '../pages/tabs/entities/newentity/newentity';
+import { NewcontractPage } from '../pages/tabs/entities/newcontract/newcontract';
+import { PreloadedcontractPage } from '../pages/tabs/entities/newcontract/preloadedcontract/preloadedcontract';
+import { NewentityexistingcontractPage } from '../pages/tabs/entities/newentity/newentityexistingcontract/newentityexistingcontract';
+import { NewentityrelationPage } from '../pages/tabs/entities/newcontract/newentityrelation/newentityrelation';
 
 @NgModule({
   declarations: [
     MyApp,
-    LoginPage,    
+    LoginPage,
     HomePage,
     TabsPage,
     EntitiesPage,
@@ -78,7 +92,22 @@ import { TrainingvideosPage } from '../pages/tabs/profile/trainingvideos/trainin
     FeedsuppliersPage,
     RateuppliersPage,
     TroublshootPage,
-    TrainingvideosPage
+    TrainingvideosPage,
+    AuctionPage,
+    AuctioninprogressPage,
+    AuctioninprogressdetailPage,
+    AuctioninprogressmoredetailPage,
+    AuctionincreatecontractPage,
+    AuctionextendPage,
+    AuctioninvitedPage,
+    BillingfirstPage,
+    BillingmethodPage,
+    NewentityPage,
+    NewcontractPage,
+    PreloadedcontractPage,
+    NewentityexistingcontractPage,
+    NewentityrelationPage
+
   ],
   imports: [
     BrowserModule,
@@ -99,7 +128,7 @@ import { TrainingvideosPage } from '../pages/tabs/profile/trainingvideos/trainin
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    LoginPage,    
+    LoginPage,
     HomePage,
     TabsPage,
     EntitiesPage,
@@ -127,7 +156,21 @@ import { TrainingvideosPage } from '../pages/tabs/profile/trainingvideos/trainin
     FeedsuppliersPage,
     RateuppliersPage,
     TroublshootPage,
-    TrainingvideosPage
+    TrainingvideosPage,
+    AuctionPage,
+    AuctioninprogressPage,
+    AuctioninprogressdetailPage,
+    AuctioninprogressmoredetailPage,
+    AuctionincreatecontractPage,
+    AuctionextendPage,
+    AuctioninvitedPage,
+    BillingfirstPage,
+    BillingmethodPage,
+    NewentityPage,
+    NewcontractPage,
+    PreloadedcontractPage,
+    NewentityexistingcontractPage,
+    NewentityrelationPage
   ],
   providers: [
     StatusBar,

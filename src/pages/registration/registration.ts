@@ -101,7 +101,6 @@ export class RegistrationPage {
     if (++this.stepIndex > 3) this.stepIndex = 3;
     if (this.stepIndex == 3)
       this.showSignature();
-
   }
 
   previous() {

@@ -1,0 +1,103 @@
+page-auctioninprogressmoredetail {
+    ion-content {
+        background: white !important;
+        .logo-wrap {
+            justify-content: center;
+            align-items: center;
+        }
+        .title {
+            color: #A3ADB7;
+            font-size: 10px;
+            font-family: Montserrat-SemiBold;
+            margin-bottom: 2px;
+            margin-top: 20px;
+        }
+        .des {
+            color: #43535F;
+            font-size: 16px;
+            font-family: Montserrat-Medium;
+        }
+        .date-des {
+            color: #43535F;
+            font-size: 16px;
+            font-family: Montserrat-Bold;
+        }
+        .month-rate-des {
+            color: #1EB8E3;
+            font-size: 16px;
+            font-family: Montserrat-Bold;
+        }
+        .detail-box-wrap {
+            margin-top: 30px;
+            .detail-block {
+                background: white;
+                margin-top: 0px;
+                padding-top: 0px;
+                border: 2px solid rgba($color: #19264D, $alpha: 0.2) ;
+                ion-row {
+                    justify-content: center;
+                }
+                .detail-title {
+                    font-size: 12px;
+                    font-family: Montserrat-Bold;
+                    color: #43535F;
+                    text-align: center;
+                }
+                .rate-des {
+                    font-size: 22px;
+                    color: #1EB8E3;
+                    font-family: Montserrat-SemiBold;
+                    ion-label {
+                        font-size: 10px !important;
+                        font-family: Montserrat-SemiBold;
+                        text-align: center;
+                    }
+                }
+                .current-rate-des {
+                    font-size: 22px;
+                    color: #FC8F3B;
+                    font-family: Montserrat-SemiBold;
+                    ion-label {
+                        font-size: 10px !important;
+                        font-family: Montserrat-SemiBold;
+                        text-align: center;
+                    }
+                }
+                ion-icon {
+                    color: #B5BEC5;
+                    font-size: 19px;
+                    font-weight: 800;
+                    margin-right: 0;
+                }
+            }
+        }
+     
+    }
+    ion-footer {
+        .step-btn {
+            background: #E9EBED;
+            padding: 0px 10px 20px 10px;
+            margin-bottom: 0;
+        }
+        .go-arrow-configure {
+            color: #43535F;
+            font-size: 12px;
+            font-family: Montserrat-Medium;
+            padding: 15px;
+            justify-content: space-between;
+            align-items: center;
+            background: #E9EBED;
+            ion-icon {
+                color: #B5BEC5;
+                font-size: 19px;
+                font-weight: 800;
+                margin-right: 0;
+            }
+            border-bottom: 1px solid #B6C0C9;
+        }
+    }
+}
+
+.ios .detail-block {
+    border-radius: 10px;
+}

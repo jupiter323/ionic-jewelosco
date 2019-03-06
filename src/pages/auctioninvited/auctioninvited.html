@@ -1,0 +1,34 @@
+<!--
+  Generated template for the AuctioninvitedPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-row class="header-row">
+    <ion-row class="header-title">
+      <ion-col col-1>
+        <ion-icon name="ios-arrow-back" (click)="navCtrl.pop()"></ion-icon>
+      </ion-col>
+      <span>
+        Invited Suppliers
+      </span>
+      <ion-col col-1 (click)="goExtendAuction()">
+        <div class="right-icon">
+          {{suppliers.length}}
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-row>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-card class="supplier-card" *ngFor="let supplier of suppliers;let index=index">
+    <img [src]="supplier.logo">
+    <div>
+      <span> {{supplier.bids}} bids</span>
+    </div>
+  </ion-card>
+</ion-content>

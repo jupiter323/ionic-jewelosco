@@ -1,0 +1,25 @@
+page-newentityrelation {
+    ion-content {
+        .title {
+            text-align: center;
+            color: white;
+            font-family: Montserrat-Bold;
+            font-size: 16px;
+        }
+        .sub {
+            font-size: 12px;
+            font-family: Montserrat-Medium;
+        }
+        .sub-title {
+            color: rgba($color: white, $alpha: 0.4);
+            font-family: Montserrat-SemiBold;
+            font-size: 10px;
+        }
+        .detail {
+            color: white;
+            font-family: Montserrat-Medium;
+            font-size: 16px;
+        }
+    }
+
+}

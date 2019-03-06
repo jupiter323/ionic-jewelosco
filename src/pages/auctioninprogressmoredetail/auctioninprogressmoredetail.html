@@ -1,0 +1,117 @@
+<!--
+  Generated template for the AuctioninprogressmoredetailPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-row class="header-row">
+    <ion-row class="header-title">
+      <ion-col col-1>
+        <ion-icon name="ios-arrow-back" (click)="navCtrl.pop()"></ion-icon>
+      </ion-col>
+      <span>
+        {{auction.title.split("—")[1]}} {{auction.loc}}
+      </span>
+      <ion-col col-1></ion-col>
+    </ion-row>
+  </ion-row>
+</ion-header>
+
+
+<ion-content padding>
+  <ion-row class="logo-wrap">
+    <img [src]="auction.supplier">
+  </ion-row>
+  <ion-row class="detail-box-wrap">
+    <ion-col no-padding col-7>
+      <div class="detail-block">
+        <ion-label class="detail-title">Rate per kWh</ion-label>
+        <ion-row>
+          <ion-col col-5>
+            <ion-row>
+              <span class="current-rate-des">7.23¢<br>
+                <ion-label>Current</ion-label>
+              </span>
+            </ion-row>
+          </ion-col>
+          <ion-col col-2>
+            <ion-row>
+              <ion-icon name="ios-arrow-forward"></ion-icon>
+            </ion-row>
+          </ion-col>
+          <ion-col col-5>
+            <ion-row>
+              <span class="rate-des">6.79¢<br>
+                <ion-label>New</ion-label>
+              </span>
+            </ion-row>
+          </ion-col>
+        </ion-row>
+      </div>
+    </ion-col>
+    <ion-col col-5>
+      <span class="title">
+        Term (Duration)
+      </span><br>
+      <span class="date-des">
+        {{auction.title.split("—")[1]}}
+      </span><br><br><br>
+      <span class="title">
+        Est. Savings/Month
+      </span><br>
+      <span class="month-rate-des">
+        ${{auction.fee}}
+      </span>
+    </ion-col>
+  </ion-row>
+  <ion-label class="title">
+    Billing Method
+  </ion-label>
+  <span class="des">
+    Single Bill (Same utility bill. Only the supply portion on your bill changes.)
+  </span>
+
+  <ion-label class="title">
+    Usage
+  </ion-label>
+  <span class="des">
+    Your rate stays fixed, no matter how much energy you consume.
+  </span>
+
+  <ion-label class="title">
+    Delivery
+  </ion-label>
+  <span class="des">
+    Energy is always distributed and delivered through your local utility company, regardless of your plan.
+  </span>
+
+  <ion-label class="title">
+    Renewal
+  </ion-label>
+  <span class="des">
+    You'll get an email reminder 30 days before the plan's end date with renewal options, so you can continue to get the
+    best available rate on the market.
+  </span>
+
+  
+  <ion-label class="title">
+      Renewal
+    </ion-label>
+    <span class="des">
+      You'll get an email reminder 30 days before the plan's end date with renewal options, so you can continue to get the
+      best available rate on the market.
+    </span>
+
+
+</ion-content>
+<ion-footer>
+  <ion-row class="go-arrow-configure" (click)="goTermsandConditions()">
+    <ion-toggle></ion-toggle>
+    <span>Agree with Terms & Conditions</span>
+    <ion-icon name="ios-arrow-forward"></ion-icon>
+  </ion-row>
+  <div class="step-btn">
+    <button class="normal-button" ion-button color="Primary" (click)="goCreateContract()">Award Supplier</button>
+  </div>
+</ion-footer>

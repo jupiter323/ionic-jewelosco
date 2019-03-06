@@ -1,0 +1,96 @@
+<!--
+  Generated template for the NewentityrelationPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<div class="menus">
+  <ion-menu side="right" type="overlay" swipeEnabled=false [content]="mycontent" id="status">
+    <ion-header>
+      <ion-row class="header-row">
+        <ion-row class="header-title">
+          <ion-col col-1>
+            <!-- <ion-icon name="ios-arrow-back"></ion-icon> -->
+          </ion-col>
+          <span class="other-menu">
+            Parent entity
+          </span>
+          <ion-col col-1 (click)="closeMenu()">
+            <div class="right-icon">
+              Done
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-row>
+    </ion-header>
+
+    <ion-content>
+      <ion-row class="answer-row" *ngFor="let statu of items;let index=index" (click)="selectAnswerItem(index)">
+        <ion-col col-10>
+          <p [ngClass]="index==selectedItem?'que-title checked':'que-title'">{{statu}}</p>
+        </ion-col>
+        <ion-col col-2>
+          <ion-row *ngIf="index==selectedItem" class="check-row">
+            <ion-icon name="ios-checkmark"></ion-icon>
+          </ion-row>
+        </ion-col>
+      </ion-row>
+    </ion-content>
+  </ion-menu>
+</div>
+
+<ion-header>
+  <ion-row class="header-row">
+    <ion-row class="header-title">
+      <ion-col col-1>
+        <ion-icon name="ios-arrow-back" (click)="navCtrl.pop()"></ion-icon>
+      </ion-col>
+      <span>
+        Entity relation
+      </span>
+      <ion-col col-1>
+      </ion-col>
+    </ion-row>
+  </ion-row>
+  <ion-row class="prent-entity" (click)="openMenu()">
+    <ion-col col-1></ion-col>
+    <ion-col col-10>
+      <span class="title">
+        Parent entity
+      </span><br>
+      <span class="detail">{{items[selectedItem]||"None"}}</span>
+    </ion-col>
+    <ion-col col-1>
+      <ion-row class="align-center full-height">
+        <ion-icon name="ios-arrow-forward"></ion-icon>
+      </ion-row>
+    </ion-col>
+  </ion-row>
+  <ion-row class="justify-center" padding>
+
+  </ion-row>
+</ion-header>
+
+
+<ion-content #mycontent padding>
+  <ion-label class="title">{{location.title}}</ion-label>
+  <ion-label class="title sub">{{location.loc}}</ion-label><br>
+  <p class="sub-title">Contract number</p>
+  <p class="detail">{{location.contractnumber}}</p>
+  <p class="sub-title">Type</p>
+  <p class="detail">{{location.type}}</p>
+  <p class="sub-title">Term</p>
+  <p class="detail">{{location.term}}</p>
+  <p class="sub-title">Status</p>
+  <p class="detail">{{location.status}}</p>
+  <p class="sub-title">Rate</p>
+  <p class="detail">$0.57900</p>
+  <p class="sub-title">Signature date</p>
+  <p class="detail">Sep 17, 2018 01:42 PM</p>
+  <p class="sub-title">Start Date</p>
+  <p class="detail">Oct 01, 2018</p>
+  <p class="sub-title">Expiration date</p>
+  <p class="detail">Apr 01, 2019</p>
+  <button ion-button class="normal-button" outline color=opacity>Chancel</button>
+  <button ion-button class="normal-button">Confirm Adding</button>
+</ion-content>

@@ -1,0 +1,50 @@
+page-billingmethod {
+    ion-content {
+        background: #E9EBED !important;
+        ion-card {
+            height: 167px;
+        }
+        .bank-card {
+            background: #A3ADB7;
+            .card-number {
+                text-align: left;
+            }
+        }
+        .visa-card {
+            background: #2F5597;
+        }
+        .express-card {
+            background: #1EB8E3;
+        }
+        .discover-card {
+            background: #FC8F3B;
+        }
+        .card-number {
+            text-align: center;
+            font-size: 24px;
+            font-family: Montserrat-Bold;
+            width: 100%;
+            color: #FFFFFF;
+        }
+        .card-kind {
+            font-size: 16px;
+            font-family: Montserrat-Bold;
+            color: #FFFFFF;
+        }
+        .check-icon {
+            font-size: 26px;
+            font-weight: Bold;
+            color: #FFFFFF;
+        }
+        .detail-title {
+            font-size: 12px;
+            color: rgba($color: white, $alpha: 0.4);
+            font-family: Montserrat-SemiBold;
+        }
+        .detail-date {
+            font-size: 12px;
+            font-family: Montserrat-Bold;
+            color: white;
+        }
+    }
+}

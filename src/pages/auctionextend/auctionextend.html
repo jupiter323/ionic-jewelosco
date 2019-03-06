@@ -1,0 +1,117 @@
+<!--
+  Generated template for the AuctionextendPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-row class="header-row">
+    <ion-row class="header-title">
+      <ion-col col-1>
+        <ion-icon name="ios-arrow-back" (click)="navCtrl.pop()"></ion-icon>
+      </ion-col>
+      <span>
+        Extend Auction
+      </span>
+      <ion-col col-1></ion-col>
+    </ion-row>
+  </ion-row>
+  <ion-row class="header-detail-wrap">
+    <ion-row class="header-detail">
+      <ion-col no-padding col-6>
+        <ion-row>
+          <ion-col col-7>
+            <span class="header-detail-title" no-padding>New End Data</span><br>
+            <span class="header-detail-des" no-padding>Jan 14,2019</span>
+          </ion-col>
+          <ion-col no-padding col-5 class="">
+            <ion-row no-padding class="full-height align-center">
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28">
+                <g id="Group_936" data-name="Group 936" transform="translate(-265 -317)">
+                  <g id="Icon-28_placeholder" transform="translate(-200 -574)">
+                    <rect id="Rectangle_307" data-name="Rectangle 307" width="28" height="28"
+                      transform="translate(465 891)" fill="none" />
+                  </g>
+                  <g id="Group_755" data-name="Group 755" transform="translate(270.716 322.751)">
+                    <path id="Path_15" data-name="Path 15"
+                      d="M1.515,11.463.305,16.1a.492.492,0,0,0,.128.5.491.491,0,0,0,.495.128l4.435-1.137L16.324,4.623A1.509,1.509,0,0,0,16.782,3.5a1.457,1.457,0,0,0-.477-1.1L14.527.68A1.548,1.548,0,0,0,12.365.7Z"
+                      transform="translate(0 0)" fill="none" stroke="#fff" stroke-linecap="round"
+                      stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.5" />
+                  </g>
+                </g>
+              </svg>
+            </ion-row>
+          </ion-col>
+        </ion-row>
+      </ion-col>
+      <ion-col no-padding col-6>
+        <ion-row>
+          <ion-col col-7>
+            <span class="header-detail-title" no-padding>New End Time</span><br>
+            <span class="header-detail-des" no-padding>10:00 PM</span>
+          </ion-col>
+          <ion-col no-padding col-5 class="">
+            <ion-row no-padding class="full-height align-center">
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28">
+                <g id="Group_936" data-name="Group 936" transform="translate(-265 -317)">
+                  <g id="Icon-28_placeholder" transform="translate(-200 -574)">
+                    <rect id="Rectangle_307" data-name="Rectangle 307" width="28" height="28"
+                      transform="translate(465 891)" fill="none" />
+                  </g>
+                  <g id="Group_755" data-name="Group 755" transform="translate(270.716 322.751)">
+                    <path id="Path_15" data-name="Path 15"
+                      d="M1.515,11.463.305,16.1a.492.492,0,0,0,.128.5.491.491,0,0,0,.495.128l4.435-1.137L16.324,4.623A1.509,1.509,0,0,0,16.782,3.5a1.457,1.457,0,0,0-.477-1.1L14.527.68A1.548,1.548,0,0,0,12.365.7Z"
+                      transform="translate(0 0)" fill="none" stroke="#fff" stroke-linecap="round"
+                      stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.5" />
+                  </g>
+                </g>
+              </svg>
+            </ion-row>
+          </ion-col>
+        </ion-row>
+      </ion-col>
+    </ion-row>
+  </ion-row>
+  <ion-row class="header-detail-wrap border-top">
+    <ion-row class="header-detail">
+      <ion-col col-12 class="">
+        <ion-row class="align-center">
+          <span class="header-detail-title" no-padding>Suppliers who will be reinvited</span><br>
+          <ion-row class="align-center">
+            <ion-toggle></ion-toggle>&nbsp;&nbsp;&nbsp;
+            <span class="header-detail-des"> Select All</span>
+          </ion-row>
+        </ion-row>
+      </ion-col>
+    </ion-row>
+  </ion-row>
+
+</ion-header>
+
+
+<ion-content>
+  <ion-row class="auction-row" *ngFor="let auction of auctionList;let index=index">
+    <ion-label>
+      {{auction.title}}
+    </ion-label>
+    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28">
+      <g id="Group_787" data-name="Group 787" transform="translate(-16 -47)">
+        <g id="Group_922" data-name="Group 922" transform="translate(5 1)">
+          <path id="Rectangle_2_copy_11" data-name="Rectangle 2 copy 11"
+            d="M5.56,7.6.389,2.319A1.38,1.38,0,0,1,.389.4,1.31,1.31,0,0,1,2.27.4L6.5,4.72,10.73.4a1.31,1.31,0,0,1,1.88,0,1.38,1.38,0,0,1,0,1.921L7.44,7.6a1.31,1.31,0,0,1-1.88,0Z"
+            transform="translate(31.5 54) rotate(90)" fill="#ff2116" />
+          <path id="Rectangle_2_copy_11-2" data-name="Rectangle 2 copy 11"
+            d="M5.56,7.6.389,2.319A1.38,1.38,0,0,1,.389.4,1.31,1.31,0,0,1,2.27.4L6.5,4.72,10.73.4a1.31,1.31,0,0,1,1.88,0,1.38,1.38,0,0,1,0,1.921L7.44,7.6a1.31,1.31,0,0,1-1.88,0Z"
+            transform="translate(18.5 67) rotate(-90)" fill="#ff2116" />
+        </g>
+        <g id="Icon-28_placeholder" transform="translate(-449 -844)">
+          <rect id="Rectangle_307" data-name="Rectangle 307" width="28" height="28" transform="translate(465 891)"
+            fill="none" />
+        </g>
+      </g>
+    </svg>
+  </ion-row>
+  <div class="step-btn">
+    <button class="normal-button" ion-button color=secondary (click)="submit()">Submit</button>
+  </div>
+</ion-content>

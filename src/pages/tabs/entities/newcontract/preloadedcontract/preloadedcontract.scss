@@ -1,0 +1,89 @@
+page-preloadedcontract {
+    ion-content {
+        background: #E9EBED !important;
+        .inputbox-wrap {
+            padding: 0 10px 10px 10px;
+        }
+        .input-box {
+            margin-top: 0px !important;
+            .input-email {
+                color: #43535F !important;
+                position: relative;
+                ion-label {
+                    color: #000000;
+                    font-size: 12px;
+                    font-family: Montserrat-Medium;
+                }
+                svg {
+                    position: absolute;
+                    top: 0;
+                    right: 5px;
+                    top: 13px;
+                    width: 20px;
+                }
+            }
+        }
+        .input-box.input-des {
+            margin-top: 15px !important;
+            height: 270px;
+        }
+        .contacts-found {
+            color: #A3ADB7;
+            font-size: 12px;
+            font-family: Montserrat-Medium;
+            text-align: center;
+        }
+        ion-card {
+            .matched-contract-number {
+                color: #1EB8E3 !important
+            }
+            .title-edit {
+                justify-content: space-between;
+                align-items: center;
+                span {
+                    font-size: 12px;
+                    color: #43535F;
+                    font-family: Montserrat-Bold
+                }
+            }
+            p.location-detail {
+                width: 50%;
+                font-size: 12px;
+                color: #43535F;
+                font-family: Montserrat-Medium;
+            }
+            .detail-block {
+                border: 1px solid #E5E9EC;
+                margin-top: 20px;
+                padding: 15px;
+                .detail-title {
+                    font-size: 10px;
+                    font-family: Montserrat-SemiBold;
+                    color: #A3ADB7;
+                }
+                .detail-des {
+                    font-size: 12px;
+                    color: #43535F;
+                    font-family: Montserrat-Bold
+                }
+            }
+        }
+        .card-ios .detail-block {
+            border-radius: 10px;
+        }
+    }
+    .content-md {
+        .active {
+            border-bottom: 1px solid #1EB8E3 !important;
+        }
+        .input-box {
+            border-bottom: 1px solid #43535F !important;
+            ion-input {
+                color: #43535F !important;
+            }
+        }
+        .ion-email {
+            border-radius: 0px !important;
+        }
+    }
+}

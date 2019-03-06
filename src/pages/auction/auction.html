@@ -1,0 +1,391 @@
+<!--
+  Generated template for the AuctionPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<div class="menus">
+  <ion-menu side="right" type="overlay" swipeEnabled=false [content]="mycontent" id="availability">
+    <ion-header>
+      <ion-row class="header-row">
+        <ion-row class="header-title">
+          <ion-col col-1>
+          </ion-col>
+          <span class="other-menu">
+            Availability date
+          </span>
+          <ion-col col-1 (click)="closeMenu()">
+            <div class="right-icon">
+              Done
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-row>
+    </ion-header>
+
+    <ion-content>
+      <ion-calendar [(ngModel)]="selectedDate" [options]="optionsPicker" [type]="type" [format]="'YYYY-MM-DD'"
+        (onChange)="onChangeCalendar($event)">
+      </ion-calendar>
+    </ion-content>
+  </ion-menu>
+</div>
+<ion-header>
+  <ion-row class="header-row">
+    <ion-row class="header-title">
+      <ion-col col-1>
+        <ion-icon name="ios-arrow-back" (click)="navCtrl.pop()"></ion-icon>
+      </ion-col>
+      <span>
+        New Auction
+      </span>
+      <ion-col col-1></ion-col>
+    </ion-row>
+  </ion-row>
+
+
+  <div *ngIf="stepIndex==1" class="step">
+    <svg xmlns="http://www.w3.org/2000/svg" width="323.754" height="30.5" viewBox="0 0 323.754 30.5">
+      <g id="Group_1026" data-name="Group 1026" transform="translate(-14.764 -99.5)">
+        <g id="Ellipse_8" data-name="Ellipse 8" transform="translate(307 99.5) rotate(90)" fill="#19264d"
+          stroke="rgba(255,255,255,0.2)" stroke-width="1.5">
+          <circle cx="6.5" cy="6.5" r="6.5" stroke="none" />
+          <circle cx="6.5" cy="6.5" r="5.75" fill="none" />
+        </g>
+        <g id="Ellipse_10" data-name="Ellipse 10" transform="translate(194 99.5) rotate(90)" fill="#19264d"
+          stroke="rgba(255,255,255,0.2)" stroke-width="1.5">
+          <circle cx="6.5" cy="6.5" r="6.5" stroke="none" />
+          <circle cx="6.5" cy="6.5" r="5.75" fill="none" />
+        </g>
+        <g id="Ellipse_9" data-name="Ellipse 9" transform="translate(81 99.5) rotate(90)" fill="#1eb8e3"
+          stroke="#1eb8e3" stroke-width="1.5">
+          <circle cx="6.5" cy="6.5" r="6.5" stroke="none" />
+          <circle cx="6.5" cy="6.5" r="5.75" fill="none" />
+        </g>
+        <line id="Line_29" data-name="Line 29" x1="100" transform="translate(81.5 106)" fill="none"
+          stroke="rgba(255,255,255,0.4)" stroke-linecap="round" stroke-width="1.5" stroke-dasharray="1 5" />
+        <line id="Line_30" data-name="Line 30" x1="100" transform="translate(194.5 106)" fill="none"
+          stroke="rgba(255,255,255,0.4)" stroke-linecap="round" stroke-width="1.5" stroke-dasharray="1 5" />
+        <text id="Product_recommender" data-name="Product recommender" transform="translate(74.764 127)" fill="#40d4fd"
+          font-size="10" font-family="Montserrat-SemiBold, Montserrat" font-weight="600">
+          <tspan x="-59.12" y="0">Product recommender</tspan>
+        </text>
+        <text id="Products" transform="translate(188 127)" fill="rgba(255,255,255,0.4)" font-size="10"
+          font-family="Montserrat-SemiBold, Montserrat" font-weight="600">
+          <tspan x="-23.305" y="0">Products</tspan>
+        </text>
+        <text id="Other_settings" data-name="Other settings" transform="translate(300.518 127)"
+          fill="rgba(255,255,255,0.4)" font-size="10" font-family="Montserrat-SemiBold, Montserrat" font-weight="600">
+          <tspan x="-37.195" y="0">Other settings</tspan>
+        </text>
+      </g>
+    </svg>
+
+  </div>
+  <div *ngIf="stepIndex==2" class="step">
+    <svg xmlns="http://www.w3.org/2000/svg" width="323.754" height="30.5" viewBox="0 0 323.754 30.5">
+      <g id="Group_1027" data-name="Group 1027" transform="translate(-14.764 -99.5)">
+        <g id="Ellipse_8" data-name="Ellipse 8" transform="translate(307 99.5) rotate(90)" fill="#19264d"
+          stroke="rgba(255,255,255,0.2)" stroke-width="1.5">
+          <circle cx="6.5" cy="6.5" r="6.5" stroke="none" />
+          <circle cx="6.5" cy="6.5" r="5.75" fill="none" />
+        </g>
+        <g id="Ellipse_10" data-name="Ellipse 10" transform="translate(194 99.5) rotate(90)" fill="#1eb8e3"
+          stroke="#1eb8e3" stroke-width="1.5">
+          <circle cx="6.5" cy="6.5" r="6.5" stroke="none" />
+          <circle cx="6.5" cy="6.5" r="5.75" fill="none" />
+        </g>
+        <g id="Ellipse_9" data-name="Ellipse 9" transform="translate(81 99.5) rotate(90)" fill="#1eb8e3"
+          stroke="#1eb8e3" stroke-width="1.5">
+          <circle cx="6.5" cy="6.5" r="6.5" stroke="none" />
+          <circle cx="6.5" cy="6.5" r="5.75" fill="none" />
+        </g>
+        <line id="Line_29" data-name="Line 29" x1="100" transform="translate(81.5 106)" fill="none" stroke="#1eb8e3"
+          stroke-linecap="round" stroke-width="1.5" stroke-dasharray="1 5" />
+        <line id="Line_30" data-name="Line 30" x1="100" transform="translate(194.5 106)" fill="none"
+          stroke="rgba(255,255,255,0.4)" stroke-linecap="round" stroke-width="1.5" stroke-dasharray="1 5" />
+        <text id="Product_recommender" data-name="Product recommender" transform="translate(74.764 127)" fill="#40d4fd"
+          font-size="10" font-family="Montserrat-SemiBold, Montserrat" font-weight="600">
+          <tspan x="-59.12" y="0">Product recommender</tspan>
+        </text>
+        <text id="Products" transform="translate(188 127)" fill="#40d4fd" font-size="10"
+          font-family="Montserrat-SemiBold, Montserrat" font-weight="600">
+          <tspan x="-23.305" y="0">Products</tspan>
+        </text>
+        <text id="Other_settings" data-name="Other settings" transform="translate(300.518 127)"
+          fill="rgba(255,255,255,0.4)" font-size="10" font-family="Montserrat-SemiBold, Montserrat" font-weight="600">
+          <tspan x="-37.195" y="0">Other settings</tspan>
+        </text>
+      </g>
+    </svg>
+
+  </div>
+  <div *ngIf="stepIndex==3" class="step">
+    <svg xmlns="http://www.w3.org/2000/svg" width="323.754" height="30.5" viewBox="0 0 323.754 30.5">
+      <g id="Group_1028" data-name="Group 1028" transform="translate(-14.764 -99.5)">
+        <g id="Ellipse_8" data-name="Ellipse 8" transform="translate(307 99.5) rotate(90)" fill="#1eb8e3"
+          stroke="#1eb8e3" stroke-width="1.5">
+          <circle cx="6.5" cy="6.5" r="6.5" stroke="none" />
+          <circle cx="6.5" cy="6.5" r="5.75" fill="none" />
+        </g>
+        <g id="Ellipse_10" data-name="Ellipse 10" transform="translate(194 99.5) rotate(90)" fill="#1eb8e3"
+          stroke="#1eb8e3" stroke-width="1.5">
+          <circle cx="6.5" cy="6.5" r="6.5" stroke="none" />
+          <circle cx="6.5" cy="6.5" r="5.75" fill="none" />
+        </g>
+        <g id="Ellipse_9" data-name="Ellipse 9" transform="translate(81 99.5) rotate(90)" fill="#1eb8e3"
+          stroke="#1eb8e3" stroke-width="1.5">
+          <circle cx="6.5" cy="6.5" r="6.5" stroke="none" />
+          <circle cx="6.5" cy="6.5" r="5.75" fill="none" />
+        </g>
+        <line id="Line_29" data-name="Line 29" x1="100" transform="translate(81.5 106)" fill="none" stroke="#1eb8e3"
+          stroke-linecap="round" stroke-width="1.5" stroke-dasharray="1 5" />
+        <line id="Line_30" data-name="Line 30" x1="100" transform="translate(194.5 106)" fill="none" stroke="#1eb8e3"
+          stroke-linecap="round" stroke-width="1.5" stroke-dasharray="1 5" />
+        <text id="Product_recommender" data-name="Product recommender" transform="translate(74.764 127)" fill="#40d4fd"
+          font-size="10" font-family="Montserrat-SemiBold, Montserrat" font-weight="600">
+          <tspan x="-59.12" y="0">Product recommender</tspan>
+        </text>
+        <text id="Products" transform="translate(188 127)" fill="#40d4fd" font-size="10"
+          font-family="Montserrat-SemiBold, Montserrat" font-weight="600">
+          <tspan x="-23.305" y="0">Products</tspan>
+        </text>
+        <text id="Other_settings" data-name="Other settings" transform="translate(300.518 127)" fill="#40d4fd"
+          font-size="10" font-family="Montserrat-SemiBold, Montserrat" font-weight="600">
+          <tspan x="-37.195" y="0">Other settings</tspan>
+        </text>
+      </g>
+    </svg>
+  </div>
+</ion-header>
+
+
+
+<ion-content #mycontent>
+
+  <!-- questions start -->
+
+  <!-- first step start -->
+  <div class="first-step" *ngIf="stepIndex==1">
+    <!-- question selected start -->
+    <div *ngIf="selectedQuestion" class="selected-question">
+      <ion-slides pager="true">
+        <ion-slide *ngFor="let question of questions;let questionIndex=index">
+          <ion-label class="title">Question{{selectedQuestion}}</ion-label>
+          <div class="card-wrap">
+            <ion-card>
+              <p class="card-header">{{questions[selectedQuestion-1]['des']}}</p>
+              <ion-row ngClass="question-row" *ngFor="let answer of answers[selectedQuestion-1];let index=index"
+                (click)="questions[selectedQuestion-1]['answerindex']=index;selectedQuestion=undefined">
+                <ion-col col-11>
+                  <ion-row>
+                    <p class="que-des">{{answer}}</p>
+                  </ion-row>
+                </ion-col>
+                <ion-col col-1>
+                  <ion-row *ngIf="index==questions[selectedQuestion-1]['answerindex']" class="check-icon">
+                    <ion-icon name="ios-checkmark"></ion-icon>
+                  </ion-row>
+                </ion-col>
+              </ion-row>
+            </ion-card>
+          </div>
+        </ion-slide>
+      </ion-slides>
+
+      <div class="step-btn">
+        <button class="normal-button" ion-button color=secondary (click)="next()">Next step</button>
+      </div>
+    </div>
+    <!-- question selected end -->
+    <div *ngIf="!selectedQuestion">
+      <ion-row class="question-row" *ngFor="let question of questions;let index=index" (click)="goAnswer(index)">
+        <ion-col col-12>
+          <ion-label class="question">Question {{index+1}}</ion-label>
+          <ion-label class="sub-question">{{question.des}}</ion-label>
+          <p class="que-des">{{answers[index][question.answerindex]}}</p>
+        </ion-col>
+      </ion-row>
+
+      <ion-row class="go-arrow-configure" (click)="true">
+        <span>Configure recommendation</span>
+        <ion-icon name="ios-arrow-forward"></ion-icon>
+      </ion-row>
+      <div class="step-btn">
+        <button class="normal-button" ion-button color=secondary (click)="next()">Next step</button>
+      </div>
+    </div>
+  </div>
+  <!-- first step end -->
+
+  <!-- second step start -->
+  <div class="second-step" *ngIf="stepIndex==2">
+
+    <ion-label class="title">CONTRACT BUILDER</ion-label>
+    <div class="card-wrap">
+      <ion-card>
+        <ion-row>
+          <ion-col class="left-col" no-padding col-2>
+            <ion-row class="full-height">
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28">
+                <g id="Group_946" data-name="Group 946" transform="translate(-16 -47)">
+                  <path id="Union_1" data-name="Union 1"
+                    d="M-7920.319-1477.389l-4.181-4.093-4.181,4.093a1.379,1.379,0,0,1-1.921,0,1.309,1.309,0,0,1,0-1.881l4.321-4.23-4.321-4.23a1.309,1.309,0,0,1,0-1.881,1.379,1.379,0,0,1,1.921,0l4.181,4.093,4.181-4.093a1.379,1.379,0,0,1,1.921,0,1.309,1.309,0,0,1,0,1.881l-4.321,4.23,4.321,4.23a1.309,1.309,0,0,1,0,1.881,1.365,1.365,0,0,1-.959.39A1.372,1.372,0,0,1-7920.319-1477.389Z"
+                    transform="translate(7954.5 1545)" fill="rgba(255,255,255,0.4)" stroke="rgba(0,0,0,0)"
+                    stroke-width="1" />
+                  <g id="Icon-28_placeholder" transform="translate(-449 -844)">
+                    <rect id="Rectangle_307" data-name="Rectangle 307" width="28" height="28"
+                      transform="translate(465 891)" fill="none" />
+                  </g>
+                </g>
+              </svg>
+            </ion-row>
+          </ion-col>
+          <ion-col no-padding col-10>
+            <ion-row class="go-arrow-configure" (click)="true">
+              <span>Index</span>
+              <ion-icon name="ios-arrow-forward"></ion-icon>
+            </ion-row>
+            <ion-row class="go-arrow-configure" (click)="true">
+              <span>36 months</span>
+              <ion-icon name="ios-arrow-forward"></ion-icon>
+            </ion-row>
+          </ion-col>
+        </ion-row>
+
+      </ion-card>
+    </div>
+    <div class="card-wrap">
+      <ion-card>
+        <ion-row>
+          <ion-col class="left-col" no-padding col-2>
+            <ion-row class="full-height">
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28">
+                <g id="Group_946" data-name="Group 946" transform="translate(-16 -47)">
+                  <path id="Union_1" data-name="Union 1"
+                    d="M-7920.319-1477.389l-4.181-4.093-4.181,4.093a1.379,1.379,0,0,1-1.921,0,1.309,1.309,0,0,1,0-1.881l4.321-4.23-4.321-4.23a1.309,1.309,0,0,1,0-1.881,1.379,1.379,0,0,1,1.921,0l4.181,4.093,4.181-4.093a1.379,1.379,0,0,1,1.921,0,1.309,1.309,0,0,1,0,1.881l-4.321,4.23,4.321,4.23a1.309,1.309,0,0,1,0,1.881,1.365,1.365,0,0,1-.959.39A1.372,1.372,0,0,1-7920.319-1477.389Z"
+                    transform="translate(7954.5 1545)" fill="rgba(255,255,255,0.4)" stroke="rgba(0,0,0,0)"
+                    stroke-width="1" />
+                  <g id="Icon-28_placeholder" transform="translate(-449 -844)">
+                    <rect id="Rectangle_307" data-name="Rectangle 307" width="28" height="28"
+                      transform="translate(465 891)" fill="none" />
+                  </g>
+                </g>
+              </svg>
+            </ion-row>
+          </ion-col>
+          <ion-col no-padding col-10>
+            <ion-row class="go-arrow-configure" (click)="true">
+              <span>Energy Only</span>
+              <ion-icon name="ios-arrow-forward"></ion-icon>
+            </ion-row>
+            <ion-row class="go-arrow-configure" (click)="true">
+              <span>24 months</span>
+              <ion-icon name="ios-arrow-forward"></ion-icon>
+            </ion-row>
+          </ion-col>
+        </ion-row>
+
+      </ion-card>
+    </div>
+    <div class="card-wrap">
+      <ion-card>
+        <ion-row>
+          <ion-col class="left-col" no-padding col-2>
+            <ion-row class="full-height">
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28">
+                <g id="Group_946" data-name="Group 946" transform="translate(-16 -47)">
+                  <path id="Union_1" data-name="Union 1"
+                    d="M-7920.319-1477.389l-4.181-4.093-4.181,4.093a1.379,1.379,0,0,1-1.921,0,1.309,1.309,0,0,1,0-1.881l4.321-4.23-4.321-4.23a1.309,1.309,0,0,1,0-1.881,1.379,1.379,0,0,1,1.921,0l4.181,4.093,4.181-4.093a1.379,1.379,0,0,1,1.921,0,1.309,1.309,0,0,1,0,1.881l-4.321,4.23,4.321,4.23a1.309,1.309,0,0,1,0,1.881,1.365,1.365,0,0,1-.959.39A1.372,1.372,0,0,1-7920.319-1477.389Z"
+                    transform="translate(7954.5 1545)" fill="rgba(255,255,255,0.4)" stroke="rgba(0,0,0,0)"
+                    stroke-width="1" />
+                  <g id="Icon-28_placeholder" transform="translate(-449 -844)">
+                    <rect id="Rectangle_307" data-name="Rectangle 307" width="28" height="28"
+                      transform="translate(465 891)" fill="none" />
+                  </g>
+                </g>
+              </svg>
+            </ion-row>
+          </ion-col>
+          <ion-col no-padding col-10>
+            <ion-row class="go-arrow-configure" (click)="true">
+              <span>Fixed all-in</span>
+              <ion-icon name="ios-arrow-forward"></ion-icon>
+            </ion-row>
+            <ion-row class="go-arrow-configure" (click)="true">
+              <span>12 months</span>
+              <ion-icon name="ios-arrow-forward"></ion-icon>
+            </ion-row>
+          </ion-col>
+        </ion-row>
+
+      </ion-card>
+    </div>
+    <div class="card-wrap">
+      <button ion-button class="normal-button" color="primary">Add a product</button>
+    </div>
+    <div class="step-btn">
+      <ion-row>
+        <ion-col col-6>
+          <button class="normal-button" ion-button color=secondary (click)="previous()">Previous step</button>
+        </ion-col>
+        <ion-col col-6>
+          <button class="normal-button" ion-button color=secondary (click)="next()">Next step</button>
+        </ion-col>
+      </ion-row>
+    </div>
+  </div>
+  <!-- second step end -->
+
+  <!-- third step start -->
+  <div class="third-step" *ngIf="stepIndex==3">
+    <ion-row class="third-row" (click)="openMenu()">
+      <ion-col col-12>
+        <ion-label text-wrap class="title">What day and time are you available to review and select the best energy
+          products for your account?</ion-label>
+        <p class="date">{{selectedDate?timeConverter(selectedDate):"Jan 14, 2019"}}</p>
+      </ion-col>
+    </ion-row>
+    <ion-row class="third-row">
+      <ion-col col-9>
+        <ion-label text-wrap class="title">What day and time are you available to review and select the best energy
+          products for your account?</ion-label>
+        <p class="sub-des">(Authorize us to request your historical usage on your behalf and analyze it for determining
+          the rate for your account)</p>
+      </ion-col>
+      <ion-col col-3>
+        <ion-row>
+          <ion-toggle></ion-toggle>
+        </ion-row>
+      </ion-col>
+    </ion-row>
+    <ion-row class="third-row">
+      <ion-col col-9>
+        <ion-label text-wrap class="title">What day and time are you available to review and select the best energy
+          products for your account?</ion-label>
+        <p class="sub-des">(Authorize us to request your historical usage on your behalf and analyze it for determining
+          the rate for your account)</p>
+      </ion-col>
+      <ion-col col-3>
+        <ion-row>
+          <ion-toggle></ion-toggle>
+        </ion-row>
+      </ion-col>
+    </ion-row>
+
+    <div class="step-btn">
+      <ion-row>
+        <ion-col col-6>
+          <button class="normal-button" ion-button color=secondary (click)="previous()">Previous step</button>
+        </ion-col>
+
+        <ion-col col-6>
+          <button class="normal-button" ion-button color=danger (click)="startAuction()">Start Auction</button>
+        </ion-col>
+      </ion-row>
+    </div>
+
+  </div>
+  <!-- third step end -->
+
+</ion-content>

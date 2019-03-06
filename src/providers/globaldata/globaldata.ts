@@ -12,26 +12,34 @@ import { LoadingController, Loading, Platform } from 'ionic-angular';
 @Injectable()
 export class GlobaldataProvider {
 
-  public isTabHidden:boolean;
+  public isTabHidden: boolean;
   public loading: Loading;
-  public isIosPlatform:boolean;
-  
+  public isIosPlatform: boolean;
+  public deviceWidth;
+  public deviceHeight
   constructor(
     public loadingCtrl: LoadingController,
     public http: Http, public plt: Platform) {
+    plt.ready().then(() => {
       if (plt.is('ios')) {
         this.isIosPlatform = true;
       }
       else
         this.isIosPlatform = false;
+      this.deviceWidth = plt.width();
+      this.deviceHeight = plt.height();
+
+    })
+
+
     console.log('Hello GlobaldataProvider Provider');
   }
 
   // tab hidden start
-  settingTabHidden(value:boolean) {
+  settingTabHidden(value: boolean) {
     this.isTabHidden = value;
   }
-  getTabHiddenStatus(){
+  getTabHiddenStatus() {
     return this.isTabHidden;
   }
 

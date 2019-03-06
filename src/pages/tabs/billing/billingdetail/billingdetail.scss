@@ -23,15 +23,7 @@ page-billingdetail {
                         font-size: 12px;
                         font-family: Montserrat-Medium;
                     }
-                   
                 }
-                ion-icon {
-                    color: #1EB8E3;
-                    margin: auto;
-                    font-weight: bold;
-                    font-size: 30px;
-                }
-             
             }
             .detail-block {
                 border: 1px solid #E5E9EC;
@@ -46,7 +38,12 @@ page-billingdetail {
                     color: #43535F;
                     font-family: Montserrat-Bold
                 }
-               
+                .detail-des.until {
+                    color: #1EB8E3;
+                }
+                .detail-des.expired {
+                    color: #FF2116;
+                }
             }
             .under-detail {
                 padding: 5px 10px 10px 10px;
@@ -61,20 +58,12 @@ page-billingdetail {
                     font-family: Montserrat-Bold
                 }
                 .detail-des.amount {
-                    color: #1EB8E3!important;
+                    color: #1EB8E3 !important;
                 }
-
             }
         }
         .card-ios .detail-block {
             border-radius: 10px;
         }
-        .pay-des {
-            text-align: center;
-            font-size: 12px;
-            font-family: Montserrat-Medium;
-            color: #A3ADB7;
-        }
-      
     }
 }

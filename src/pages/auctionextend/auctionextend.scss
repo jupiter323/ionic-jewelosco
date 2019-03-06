@@ -1,0 +1,48 @@
+page-auctionextend {
+    ion-content {
+        background: white !important;
+    }
+    .toggle-md.toggle-checked .toggle-icon {
+        background-color: #8fdcf1 !important;
+    }
+    ion-toggle.toggle-md {
+        margin-left: 0;
+        padding-left: 0;
+        .toggle-icon {
+            background-color: #555e7b;
+        }
+    }
+    .toggle-ios.toggle-checked .toggle-icon {
+        background-color: #1EB8E3 !important;
+    }
+    ion-toggle.toggle-ios {
+        margin-left: 0;
+        padding-left: 0;
+        .toggle-icon {
+            background: none;
+        }
+        .toggle-icon::before {
+            background: #19264d;
+            bottom: 0px;
+            top: 0px;
+            right: 0px;
+            left: 0px;
+            border: 1px solid #465070;
+        }
+    }
+    .step-btn {
+        background: #E9EBED;
+        padding: 0px 10px 20px 10px;
+        margin-bottom: 0;
+    }
+    .auction-row {
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid #E5E9EC;
+        padding-left: 10px;
+        padding-right: 10px;
+        color: #43535F;
+        font-size: 12px;
+        font-family: Montserrat-Medium;
+    }
+}

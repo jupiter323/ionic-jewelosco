@@ -26,7 +26,8 @@ export class BillingdetailPage {
       billstart: "08/01/2018",
       billend: "09/01/2018",
       usage: "3534",
-      amount: "324.34"
+      amount: "324.34",
+      untildue: 12
     },
     {
       address: "4175 S. Laspina St. Tulare, CA 93274",
@@ -37,7 +38,8 @@ export class BillingdetailPage {
       billstart: "08/01/2018",
       billend: "09/01/2018",
       usage: "534",
-      amount: "34.34"
+      amount: "34.34",
+      untildue: 5
     },
     {
       address: "4175 S. Laspina St. Tulare, CA 93274",
@@ -48,7 +50,9 @@ export class BillingdetailPage {
       billstart: "08/01/2018",
       billend: "09/01/2018",
       usage: "334",
-      amount: "24.34"
+      amount: "24.34",
+      untildue: 5
+
     }
 
   ]
@@ -67,14 +71,6 @@ export class BillingdetailPage {
     console.log('ionViewDidLoad BillingdetailPage');
   }
 
-  clickBillingDetail(index) {
-    this.billingdetails[index].selected = !this.billingdetails[index].selected;
-    this.buttonTitle = "Pay for all";
-    for (let billingdetail of this.billingdetails)
-      if (!billingdetail.selected) {
-        this.buttonTitle = "Pay for selected items only";
-        break;
-      }
-  }
+
 
 }

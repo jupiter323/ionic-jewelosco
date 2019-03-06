@@ -1,0 +1,139 @@
+page-auction {
+    ion-header {
+        .step {
+            margin-bottom: 15px;
+            text-align: center;
+        }
+    }
+    ion-content {
+        background: white !important;
+        .step-btn {
+            background: #E9EBED;
+            padding: 0px 10px 20px 10px;
+            margin-bottom: 0;
+        }
+        .first-step {
+            .selected-question {
+                background: #E9EBED;
+                .card-wrap {
+                    padding: 20px;
+                    ion-card {
+                        padding: 0;
+                        .card-header {
+                            text-align: center;
+                            padding: 25px;
+                            background: #19264D;
+                            color: white;
+                            font-size: 16px;
+                            font-family: Montserrat-Medium;
+                        }
+                    }
+                    .question-row {
+                        height: 120px;
+                        justify-content: center;
+                        align-items: center;
+                        padding: 10px;
+                        .que-des {
+                            font-size: 16px;
+                            color: #43535F;
+                            font-family: Montserrat-Medium;
+                        }
+                        .check-icon {
+                            color: #1EB8E3;
+                            font-weight: bold;
+                            font-size: 30px;
+                        }
+                    }
+                }
+                .title {
+                    text-align: center;
+                    font-size: 12px;
+                    color: #43535F;
+                    font-family: Montserrat-Medium;
+                    margin: 0;
+                    padding: 20px 0 0 0;
+                }
+                .step-btn {
+                    border-top: 1px solid #B6C0C9;
+                }
+            }
+            .go-arrow-configure {
+                color: #43535F;
+                font-size: 12px;
+                font-family: Montserrat-Medium;
+                padding: 10px 10px 10px 15px;
+                justify-content: space-between;
+                align-items: center;
+                background: #E9EBED;
+                ion-icon {
+                    color: #B5BEC5;
+                    font-size: 19px;
+                    font-weight: 800;
+                    margin-right: 0;
+                }
+                border-bottom: 1px solid #B6C0C9;
+            }
+        }
+        .second-step {
+            .title {
+                text-align: center;
+                font-size: 16px;
+                color: #43535F;
+                font-family: Montserrat-Bold;
+            }
+            .card-wrap {
+                padding:  7.5px 15px;
+                ion-card {
+                    padding: 0;
+                    margin-bottom: 0!important;
+                    border: 1px solid #19264D;
+                    .left-col {
+                        background: #19264D;
+                        ion-row {
+                            justify-content: center;
+                            align-items: center;
+                        }
+                    }
+                }
+            }
+            .go-arrow-configure {
+                color: #43535F;
+                font-size: 16px;
+                font-family: Montserrat-Medium;
+                padding: 15px 10px;
+                justify-content: space-between;
+                align-items: center;
+                ion-icon {
+                    color: #B5BEC5;
+                    font-size: 19px;
+                    font-weight: 800;
+                    margin-right: 0;
+                }
+                border-bottom: 1px solid #B6C0C9;
+            }
+        }
+        .third-step {
+            .third-row {
+                border-bottom: 1px solid #E5E9EC;
+                padding: 15px;
+                .title {
+                    color: #43535F;
+                    font-size: 12px;
+                    font-family: Montserrat-Bold;
+                    margin-top: 0;
+                }
+                .sub-des {
+                    color: #A3ADB7;
+                    font-size: 12px;
+                    font-family: Montserrat-Medium;
+                }
+                .date {
+                    color: #43535F;
+                    font-size: 16px;
+                    font-family: Montserrat-Medium;
+                }
+            
+            }
+        }
+    }
+}

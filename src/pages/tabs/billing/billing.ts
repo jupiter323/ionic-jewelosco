@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { BillingdetailPage } from './billingdetail/billingdetail';
+import { BillingfirstPage } from './billingfirst/billingfirst';
 
 /**
  * Generated class for the BillingPage page.
@@ -15,142 +16,34 @@ import { BillingdetailPage } from './billingdetail/billingdetail';
   templateUrl: 'billing.html',
 })
 export class BillingPage {
-  public billingitems: any = [
+  public locationItems: any = [
     {
-      title: "Edison",
-      loc: "Southern California Edison",
-      note: "Pacific Blvd Apartments",
-      kind: "gas",
-      invoice: "545.45",
-      payment: "345.34",
-      balance: "453.45"
-
+      title: "AMLI Bay Area",
+      loc: "Bay Area"
     },
     {
-      title: "Edison",
-      loc: "Southern California Edison",
-      note: "853 N Sunset ",
-      kind: "electricity",
-      invoice: "55.45",
-      payment: "3345.34",
-      balance: "453.00"
+      title: "AMLI Texas",
+      loc: "Texas"
     },
     {
-      title: "Edison",
-      loc: "Southern California Edison",
-      note: "Marina Del Ray Waterside Dr.",
-      kind: "gas",
-      invoice: "545.45",
-      payment: "345.34",
-      balance: "453.45"
+      title: "AMLI D.C.",
+      loc: "D.C."
     },
     {
-      title: "Edison",
-      loc: "Southern California Edison",
-      note: "Anchorage St Apartments  ",
-      kind: "gas",
-      invoice: "34.45",
-      payment: "789.34",
-      balance: "65.45"
+      title: "AMLI Southern California",
+      loc: "Southern California"
     },
     {
-      title: "Edison",
-      loc: "Southern California Edison",
-      note: "Pacific Blvd Apartments",
-      kind: "gas",
-      invoice: "34.45",
-      payment: "789.34",
-      balance: "65.45"
+      title: "AMLI Bay Area",
+      loc: "Bay Area"
     },
     {
-      title: "Edison",
-      loc: "Southern California Edison",
-      note: "7741 Bay St.",
-      kind: "electricity",
-      invoice: "34.45",
-      payment: "789.34",
-      balance: "65.45"
+      title: "AMLI Baltimore",
+      loc: "Baltimore"
     },
     {
-      title: "Edison",
-      loc: "Southern California Edison",
-      note: "Riverside Drive Condos",
-      kind: "electricity",
-      invoice: "34.45",
-      payment: "789.34",
-      balance: "65.45"
-    },
-    {
-      title: "Edison",
-      loc: "Southern California Edison",
-      note: "Pacific Blvd Apartments",
-      kind: "gas",
-      invoice: "34.45",
-      payment: "789.34",
-      balance: "65.45"
-    },
-    {
-      title: "Edison",
-      loc: "Southern California Edison",
-      note: "Pacific Blvd Apartments",
-      kind: "gas",
-      invoice: "34.45",
-      payment: "789.34",
-      balance: "65.45"
-    },
-    {
-      title: "Edison",
-      loc: "Southern California Edison",
-      note: "Pacific Blvd Apartments",
-      kind: "gas",
-      invoice: "34.45",
-      payment: "789.34",
-      balance: "65.45"
-    },
-    {
-      title: "Edison",
-      loc: "Southern California Edison",
-      note: "Pacific Blvd Apartments",
-      kind: "gas",
-      invoice: "34.45",
-      payment: "789.34",
-      balance: "65.45"
-    },
-    {
-      title: "Edison",
-      loc: "Southern California Edison",
-      note: "Riverside Drive Condos",
-      kind: "electricity",
-      invoice: "34.45",
-      payment: "789.34",
-      balance: "65.45"
-    },
-    {
-      title: "Edison",
-      loc: "Southern California Edison",
-      note: "Riverside Drive Condos",
-      kind: "electricity",
-      invoice: "34.45",
-      payment: "789.34",
-      balance: "65.45"
-    },
-    {
-      title: "Edison",
-      loc: "Southern California Edison",
-      note: "Riverside Drive Condos",
-      kind: "electricity",
-      invoice: "34.45",
-      payment: "789.34",
-      balance: "65.45"
-    },
-    {
-      title: "Edison",
-      loc: "Southern California Edison",
-      note: "Riverside Drive Condos d",
-      kind: "electricity",
-      invoice: "34.45",
-      payment: "789.34",
-      balance: "65.45"
+      title: "AMLI Chicago",
+      loc: "Chicago"
     }
   ];
 
@@ -158,10 +51,10 @@ export class BillingPage {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad BillingPage');
+    console.log('ionViewDidLoad EntitiesPage');
   }
-  goBillingDetail(billingitem: any) {
-    this.navCtrl.push(BillingdetailPage, { billingitem })
+  goEntitiesDetail(locationItem: any) {
+    this.navCtrl.push(BillingfirstPage, { locationItem });
   }
 
 }

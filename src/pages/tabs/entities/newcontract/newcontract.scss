@@ -1,0 +1,57 @@
+page-newcontract {
+   
+    ion-content {
+        background: white !important;
+        .step-btn {
+            background: #E9EBED;
+            padding: 0px 10px 20px 10px;
+            margin-bottom: 0;
+        }
+        .step-3-wrap {
+            margin-top: 7.5px;
+        }
+        .card-wrap {
+            padding: 7.5px 15px 7.5px 15px;
+            ion-card {
+                padding: 0;
+                margin-bottom: 0 !important;
+                border: 1px solid #19264D;
+                .left-col {
+                    background: #19264D;
+                    ion-row {
+                        justify-content: center;
+                        align-items: center;
+                    }
+                }
+            }
+            .go-arrow-configure {
+                color: #43535F;
+                font-size: 12px;
+                font-family: Montserrat-Bold;
+                padding: 15px 10px;
+                justify-content: space-between;
+                align-items: center;
+                ion-icon {
+                    color: #B5BEC5;
+                    font-size: 19px;
+                    font-weight: 800;
+                    margin-right: 0;
+                }
+                .des {
+                    font-size: 16px;
+                    color: #43535F;
+                    font-family: Montserrat-Medium;
+                }
+                border-bottom: 1px solid #B6C0C9;
+            }
+        }
+    }
+    .menus {
+        .round {
+            border-radius: 19px;
+            width:80%;
+            margin: auto;
+            margin-bottom: 10px;
+        }
+    }
+}

@@ -1,0 +1,55 @@
+page-auctioninprogressdetail {
+    ion-content {
+        background: #E9EBED !important;
+        .card-wrap {
+            padding: 20px;
+        }
+        .detail-block {
+            background: white;
+            margin-top: 0px;
+            padding: 15px;
+            img {
+                margin-top: 10px;
+            }
+            .detail-title {
+                font-size: 10px;
+                font-family: Montserrat-SemiBold;
+                color: #A3ADB7;
+            }
+            .rate-des {
+                font-size: 35px;
+                color: #43535F;
+                font-family: Montserrat-Medium
+            }
+            .current-rate-des {
+                font-size: 35px;
+                color: #1EB8E3;
+                font-family: Montserrat-Medium
+            }
+            .current-rate {
+                color: #FC8F3B;
+                font-size: 16px;
+                font-family: Montserrat-Bold;
+                span {
+                    font-size: 10px;
+                    font-family: Montserrat-SemiBold;
+                }
+            }
+            .fee-des {
+                font-size: 16px;
+                color: #1EB8E3;
+                font-family: Montserrat-Bold
+            }
+            ion-icon {
+                color: #B5BEC5;
+                font-size: 19px;
+                font-weight: 800;
+                margin-right: 0;
+                margin: auto
+            }
+        }
+        .card-ios .detail-block {
+            border-radius: 10px;
+        }
+    }
+}

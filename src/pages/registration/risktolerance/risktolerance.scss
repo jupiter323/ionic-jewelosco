@@ -2,30 +2,4 @@ page-risktolerance {
     ion-content {
         background-color: white !important;
     }
-    .question-row {
-        border-top: 1px solid #E5E9EC;
-        padding: 15px;
-        padding-top: 0px;
-        align-items: center;
-        .question {
-            font-size: 12px;
-            font-family: Montserrat-Bold;
-           
-        }
-
-        .que-des {
-            // height: 10px;
-            font-size: 16px;
-            font-family: Montserrat-Medium;
-        }
-        .dot-arrow {
-            align-items: center;
-            justify-content: space-between;
-            ion-icon {
-                font-size: 23px;
-                color: #B5BEC5;
-                font-weight: bold;
-            }
-        }
-    }
 }

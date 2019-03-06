@@ -157,6 +157,7 @@ export class HomePage {
 
   selectAlerts() {
     this.selectedTab = 2;
+    
   }
 
   dismiss(selectedItem: ItemSliding, index: any) {

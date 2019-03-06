@@ -1,0 +1,404 @@
+<!--
+  Generated template for the NewcontractPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<div class="menus">
+  <ion-menu side="right" type="overlay" swipeEnabled=false [content]="mycontent" id="status">
+    <ion-header>
+      <ion-row class="header-row">
+        <ion-row class="header-title">
+          <ion-col col-1>
+            <!-- <ion-icon name="ios-arrow-back"></ion-icon> -->
+          </ion-col>
+          <span class="other-menu">
+            Parent entity
+          </span>
+          <ion-col col-1 (click)="closeMenu()">
+            <div class="right-icon">
+              Done
+            </div>
+          </ion-col>
+        </ion-row>
+        <button ion-button class="normal-button round" color=opacity (click)="addNew()">Add new</button>
+      </ion-row>
+    </ion-header>
+
+    <ion-content>
+      <ion-row class="answer-row" *ngFor="let statu of items;let index=index" (click)="selectAnswerItem(index)">
+        <ion-col col-10>
+          <p [ngClass]="index==selectedItem?'que-title checked':'que-title'">{{statu}}</p>
+        </ion-col>
+        <ion-col col-2>
+          <ion-row *ngIf="index==selectedItem" class="check-row">
+            <ion-icon name="ios-checkmark"></ion-icon>
+          </ion-row>
+        </ion-col>
+      </ion-row>
+    </ion-content>
+  </ion-menu>
+</div>
+
+<ion-header>
+  <ion-row class="header-row">
+    <ion-row class="header-title">
+      <ion-col col-1>
+        <ion-icon name="ios-arrow-back" (click)="navCtrl.pop()"></ion-icon>
+      </ion-col>
+      <span>
+        New Contract
+      </span>
+      <ion-col col-1>
+      </ion-col>
+    </ion-row>
+  </ion-row>
+  <ion-row class="prent-entity" (click)="openMenu()">
+    <ion-col col-1></ion-col>
+    <ion-col col-10>
+      <span class="title">
+        Parent entity
+      </span><br>
+      <span class="detail">{{items[selectedItem]||"None"}}</span>
+    </ion-col>
+    <ion-col col-1>
+      <ion-row class="align-center full-height">
+        <ion-icon name="ios-arrow-forward"></ion-icon>
+      </ion-row>
+    </ion-col>
+  </ion-row>
+  <ion-row class="justify-center" padding>
+    <svg *ngIf="stepIndex==1" xmlns="http://www.w3.org/2000/svg" width="282.754" height="30.5"
+      viewBox="0 0 282.754 30.5">
+      <g id="Group_1029" data-name="Group 1029" transform="translate(-42.764 -179.5)">
+        <g id="Ellipse_8" data-name="Ellipse 8" transform="translate(307 179.5) rotate(90)" fill="#19264d"
+          stroke="rgba(255,255,255,0.2)" stroke-width="1.5">
+          <circle cx="6.5" cy="6.5" r="6.5" stroke="none" />
+          <circle cx="6.5" cy="6.5" r="5.75" fill="none" />
+        </g>
+        <g id="Ellipse_10" data-name="Ellipse 10" transform="translate(194 179.5) rotate(90)" fill="#19264d"
+          stroke="rgba(255,255,255,0.2)" stroke-width="1.5">
+          <circle cx="6.5" cy="6.5" r="6.5" stroke="none" />
+          <circle cx="6.5" cy="6.5" r="5.75" fill="none" />
+        </g>
+        <g id="Ellipse_9" data-name="Ellipse 9" transform="translate(81 179.5) rotate(90)" fill="#1eb8e3"
+          stroke="#1eb8e3" stroke-width="1.5">
+          <circle cx="6.5" cy="6.5" r="6.5" stroke="none" />
+          <circle cx="6.5" cy="6.5" r="5.75" fill="none" />
+        </g>
+        <line id="Line_29" data-name="Line 29" x1="100" transform="translate(81.5 186)" fill="none"
+          stroke="rgba(255,255,255,0.4)" stroke-linecap="round" stroke-width="1.5" stroke-dasharray="1 5" />
+        <line id="Line_30" data-name="Line 30" x1="100" transform="translate(194.5 186)" fill="none"
+          stroke="rgba(255,255,255,0.4)" stroke-linecap="round" stroke-width="1.5" stroke-dasharray="1 5" />
+        <text id="Contact_info" data-name="Contact info" transform="translate(74.764 207)" fill="#40d4fd" font-size="10"
+          font-family="Montserrat-SemiBold, Montserrat" font-weight="600">
+          <tspan x="-31.705" y="0">Contact info</tspan>
+        </text>
+        <text id="Conditions" transform="translate(188 207)" fill="rgba(255,255,255,0.4)" font-size="10"
+          font-family="Montserrat-SemiBold, Montserrat" font-weight="600">
+          <tspan x="-27.88" y="0">Conditions</tspan>
+        </text>
+        <text id="Locations" transform="translate(300.518 207)" fill="rgba(255,255,255,0.4)" font-size="10"
+          font-family="Montserrat-SemiBold, Montserrat" font-weight="600">
+          <tspan x="-24.925" y="0">Locations</tspan>
+        </text>
+      </g>
+    </svg>
+    <svg *ngIf="stepIndex==2" xmlns="http://www.w3.org/2000/svg" width="282.754" height="30.5"
+      viewBox="0 0 282.754 30.5">
+      <g id="Group_1030" data-name="Group 1030" transform="translate(-42.764 -179.5)">
+        <g id="Ellipse_8" data-name="Ellipse 8" transform="translate(307 179.5) rotate(90)" fill="#19264d"
+          stroke="rgba(255,255,255,0.2)" stroke-width="1.5">
+          <circle cx="6.5" cy="6.5" r="6.5" stroke="none" />
+          <circle cx="6.5" cy="6.5" r="5.75" fill="none" />
+        </g>
+        <g id="Ellipse_10" data-name="Ellipse 10" transform="translate(194 179.5) rotate(90)" fill="#1eb8e3"
+          stroke="#1eb8e3" stroke-width="1.5">
+          <circle cx="6.5" cy="6.5" r="6.5" stroke="none" />
+          <circle cx="6.5" cy="6.5" r="5.75" fill="none" />
+        </g>
+        <g id="Ellipse_9" data-name="Ellipse 9" transform="translate(81 179.5) rotate(90)" fill="#1eb8e3"
+          stroke="#1eb8e3" stroke-width="1.5">
+          <circle cx="6.5" cy="6.5" r="6.5" stroke="none" />
+          <circle cx="6.5" cy="6.5" r="5.75" fill="none" />
+        </g>
+        <line id="Line_29" data-name="Line 29" x1="100" transform="translate(81.5 186)" fill="none" stroke="#1eb8e3"
+          stroke-linecap="round" stroke-width="1.5" stroke-dasharray="1 5" />
+        <line id="Line_30" data-name="Line 30" x1="100" transform="translate(194.5 186)" fill="none"
+          stroke="rgba(255,255,255,0.4)" stroke-linecap="round" stroke-width="1.5" stroke-dasharray="1 5" />
+        <text id="Contact_info" data-name="Contact info" transform="translate(74.764 207)" fill="#40d4fd" font-size="10"
+          font-family="Montserrat-SemiBold, Montserrat" font-weight="600">
+          <tspan x="-31.705" y="0">Contact info</tspan>
+        </text>
+        <text id="Conditions" transform="translate(188 207)" fill="#40d4fd" font-size="10"
+          font-family="Montserrat-SemiBold, Montserrat" font-weight="600">
+          <tspan x="-27.88" y="0">Conditions</tspan>
+        </text>
+        <text id="Locations" transform="translate(300.518 207)" fill="rgba(255,255,255,0.4)" font-size="10"
+          font-family="Montserrat-SemiBold, Montserrat" font-weight="600">
+          <tspan x="-24.925" y="0">Locations</tspan>
+        </text>
+      </g>
+    </svg>
+    <svg *ngIf="stepIndex==3" xmlns="http://www.w3.org/2000/svg" width="282.754" height="30.5"
+      viewBox="0 0 282.754 30.5">
+      <g id="Group_1031" data-name="Group 1031" transform="translate(-42.764 -179.5)">
+        <g id="Ellipse_8" data-name="Ellipse 8" transform="translate(307 179.5) rotate(90)" fill="#1eb8e3"
+          stroke="#1eb8e3" stroke-width="1.5">
+          <circle cx="6.5" cy="6.5" r="6.5" stroke="none" />
+          <circle cx="6.5" cy="6.5" r="5.75" fill="none" />
+        </g>
+        <g id="Ellipse_10" data-name="Ellipse 10" transform="translate(194 179.5) rotate(90)" fill="#1eb8e3"
+          stroke="#1eb8e3" stroke-width="1.5">
+          <circle cx="6.5" cy="6.5" r="6.5" stroke="none" />
+          <circle cx="6.5" cy="6.5" r="5.75" fill="none" />
+        </g>
+        <g id="Ellipse_9" data-name="Ellipse 9" transform="translate(81 179.5) rotate(90)" fill="#1eb8e3"
+          stroke="#1eb8e3" stroke-width="1.5">
+          <circle cx="6.5" cy="6.5" r="6.5" stroke="none" />
+          <circle cx="6.5" cy="6.5" r="5.75" fill="none" />
+        </g>
+        <line id="Line_29" data-name="Line 29" x1="100" transform="translate(81.5 186)" fill="none" stroke="#1eb8e3"
+          stroke-linecap="round" stroke-width="1.5" stroke-dasharray="1 5" />
+        <line id="Line_30" data-name="Line 30" x1="100" transform="translate(194.5 186)" fill="none" stroke="#1eb8e3"
+          stroke-linecap="round" stroke-width="1.5" stroke-dasharray="1 5" />
+        <text id="Contact_info" data-name="Contact info" transform="translate(74.764 207)" fill="#40d4fd" font-size="10"
+          font-family="Montserrat-SemiBold, Montserrat" font-weight="600">
+          <tspan x="-31.705" y="0">Contact info</tspan>
+        </text>
+        <text id="Conditions" transform="translate(188 207)" fill="#40d4fd" font-size="10"
+          font-family="Montserrat-SemiBold, Montserrat" font-weight="600">
+          <tspan x="-27.88" y="0">Conditions</tspan>
+        </text>
+        <text id="Locations" transform="translate(300.518 207)" fill="#40d4fd" font-size="10"
+          font-family="Montserrat-SemiBold, Montserrat" font-weight="600">
+          <tspan x="-24.925" y="0">Locations</tspan>
+        </text>
+      </g>
+    </svg>
+  </ion-row>
+</ion-header>
+
+<ion-content #mycontent>
+  <div *ngIf="stepIndex==1">
+    <div class="input-box-ios" *ngIf="gs.isIosPlatform">
+      <!-- Name -->
+      <span>Contact name</span>
+      <ion-input matInput type="text" placeholder="Zaid Marsala" [(ngModel)]="user.name"></ion-input>
+      <!-- Email -->
+      <span>Email</span>
+      <ion-input matInput type="email" placeholder="zaid.marsala@amli.com" [(ngModel)]="user.email"></ion-input>
+      <!-- phone -->
+      <span>Cell phone</span>
+      <ion-input matInput type="phone" placeholder="(203) 283-2849" [(ngModel)]="user.phone"></ion-input>
+      <span>Company / Organization</span>
+      <ion-input matInput type="phone" placeholder="(312) 340-5720" [(ngModel)]="user.company"></ion-input>
+    </div>
+
+    <div class="input-box-md" *ngIf="!gs.isIosPlatform">
+      <!-- name -->
+      <mat-form-field class="full-width">
+        <input matInput type="text" placeholder="Contact name" [(ngModel)]="user.name">
+      </mat-form-field>
+      <!-- Email -->
+      <mat-form-field class="full-width">
+        <input matInput type="email" placeholder="Email" [(ngModel)]="user.email">
+      </mat-form-field>
+      <!-- phone -->
+      <mat-form-field class="full-width">
+        <input matInput type="phone" placeholder="Cell phone" [(ngModel)]="user.phone">
+      </mat-form-field>
+      <mat-form-field class="full-width">
+        <input matInput type="phone" placeholder="Company / Organization" [(ngModel)]="user.company">
+      </mat-form-field>
+    </div>
+
+    <div class="step-btn">
+      <button class="normal-button" ion-button color="secondary" (click)="next()">Next step</button>
+    </div>
+  </div>
+  <div *ngIf="stepIndex==2">
+
+    <div class="input-box-ios" *ngIf="gs.isIosPlatform">
+      <!-- Name -->
+      <span>Contract number</span>
+      <ion-input matInput type="text" placeholder="TX0000000098-00" [(ngModel)]="user.contractnumber"></ion-input>
+      <!-- Email -->
+      <span>Type</span>
+      <ion-input matInput type="text" placeholder="Residential" [(ngModel)]="user.type"></ion-input>
+      <!-- phone -->
+      <span>Term</span>
+      <ion-input matInput type="text" placeholder="6 Months" [(ngModel)]="user.term"></ion-input>
+      <span>Rate</span>
+      <ion-input matInput type="text" placeholder="$0.57900" [(ngModel)]="user.rate"></ion-input>
+      <span>Signature date</span>
+      <ion-input matInput type="text" placeholder="Sep 17, 2018 01:42 PM" [(ngModel)]="user.signaturedate"></ion-input>
+      <span>Start Date</span>
+      <ion-input matInput type="text" placeholder="Oct 01, 2018" [(ngModel)]="user.startdate"></ion-input>
+    </div>
+
+    <div class="input-box-md" *ngIf="!gs.isIosPlatform">
+      <!-- name -->
+      <mat-form-field class="full-width">
+        <input matInput type="text" placeholder="Contract number" [(ngModel)]="user.contractnumber">
+      </mat-form-field>
+      <!-- Email -->
+      <mat-form-field class="full-width">
+        <input matInput type="text" placeholder="Type" [(ngModel)]="user.type">
+      </mat-form-field>
+      <!-- phone -->
+      <mat-form-field class="full-width">
+        <input matInput type="text" placeholder="Term" [(ngModel)]="user.term">
+      </mat-form-field>
+      <mat-form-field class="full-width">
+        <input matInput type="text" placeholder="Rate" [(ngModel)]="user.rate">
+      </mat-form-field>
+      <mat-form-field class="full-width">
+        <input matInput type="text" placeholder="Signature date" [(ngModel)]="user.signaturedate">
+      </mat-form-field>
+      <mat-form-field class="full-width">
+        <input matInput type="text" placeholder="Start Date" [(ngModel)]="user.startdate">
+      </mat-form-field>
+    </div>
+
+
+    <div class="step-btn">
+      <ion-row>
+        <ion-col col-6>
+          <button class="normal-button" ion-button color=secondary (click)="previous()">Previous step</button>
+        </ion-col>
+        <ion-col col-6>
+          <button class="normal-button" ion-button color=secondary (click)="next()">Next step</button>
+        </ion-col>
+      </ion-row>
+    </div>
+  </div>
+  <div *ngIf="stepIndex==3" class="step-3-wrap">
+    <div class="card-wrap">
+      <ion-card>
+        <ion-row>
+          <ion-col class="left-col" no-padding col-2>
+            <ion-row class="full-height">
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28">
+                <g id="Group_946" data-name="Group 946" transform="translate(-16 -47)">
+                  <path id="Union_1" data-name="Union 1"
+                    d="M-7920.319-1477.389l-4.181-4.093-4.181,4.093a1.379,1.379,0,0,1-1.921,0,1.309,1.309,0,0,1,0-1.881l4.321-4.23-4.321-4.23a1.309,1.309,0,0,1,0-1.881,1.379,1.379,0,0,1,1.921,0l4.181,4.093,4.181-4.093a1.379,1.379,0,0,1,1.921,0,1.309,1.309,0,0,1,0,1.881l-4.321,4.23,4.321,4.23a1.309,1.309,0,0,1,0,1.881,1.365,1.365,0,0,1-.959.39A1.372,1.372,0,0,1-7920.319-1477.389Z"
+                    transform="translate(7954.5 1545)" fill="rgba(255,255,255,0.4)" stroke="rgba(0,0,0,0)"
+                    stroke-width="1" />
+                  <g id="Icon-28_placeholder" transform="translate(-449 -844)">
+                    <rect id="Rectangle_307" data-name="Rectangle 307" width="28" height="28"
+                      transform="translate(465 891)" fill="none" />
+                  </g>
+                </g>
+              </svg>
+            </ion-row>
+          </ion-col>
+          <ion-col no-padding col-10>
+            <ion-row class="go-arrow-configure" (click)="true">
+              <div>
+                <span>Name</span><br><br>
+                <span class="des">Spanish Hills</span>
+              </div>
+            </ion-row>
+            <ion-row class="go-arrow-configure" (click)="true">
+              <div>
+                <span>Address</span><br><br>
+                <span class="des">4175 S. Laspina St.Tulare, CA 93274</span>
+              </div>
+            </ion-row>
+          </ion-col>
+        </ion-row>
+
+      </ion-card>
+    </div>
+
+    <div class="card-wrap">
+      <ion-card>
+        <ion-row>
+          <ion-col class="left-col" no-padding col-2>
+            <ion-row class="full-height">
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28">
+                <g id="Group_946" data-name="Group 946" transform="translate(-16 -47)">
+                  <path id="Union_1" data-name="Union 1"
+                    d="M-7920.319-1477.389l-4.181-4.093-4.181,4.093a1.379,1.379,0,0,1-1.921,0,1.309,1.309,0,0,1,0-1.881l4.321-4.23-4.321-4.23a1.309,1.309,0,0,1,0-1.881,1.379,1.379,0,0,1,1.921,0l4.181,4.093,4.181-4.093a1.379,1.379,0,0,1,1.921,0,1.309,1.309,0,0,1,0,1.881l-4.321,4.23,4.321,4.23a1.309,1.309,0,0,1,0,1.881,1.365,1.365,0,0,1-.959.39A1.372,1.372,0,0,1-7920.319-1477.389Z"
+                    transform="translate(7954.5 1545)" fill="rgba(255,255,255,0.4)" stroke="rgba(0,0,0,0)"
+                    stroke-width="1" />
+                  <g id="Icon-28_placeholder" transform="translate(-449 -844)">
+                    <rect id="Rectangle_307" data-name="Rectangle 307" width="28" height="28"
+                      transform="translate(465 891)" fill="none" />
+                  </g>
+                </g>
+              </svg>
+            </ion-row>
+          </ion-col>
+          <ion-col no-padding col-10>
+            <ion-row class="go-arrow-configure" (click)="true">
+              <div>
+                <span>Name</span><br><br>
+                <span class="des">Spanish Hills</span>
+              </div>
+            </ion-row>
+            <ion-row class="go-arrow-configure" (click)="true">
+              <div>
+                <span>Address</span><br><br>
+                <span class="des">4175 S. Laspina St.Tulare, CA 93274</span>
+              </div>
+            </ion-row>
+          </ion-col>
+        </ion-row>
+
+      </ion-card>
+    </div>
+
+    <div class="card-wrap">
+      <ion-card>
+        <ion-row>
+          <ion-col class="left-col" no-padding col-2>
+            <ion-row class="full-height">
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28">
+                <g id="Group_946" data-name="Group 946" transform="translate(-16 -47)">
+                  <path id="Union_1" data-name="Union 1"
+                    d="M-7920.319-1477.389l-4.181-4.093-4.181,4.093a1.379,1.379,0,0,1-1.921,0,1.309,1.309,0,0,1,0-1.881l4.321-4.23-4.321-4.23a1.309,1.309,0,0,1,0-1.881,1.379,1.379,0,0,1,1.921,0l4.181,4.093,4.181-4.093a1.379,1.379,0,0,1,1.921,0,1.309,1.309,0,0,1,0,1.881l-4.321,4.23,4.321,4.23a1.309,1.309,0,0,1,0,1.881,1.365,1.365,0,0,1-.959.39A1.372,1.372,0,0,1-7920.319-1477.389Z"
+                    transform="translate(7954.5 1545)" fill="rgba(255,255,255,0.4)" stroke="rgba(0,0,0,0)"
+                    stroke-width="1" />
+                  <g id="Icon-28_placeholder" transform="translate(-449 -844)">
+                    <rect id="Rectangle_307" data-name="Rectangle 307" width="28" height="28"
+                      transform="translate(465 891)" fill="none" />
+                  </g>
+                </g>
+              </svg>
+            </ion-row>
+          </ion-col>
+          <ion-col no-padding col-10>
+            <ion-row class="go-arrow-configure" (click)="true">
+              <div>
+                <span>Name</span><br><br>
+                <span class="des">Spanish Hills</span>
+              </div>
+            </ion-row>
+            <ion-row class="go-arrow-configure" (click)="true">
+              <div>
+                <span>Address</span><br><br>
+                <span class="des">4175 S. Laspina St.Tulare, CA 93274</span>
+              </div>
+            </ion-row>
+          </ion-col>
+        </ion-row>
+
+      </ion-card>
+    </div>
+    <div class="card-wrap">
+      <button ion-button class="normal-button" color="primary">Add location</button>
+    </div>
+    <div class="step-btn">
+      <ion-row>
+        <ion-col col-6>
+          <button class="normal-button" ion-button color=secondary (click)="previous()">Previous step</button>
+        </ion-col>
+        <ion-col col-6>
+          <button class="normal-button" ion-button color=danger (click)="submit()">Submit</button>
+        </ion-col>
+      </ion-row>
+    </div>
+  </div>
+</ion-content>

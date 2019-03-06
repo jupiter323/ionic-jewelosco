@@ -1,0 +1,128 @@
+<!--
+  Generated template for the AuctionincreatecontractPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-row class="header-row">
+    <ion-row class="header-title">
+      <ion-col col-1>
+        <ion-icon name="ios-arrow-back" (click)="navCtrl.pop()"></ion-icon>
+      </ion-col>
+      <span>
+        Create Contract
+      </span>
+      <ion-col col-1>
+      </ion-col>
+    </ion-row>
+  </ion-row>
+  <ion-row class="header-detail-wrap">
+    <ion-row class="header-detail">
+      <ion-col col-12>
+        <p class="header-detail-title center">You will be notified by email with instructions on how to view your
+          contract
+          online after enrollment</p>
+      </ion-col>
+      <ion-col no-padding col-6>
+        <span class="header-detail-title" no-padding>Effective Data</span><br>
+        <span class="header-detail-des" no-padding>Jan 14,2019</span><br><br>
+        <span class="header-detail-title" no-padding>Utility</span><br>
+        <span class="header-detail-des" no-padding>COMED</span><br><br>
+        <span class="header-detail-title" no-padding>Rate per kWh</span><br>
+        <ion-row class="header-detail-des">
+          <span class="big" no-padding>{{auction.rate}}¢</span>
+        </ion-row>
+
+      </ion-col>
+      <ion-col no-padding col-6>
+        <span class="header-detail-title" no-padding>Term (Duration)</span><br>
+        <span class="header-detail-des" no-padding>12 month</span><br><br>
+        <span class="header-detail-title" no-padding>Supplier</span><br>
+        <span class="header-detail-des" no-padding>Mega Energy</span><br><br>
+        <span class="header-detail-title" no-padding>Projected Yearly Spending (Est.)</span><br>
+        <ion-row class="header-detail-des">
+          <span class="big" no-padding>$1617</span>
+          <div class="top">.68</div>
+        </ion-row>
+      </ion-col>
+    </ion-row>
+  </ion-row>
+</ion-header>
+
+
+<ion-content>
+  <div class="input-box-ios" *ngIf="gs.isIosPlatform">
+    <!-- Name -->
+    <span>Name</span>
+    <ion-input matInput type="text" placeholder="Zaid Marsala" [(ngModel)]="user.name"></ion-input>
+    <!-- Email -->
+    <span>Email</span>
+    <ion-input matInput type="email" placeholder="zaid.marsala@amli.com" [(ngModel)]="user.email"></ion-input>
+    <!-- phone -->
+    <ion-row>
+      <ion-col col-6 no-padding>
+          <span>Cell phone</span>
+      </ion-col>
+      <ion-col col-6 class="c-phone" no-padding>
+          <span>Company / Organization</span>
+      </ion-col>
+    </ion-row>
+    
+    <ion-row>
+      <ion-col col-6 no-padding>
+        <ion-input matInput type="phone" placeholder="(203) 283-2849" [(ngModel)]="user.phone"></ion-input>
+      </ion-col>
+      <ion-col col-6 class="c-phone" no-padding>
+        <ion-input matInput type="phone" placeholder="(312) 340-5720" [(ngModel)]="user.company"></ion-input>
+      </ion-col>
+    </ion-row>
+
+    <!-- bill -->
+    <span>Billing address</span>
+    <ion-input matInput type="text" placeholder="141 W Jackson Blvd, #300, Chicago, IL" [(ngModel)]="user.billaddress">
+    </ion-input>
+    <!-- mail -->
+    <span>Mailing address</span>
+    <ion-input matInput type="text" placeholder="141 W Jackson Blvd, #300, Chicago, IL" [(ngModel)]="user.mailaddress">
+    </ion-input>
+  </div>
+
+  <div class="input-box-md" *ngIf="!gs.isIosPlatform">
+    <!-- name -->
+    <mat-form-field class="full-width">
+      <input matInput type="text" placeholder="Name" [(ngModel)]="user.name">
+    </mat-form-field>
+    <!-- Email -->
+    <mat-form-field class="full-width">
+      <input matInput type="email" placeholder="Email" [(ngModel)]="user.email">
+    </mat-form-field>
+    <!-- phone -->
+    <ion-row>
+      <ion-col col-6 no-padding>
+        <mat-form-field class="full-width">
+          <input matInput type="phone" placeholder="Cell phone" [(ngModel)]="user.phone">
+        </mat-form-field>
+      </ion-col>
+      <ion-col col-6 class="c-phone" no-padding>
+        <mat-form-field class="full-width">
+          <input matInput type="phone" placeholder="Company / Organization" [(ngModel)]="user.company">
+        </mat-form-field>
+      </ion-col>
+    </ion-row>
+
+    <!-- bill -->
+    <mat-form-field class="full-width">
+      <input matInput type="text" placeholder="Billing address" [(ngModel)]="user.billaddress">
+    </mat-form-field>
+    <!-- mail -->
+    <mat-form-field class="full-width">
+      <input matInput type="text" placeholder="Mailing address" [(ngModel)]="user.mailaddress">
+    </mat-form-field>
+  </div>
+
+  <div class="step-btn">
+    <ion-label>To e-sign, we'll send a separate email.</ion-label>
+    <button class="normal-button" ion-button color="secondary" (click)="goCreateContract()">Approve via e-Signature</button>
+  </div>
+</ion-content>
