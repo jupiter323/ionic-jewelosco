@@ -27,6 +27,28 @@ page-feedsuppliers {
                 margin: auto;
             }
         }
+        .sub-title {
+            font-size: 12px;
+            font-family: Montserrat-Bold;
+            padding-left: 20px;
+            color: #43535F;
+        }
+        .sub-des {
+            text-align: center;
+            width: 60%;
+            margin: auto;
+            font-size: 12px;
+            color: #A3ADB7;
+            font-family: Montserrat-Medium;
+            margin-bottom: 20px;
+        }
+        .star-rate {
+            padding-top: 20px;
+            padding-bottom: 20px;
+            justify-content: space-between;
+            width: 65%;
+            margin: auto;
+        }
         .des {
             padding-left: 20px;
             padding-right: 20px;

@@ -28,13 +28,13 @@
 <ion-content>
   <div class="input-box-ios" *ngIf="gs.isIosPlatform">
     <span>Name</span>
-    <ion-input type="text" placeholder="Zaid Marsala" [(ngModel)]="user.name"></ion-input>
+    <ion-input autofocus  type="text" placeholder="Zaid Marsala" [(ngModel)]="user.name"></ion-input>
     <span>Email</span>
-    <ion-input type="text" placeholder="zaid.marsala@amli.com" [(ngModel)]="user.email"></ion-input>
+    <ion-input autofocus  type="text" placeholder="zaid.marsala@amli.com" [(ngModel)]="user.email"></ion-input>
     <span>Cell Phone</span>
-    <ion-input type="text" placeholder="(203) 283-2849" [(ngModel)]="user.cphone"></ion-input>
+    <ion-input autofocus  type="text" placeholder="(203) 283-2849" [(ngModel)]="user.cphone"></ion-input>
     <span>Company / Organization Phone</span>
-    <ion-input type="text" placeholder="(312) 340-5720" [(ngModel)]="user.ophone"></ion-input>
+    <ion-input autofocus  type="text" placeholder="(312) 340-5720" [(ngModel)]="user.ophone"></ion-input>
   </div>
 
   <div class="input-box-md" *ngIf="!gs.isIosPlatform">

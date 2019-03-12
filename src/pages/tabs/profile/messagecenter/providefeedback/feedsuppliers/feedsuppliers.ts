@@ -15,12 +15,16 @@ import { GlobaldataProvider } from '../../../../../../providers/globaldata/globa
   templateUrl: 'feedsuppliers.html',
 })
 export class FeedsuppliersPage {
-
+  public rate = 0;
   constructor(public navCtrl: NavController, public navParams: NavParams, public gs:GlobaldataProvider) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad FeedsuppliersPage');
+  }
+
+  onClickStar(selectedStar) {
+    this.rate = selectedStar;
   }
 
 }

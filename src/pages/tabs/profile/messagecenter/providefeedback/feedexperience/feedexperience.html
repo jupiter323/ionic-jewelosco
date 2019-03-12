@@ -23,7 +23,7 @@
   <div [ngClass]="gs.isIosPlatform?'line-edge-ios':'line-edge-md'"> </div>
   <div class="input-box-ios" *ngIf="gs.isIosPlatform">
     <span>Email</span>
-    <ion-input type="text" placeholder="zaid.marsala@amli.com" [(ngModel)]="support.email"></ion-input>
+    <ion-input autofocus  type="text" placeholder="zaid.marsala@amli.com" [(ngModel)]="support.email"></ion-input>
     <span>Feedback text</span>
     <ion-textarea type="text" placeholder="It's perfectly normal to have bugs in new updates, but what stood out from PK team was their outstanding and fast resolution. Thank you!!"
       [(ngModel)]="support.des"></ion-textarea>

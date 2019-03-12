@@ -79,7 +79,7 @@
     </ion-col>
     <ion-col col-10>
       <ion-row class="send-text-area">
-        <ion-input #chat_input [(ngModel)]="editorMsg" (keyup.enter)="sendMsg()" (focus)="onFocus()">
+        <ion-input autofocus  #chat_input [(ngModel)]="editorMsg" (keyup.enter)="sendMsg()" (focus)="onFocus()">
         </ion-input>
         <svg (click)="sendMsg()" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
           <g id="Group_936" data-name="Group 936" transform="translate(-327 -478)">

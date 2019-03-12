@@ -140,17 +140,17 @@
 
     <div class="input-box-ios" *ngIf="isIosPlatform">
       <span>Name</span>
-      <ion-input type="text" placeholder="Zaid Marsala" [(ngModel)]="user.name"></ion-input>
+      <ion-input autofocus  type="text" placeholder="Zaid Marsala" [(ngModel)]="user.name"></ion-input>
       <span>Email</span>
-      <ion-input type="text" placeholder="zaid.marsala@amli.com" [(ngModel)]="user.email"></ion-input>
+      <ion-input autofocus  type="text" placeholder="zaid.marsala@amli.com" [(ngModel)]="user.email"></ion-input>
       <span>Password</span>
-      <ion-input type="password" placeholder="●●●●●●●●●●" [(ngModel)]="user.password"></ion-input>
+      <ion-input autofocus  type="password" placeholder="●●●●●●●●●●" [(ngModel)]="user.password"></ion-input>
       <span>Retype Password</span>
-      <ion-input type="password" placeholder="●●●●●●●●●●" [(ngModel)]="user.cpassword"></ion-input>
+      <ion-input autofocus  type="password" placeholder="●●●●●●●●●●" [(ngModel)]="user.cpassword"></ion-input>
       <span>Cell Phone</span>
-      <ion-input type="text" placeholder="(203) 283-2849" [(ngModel)]="user.cphone"></ion-input>
+      <ion-input autofocus  type="text" placeholder="(203) 283-2849" [(ngModel)]="user.cphone"></ion-input>
       <span>Company / Organization Phone</span>
-      <ion-input type="text" placeholder="(312) 340-5720" [(ngModel)]="user.ophone"></ion-input>
+      <ion-input autofocus  type="text" placeholder="(312) 340-5720" [(ngModel)]="user.ophone"></ion-input>
     </div>
 
     <div class="input-box-md" *ngIf="!isIosPlatform">
@@ -189,7 +189,7 @@
       <!-- card number -->
       <span>Card Number</span>
       <ion-row>
-        <ion-input type="text" placeholder="1928-1849-4729-1928" [(ngModel)]="user.cardnumber"></ion-input>
+        <ion-input autofocus  type="text" placeholder="1928-1849-4729-1928" [(ngModel)]="user.cardnumber"></ion-input>
         <!-- visa icon -->
         <div class="visa-icon">
           <svg id="Icons_1_" xmlns="http://www.w3.org/2000/svg" width="52" height="34" viewBox="0 0 52 34">
@@ -206,24 +206,24 @@
       <span>Expires</span>
       <ion-row>
         <ion-col col-6 no-padding>
-          <ion-input matInput type="text" placeholder="Expires" [(ngModel)]="user.expires"></ion-input>
+          <ion-input autofocus  matInput type="text" placeholder="Expires" [(ngModel)]="user.expires"></ion-input>
         </ion-col>
         <ion-col col-6 class="cvv" no-padding>
-          <ion-input matInput type="text" placeholder="CVV" [(ngModel)]="user.cvv"></ion-input>
+          <ion-input autofocus  matInput type="text" placeholder="CVV" [(ngModel)]="user.cvv"></ion-input>
         </ion-col>
       </ion-row>
       <!-- account -->
       <span>Account #</span>
-      <ion-input matInput type="text" placeholder="192034820" [(ngModel)]="user.account"></ion-input>
+      <ion-input autofocus  matInput type="text" placeholder="192034820" [(ngModel)]="user.account"></ion-input>
       <!-- routing -->
       <span>Routing #</span>
-      <ion-input matInput type="text" placeholder="572930284" [(ngModel)]="user.routing"></ion-input>
+      <ion-input autofocus  matInput type="text" placeholder="572930284" [(ngModel)]="user.routing"></ion-input>
       <!-- bill -->
       <span>Billing address</span>
-      <ion-input matInput type="text" placeholder="141 W Jackson Blvd, #300, Chicago, IL" [(ngModel)]="user.billaddress"></ion-input>
+      <ion-input autofocus  matInput type="text" placeholder="141 W Jackson Blvd, #300, Chicago, IL" [(ngModel)]="user.billaddress"></ion-input>
       <!-- mail -->
       <span>Mailing address</span>
-      <ion-input matInput type="text" placeholder="141 W Jackson Blvd, #300, Chicago, IL" [(ngModel)]="user.mailaddress"></ion-input>
+      <ion-input autofocus  matInput type="text" placeholder="141 W Jackson Blvd, #300, Chicago, IL" [(ngModel)]="user.mailaddress"></ion-input>
     </div>
 
     <div class="input-box-md" *ngIf="!isIosPlatform">

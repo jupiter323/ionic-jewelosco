@@ -15,10 +15,47 @@ page-emailsupport {
                 }
             }
         }
+        .cat-drop {
+            margin-bottom: 15px;
+            height: 51px;
+            ion-item {
+                border-radius: 7px;
+                padding-left: 22px;
+                .item-inner {
+                    border-bottom: none;
+                    ion-select {
+                        max-width: 85%;
+                        padding-left: 0;
+                    }
+                    ion-label {
+                        font-family: Montserrat-Bold;
+                        font-size: 12px;
+                    }
+                    .select-text {
+                        font-family: Montserrat-Medium;
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
     }
     .content-md {
+        .cat-drop {
+            ion-item {
+                padding-left: 16px;
+                border-radius: 0px;
+                background: #19264D;
+                border-bottom: 2px solid rgba(255, 255, 255, 0.12);
+                .item-inner {
+                    border-bottom: none;
+                    .select-text {
+                        color: white;
+                    }
+                }
+            }
+        }
         .active {
-            border-bottom: 1px solid #1EB8E3!important;
+            border-bottom: 1px solid #1EB8E3 !important;
         }
         .input-box {
             border-bottom: 1px solid rgba(255, 255, 255, 0.12);

@@ -55,10 +55,10 @@
   <div class="input-box-ios" *ngIf="gs.isIosPlatform">
     <!-- Name -->
     <span>Name</span>
-    <ion-input matInput type="text" placeholder="Zaid Marsala" [(ngModel)]="user.name"></ion-input>
+    <ion-input autofocus  matInput type="text" placeholder="Zaid Marsala" [(ngModel)]="user.name"></ion-input>
     <!-- Email -->
     <span>Email</span>
-    <ion-input matInput type="email" placeholder="zaid.marsala@amli.com" [(ngModel)]="user.email"></ion-input>
+    <ion-input autofocus  matInput type="email" placeholder="zaid.marsala@amli.com" [(ngModel)]="user.email"></ion-input>
     <!-- phone -->
     <ion-row>
       <ion-col col-6 no-padding>
@@ -71,20 +71,20 @@
     
     <ion-row>
       <ion-col col-6 no-padding>
-        <ion-input matInput type="phone" placeholder="(203) 283-2849" [(ngModel)]="user.phone"></ion-input>
+        <ion-input autofocus  matInput type="phone" placeholder="(203) 283-2849" [(ngModel)]="user.phone"></ion-input>
       </ion-col>
       <ion-col col-6 class="c-phone" no-padding>
-        <ion-input matInput type="phone" placeholder="(312) 340-5720" [(ngModel)]="user.company"></ion-input>
+        <ion-input autofocus  matInput type="phone" placeholder="(312) 340-5720" [(ngModel)]="user.company"></ion-input>
       </ion-col>
     </ion-row>
 
     <!-- bill -->
     <span>Billing address</span>
-    <ion-input matInput type="text" placeholder="141 W Jackson Blvd, #300, Chicago, IL" [(ngModel)]="user.billaddress">
+    <ion-input autofocus  matInput type="text" placeholder="141 W Jackson Blvd, #300, Chicago, IL" [(ngModel)]="user.billaddress">
     </ion-input>
     <!-- mail -->
     <span>Mailing address</span>
-    <ion-input matInput type="text" placeholder="141 W Jackson Blvd, #300, Chicago, IL" [(ngModel)]="user.mailaddress">
+    <ion-input autofocus  matInput type="text" placeholder="141 W Jackson Blvd, #300, Chicago, IL" [(ngModel)]="user.mailaddress">
     </ion-input>
   </div>
 

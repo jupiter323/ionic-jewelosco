@@ -20,6 +20,13 @@ export class EmailsupportPage {
   public supportFormData: any =
     {}
 
+  
+    customPopoverOptions: any = {
+      header: 'Hair Color',
+      subHeader: 'Select your hair color',
+      message: 'Only select your dominant hair color'
+    };
+  
   constructor(public navCtrl: NavController, public navParams: NavParams, public gs: GlobaldataProvider) {
   }
 
@@ -52,4 +59,5 @@ export class EmailsupportPage {
   request() {
 
   }
+  
 }

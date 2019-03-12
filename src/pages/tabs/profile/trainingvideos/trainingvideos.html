@@ -22,60 +22,78 @@
 </ion-header>
 
 
-<ion-content padding>
-  <ion-card no-padding>
-    <img src="assets/imgs/video1.png">
-    <ion-row class="bottom-row">
-      <ion-col col-7>
-        <p class="top-des">Creating an auction</p>
-        <p class="dur">12:56</p>
-      </ion-col>
-      <ion-col col-3></ion-col>
-      <ion-col col-2 class="play-btn">
-        <ion-row>
-          <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34">
-            <g id="Group_878" data-name="Group 878" transform="translate(-308 -310)">
-              <g id="Group_876" data-name="Group 876">
-                <g id="Ellipse_19" data-name="Ellipse 19" transform="translate(308 310)" fill="#fff" stroke="#e5e9ec"
-                  stroke-width="1">
-                  <circle cx="17" cy="17" r="17" stroke="none" />
-                  <circle cx="17" cy="17" r="16.5" fill="none" />
-                </g>
-              </g>
-              <path id="Path_71" data-name="Path 71" d="M224.975,203.3l-8.014,4.848a1.489,1.489,0,0,1-2.261-1.272v-9.7a1.485,1.485,0,0,1,2.261-1.272l8.014,4.848A1.479,1.479,0,0,1,224.975,203.3Z"
-                transform="translate(105.3 125.215)" fill="#b6c0c9" />
-            </g>
-          </svg>
-        </ion-row>
-      </ion-col>
-    </ion-row>
-  </ion-card>
 
-  <ion-card no-padding>
-    <img src="assets/imgs/video2.png">
-    <ion-row class="bottom-row">
-      <ion-col col-7>
-        <p class="top-des">Working with bids</p>
-        <p class="dur">5:08</p>
-      </ion-col>
-      <ion-col col-3></ion-col>
-      <ion-col col-2 class="play-btn">
-        <ion-row>
-          <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34">
-            <g id="Group_878" data-name="Group 878" transform="translate(-308 -310)">
-              <g id="Group_876" data-name="Group 876">
-                <g id="Ellipse_19" data-name="Ellipse 19" transform="translate(308 310)" fill="#fff" stroke="#e5e9ec"
-                  stroke-width="1">
-                  <circle cx="17" cy="17" r="17" stroke="none" />
-                  <circle cx="17" cy="17" r="16.5" fill="none" />
+<ion-content>
+  <div class="wrap-video" [hidden]="!loadingVideo">
+    <svg id="Group_947" (click)="stopPlay()" data-name="Group 947" xmlns="http://www.w3.org/2000/svg" width="28" height="28"
+      viewBox="0 0 28 28">
+      <path id="Union_1" data-name="Union 1"
+        d="M10.681,12.611,6.5,8.518,2.319,12.611a1.379,1.379,0,0,1-1.921,0,1.309,1.309,0,0,1,0-1.881L4.72,6.5.4,2.271A1.309,1.309,0,0,1,.4.39a1.379,1.379,0,0,1,1.921,0L6.5,4.482,10.681.39A1.379,1.379,0,0,1,12.6.39a1.309,1.309,0,0,1,0,1.881L8.281,6.5,12.6,10.73a1.309,1.309,0,0,1,0,1.881,1.379,1.379,0,0,1-1.921,0Z"
+        transform="translate(7.5 8)" fill="rgba(0,0,0,0.68)" stroke="rgba(0,0,0,0)" stroke-width="1" />
+      <g id="Icon-28_placeholder" transform="translate(-465 -891)">
+        <rect id="Rectangle_307" data-name="Rectangle 307" width="28" height="28" transform="translate(465 891)"
+          fill="none" />
+      </g>
+    </svg>
+    <video #videoPlayer muted="true" controls playsinline preload="auto" [poster]="videoBuffer.thumbnail?.url"></video>
+  </div>
+  <div *ngIf="!loadingVideo" padding>
+    <ion-card no-padding (click)="playVideo(1)">
+      <img src="assets/imgs/video1.png">
+      <ion-row class="bottom-row">
+        <ion-col col-7>
+          <p class="top-des">Creating an auction</p>
+          <p class="dur">12:56</p>
+        </ion-col>
+        <ion-col col-3></ion-col>
+        <ion-col col-2 class="play-btn">
+          <ion-row>
+            <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34">
+              <g id="Group_878" data-name="Group 878" transform="translate(-308 -310)">
+                <g id="Group_876" data-name="Group 876">
+                  <g id="Ellipse_19" data-name="Ellipse 19" transform="translate(308 310)" fill="#fff" stroke="#e5e9ec"
+                    stroke-width="1">
+                    <circle cx="17" cy="17" r="17" stroke="none" />
+                    <circle cx="17" cy="17" r="16.5" fill="none" />
+                  </g>
                 </g>
+                <path id="Path_71" data-name="Path 71"
+                  d="M224.975,203.3l-8.014,4.848a1.489,1.489,0,0,1-2.261-1.272v-9.7a1.485,1.485,0,0,1,2.261-1.272l8.014,4.848A1.479,1.479,0,0,1,224.975,203.3Z"
+                  transform="translate(105.3 125.215)" fill="#b6c0c9" />
               </g>
-              <path id="Path_71" data-name="Path 71" d="M224.975,203.3l-8.014,4.848a1.489,1.489,0,0,1-2.261-1.272v-9.7a1.485,1.485,0,0,1,2.261-1.272l8.014,4.848A1.479,1.479,0,0,1,224.975,203.3Z"
-                transform="translate(105.3 125.215)" fill="#b6c0c9" />
-            </g>
-          </svg>
-        </ion-row>
-      </ion-col>
-    </ion-row>
-  </ion-card>
+            </svg>
+          </ion-row>
+        </ion-col>
+      </ion-row>
+    </ion-card>
+
+    <ion-card no-padding (click)="playVideo(2)">
+      <img src="assets/imgs/video2.png">
+      <ion-row class="bottom-row">
+        <ion-col col-7>
+          <p class="top-des">Working with bids</p>
+          <p class="dur">5:08</p>
+        </ion-col>
+        <ion-col col-3></ion-col>
+        <ion-col col-2 class="play-btn">
+          <ion-row>
+            <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34">
+              <g id="Group_878" data-name="Group 878" transform="translate(-308 -310)">
+                <g id="Group_876" data-name="Group 876">
+                  <g id="Ellipse_19" data-name="Ellipse 19" transform="translate(308 310)" fill="#fff" stroke="#e5e9ec"
+                    stroke-width="1">
+                    <circle cx="17" cy="17" r="17" stroke="none" />
+                    <circle cx="17" cy="17" r="16.5" fill="none" />
+                  </g>
+                </g>
+                <path id="Path_71" data-name="Path 71"
+                  d="M224.975,203.3l-8.014,4.848a1.489,1.489,0,0,1-2.261-1.272v-9.7a1.485,1.485,0,0,1,2.261-1.272l8.014,4.848A1.479,1.479,0,0,1,224.975,203.3Z"
+                  transform="translate(105.3 125.215)" fill="#b6c0c9" />
+              </g>
+            </svg>
+          </ion-row>
+        </ion-col>
+      </ion-row>
+    </ion-card>
+  </div>
 </ion-content>

@@ -28,11 +28,11 @@
 <ion-content>
   <div class="input-box-ios" *ngIf="gs.isIosPlatform">
     <span>Old Password</span>
-    <ion-input type="password" placeholder="●●●●●●●●●●" [(ngModel)]="user.oldpass"></ion-input>
+    <ion-input autofocus  type="password" placeholder="●●●●●●●●●●" [(ngModel)]="user.oldpass"></ion-input>
     <span>New Password</span>
-    <ion-input type="password" placeholder="●●●●●●●●●●" [(ngModel)]="user.newpass"></ion-input>
+    <ion-input autofocus  type="password" placeholder="●●●●●●●●●●" [(ngModel)]="user.newpass"></ion-input>
     <span>Retype New Password</span>
-    <ion-input type="password" placeholder="●●●●●●●●●●" [(ngModel)]="user.cnewpass"></ion-input>
+    <ion-input autofocus  type="password" placeholder="●●●●●●●●●●" [(ngModel)]="user.cnewpass"></ion-input>
   </div>
 
   <div class="input-box-md" *ngIf="!gs.isIosPlatform">

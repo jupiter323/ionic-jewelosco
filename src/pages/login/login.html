@@ -44,7 +44,7 @@
           <ion-label>Email</ion-label>
         </ion-col>
         <ion-col col-8>
-          <ion-input type="text" placeholder="mail@example.com" [(ngModel)]="user.email"></ion-input>
+          <ion-input autofocus  type="text" placeholder="mail@example.com" [(ngModel)]="user.email"></ion-input>
         </ion-col>
       </ion-row>
       <ion-row class="input-password">
@@ -52,19 +52,19 @@
           <ion-label>Password</ion-label>
         </ion-col>
         <ion-col col-8>
-          <ion-input type="password" placeholder="●●●●●●●●●●" [(ngModel)]="user.password"></ion-input>
+          <ion-input autofocus  type="password" placeholder="●●●●●●●●●●" [(ngModel)]="user.password"></ion-input>
         </ion-col>
       </ion-row>
     </ion-row>
     <ion-row *ngIf="!isIosPlatform" class="input-box">
       <ion-row [ngClass]="isFocusEmail?'input-email active':'input-email'">
         <ion-col col-12>
-          <ion-input type="text" placeholder="mail@example.com" [(ngModel)]="user.email" (ionFocus)='isFocus("email")' (ionBlur)='isBlur("email")'></ion-input>
+          <ion-input autofocus  type="text" placeholder="mail@example.com" [(ngModel)]="user.email" (ionFocus)='isFocus("email")' (ionBlur)='isBlur("email")'></ion-input>
         </ion-col>
       </ion-row>
       <ion-row [ngClass]="isFocusPass?'input-password active':'input-password'">
         <ion-col col-12>
-          <ion-input type="password" placeholder="●●●●●●●●●●" [(ngModel)]="user.password" (ionFocus)='isFocus("pass")' (ionBlur)='isBlur("pass")'></ion-input>
+          <ion-input autofocus  type="password" placeholder="●●●●●●●●●●" [(ngModel)]="user.password" (ionFocus)='isFocus("pass")' (ionBlur)='isBlur("pass")'></ion-input>
         </ion-col>
       </ion-row>
     </ion-row>

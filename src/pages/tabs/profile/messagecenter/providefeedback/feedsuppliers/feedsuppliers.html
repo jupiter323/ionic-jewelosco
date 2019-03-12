@@ -38,9 +38,11 @@
                 fill="none" />
             </g>
             <g id="Group_683" data-name="Group 683" transform="translate(925.023 1947.012)">
-              <path id="Path_12" data-name="Path 12" d="M2.3,24.485,12.5,11.458a.64.64,0,0,0,.074-.684A.61.61,0,0,0,12,10.409H9.467a.6.6,0,0,1-.494-.251A.655.655,0,0,1,8.854,9.6L11.06.529a.439.439,0,0,0-.221-.494.4.4,0,0,0-.509.114L.119,13.183a.657.657,0,0,0-.081.684.61.61,0,0,0,.568.365H3.137a.6.6,0,0,1,.494.251.649.649,0,0,1,.118.555L1.565,24.1a.435.435,0,0,0,.221.494.4.4,0,0,0,.509-.114Z"
+              <path id="Path_12" data-name="Path 12"
+                d="M2.3,24.485,12.5,11.458a.64.64,0,0,0,.074-.684A.61.61,0,0,0,12,10.409H9.467a.6.6,0,0,1-.494-.251A.655.655,0,0,1,8.854,9.6L11.06.529a.439.439,0,0,0-.221-.494.4.4,0,0,0-.509.114L.119,13.183a.657.657,0,0,0-.081.684.61.61,0,0,0,.568.365H3.137a.6.6,0,0,1,.494.251.649.649,0,0,1,.118.555L1.565,24.1a.435.435,0,0,0,.221.494.4.4,0,0,0,.509-.114Z"
                 transform="translate(0 0)" fill="#ffb300" fill-rule="evenodd" />
-              <path id="Path_13" data-name="Path 13" d="M35.164.3,29.707,10.7a1.311,1.311,0,0,0,.022,1.277,1.208,1.208,0,0,0,1.077.631h2.08a.392.392,0,0,1,.361.22.448.448,0,0,1-.007.441L26.3,24.925a.4.4,0,0,0,.376-.16l10.2-13.027a.641.641,0,0,0,.074-.684.61.61,0,0,0-.568-.365H33.844a.6.6,0,0,1-.494-.251.655.655,0,0,1-.118-.555L35.437.817a.439.439,0,0,0-.221-.494A.354.354,0,0,0,35.164.3Z"
+              <path id="Path_13" data-name="Path 13"
+                d="M35.164.3,29.707,10.7a1.311,1.311,0,0,0,.022,1.277,1.208,1.208,0,0,0,1.077.631h2.08a.392.392,0,0,1,.361.22.448.448,0,0,1-.007.441L26.3,24.925a.4.4,0,0,0,.376-.16l10.2-13.027a.641.641,0,0,0,.074-.684.61.61,0,0,0-.568-.365H33.844a.6.6,0,0,1-.494-.251.655.655,0,0,1-.118-.555L35.437.817a.439.439,0,0,0-.221-.494A.354.354,0,0,0,35.164.3Z"
                 transform="translate(-24.376 -0.288)" fill="#fc8f3b" fill-rule="evenodd" />
             </g>
           </g>
@@ -55,12 +57,46 @@
     </ion-col>
   </ion-row>
   <div [ngClass]="gs.isIosPlatform?'line-edge-ios':'line-edge-md'"> </div>
-  <p class="des">Green Mountain is awesome. Their
-    bills are easy to read and understand
-    (and a little more affordable than
-    everyone else, too). Their CSRs are cool.
-    They have cool incentives, and they
-    don't suck.</p>
+  <ion-row class="top-row">
+    <div class="item-des">
+      <ion-label class="loc-row">Feedback text</ion-label>
+      <p class="note-row">Green Mountain is awesome. Their
+        bills are easy to read and understand
+        (and a little more affordable than
+        everyone else, too). Their CSRs are cool.
+        They have cool incentives, and they
+        don't suck.</p>
+    </div>    
+  </ion-row>
+
+  <!-- rating -->
+  <div [ngClass]="gs.isIosPlatform?'line-edge-ios':'line-edge-md'"> </div>
+  <ion-label class="sub-title">Rating</ion-label>
+  <ion-row class="star-rate">
+    <div *ngFor="let star of [1,2,3,4,5]" (click)="onClickStar(star)">
+      <!-- star Fill -->
+      <svg *ngIf="star<=rate" xmlns=" http://www.w3.org/2000/svg" width="35.8" height="32.022"
+        viewBox="0 0 35.8 32.022">
+        <g id="Livello_100" data-name="Livello 100" transform="translate(0.5 0.5)">
+          <path id="Path_73" data-name="Path 73"
+            d="M36.03,21.055a1.512,1.512,0,0,0-1.536-1.486c-.055,0-.108,0-.161.008l-10.606-.25L20.1,9.867a1.547,1.547,0,0,0-2.949,0l-3.624,9.459-10.605.25c-.053-.005-.107-.008-.161-.008A1.511,1.511,0,0,0,1.23,21.055a1.473,1.473,0,0,0,.7,1.249l8.447,5.972L7.366,37.644a1.431,1.431,0,0,0-.172.68A1.512,1.512,0,0,0,8.73,39.811a1.558,1.558,0,0,0,.953-.322l8.949-5.681,8.948,5.681a1.558,1.558,0,0,0,.952.322,1.512,1.512,0,0,0,1.535-1.487,1.436,1.436,0,0,0-.172-.68l-3.014-9.369L35.328,22.3a1.476,1.476,0,0,0,.7-1.249"
+            transform="translate(-1.23 -8.789)" fill="#ffb300" stroke="#ffb300" stroke-width="1" />
+        </g>
+      </svg>
+      <!-- star out -->
+      <svg *ngIf="star>rate" xmlns="http://www.w3.org/2000/svg" width="35.8" height="32.022" viewBox="0 0 35.8 32.022">
+        <g id="Livello_100" data-name="Livello 100" transform="translate(0.5 0.5)">
+          <path id="Path_73" data-name="Path 73"
+            d="M36.03,21.055a1.512,1.512,0,0,0-1.536-1.486c-.055,0-.108,0-.161.008l-10.606-.25L20.1,9.867a1.547,1.547,0,0,0-2.949,0l-3.624,9.459-10.605.25c-.053-.005-.107-.008-.161-.008A1.511,1.511,0,0,0,1.23,21.055a1.473,1.473,0,0,0,.7,1.249l8.447,5.972L7.366,37.644a1.431,1.431,0,0,0-.172.68A1.512,1.512,0,0,0,8.73,39.811a1.558,1.558,0,0,0,.953-.322l8.949-5.681,8.948,5.681a1.558,1.558,0,0,0,.952.322,1.512,1.512,0,0,0,1.535-1.487,1.436,1.436,0,0,0-.172-.68l-3.014-9.369L35.328,22.3a1.476,1.476,0,0,0,.7-1.249"
+            transform="translate(-1.23 -8.789)" fill="none" stroke="#a3adb7" stroke-width="1" />
+        </g>
+      </svg>
+    </div>
+
+  </ion-row>
+  <p class="sub-des">Your rating allows for meaningful
+    feedback in order to improve
+    supplier performance</p>
   <ion-row class="btn-wrap">
     <button ion-button class="normal-button" color=secondary>Next step</button>
   </ion-row>

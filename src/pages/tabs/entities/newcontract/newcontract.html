@@ -184,15 +184,15 @@
     <div class="input-box-ios" *ngIf="gs.isIosPlatform">
       <!-- Name -->
       <span>Contact name</span>
-      <ion-input matInput type="text" placeholder="Zaid Marsala" [(ngModel)]="user.name"></ion-input>
+      <ion-input autofocus  matInput type="text" placeholder="Zaid Marsala" [(ngModel)]="user.name"></ion-input>
       <!-- Email -->
       <span>Email</span>
-      <ion-input matInput type="email" placeholder="zaid.marsala@amli.com" [(ngModel)]="user.email"></ion-input>
+      <ion-input autofocus  matInput type="email" placeholder="zaid.marsala@amli.com" [(ngModel)]="user.email"></ion-input>
       <!-- phone -->
       <span>Cell phone</span>
-      <ion-input matInput type="phone" placeholder="(203) 283-2849" [(ngModel)]="user.phone"></ion-input>
+      <ion-input autofocus  matInput type="phone" placeholder="(203) 283-2849" [(ngModel)]="user.phone"></ion-input>
       <span>Company / Organization</span>
-      <ion-input matInput type="phone" placeholder="(312) 340-5720" [(ngModel)]="user.company"></ion-input>
+      <ion-input autofocus  matInput type="phone" placeholder="(312) 340-5720" [(ngModel)]="user.company"></ion-input>
     </div>
 
     <div class="input-box-md" *ngIf="!gs.isIosPlatform">
@@ -218,23 +218,22 @@
     </div>
   </div>
   <div *ngIf="stepIndex==2">
-
     <div class="input-box-ios" *ngIf="gs.isIosPlatform">
       <!-- Name -->
       <span>Contract number</span>
-      <ion-input matInput type="text" placeholder="TX0000000098-00" [(ngModel)]="user.contractnumber"></ion-input>
+      <ion-input autofocus  matInput type="text" placeholder="TX0000000098-00" [(ngModel)]="user.contractnumber"></ion-input>
       <!-- Email -->
       <span>Type</span>
-      <ion-input matInput type="text" placeholder="Residential" [(ngModel)]="user.type"></ion-input>
+      <ion-input autofocus  matInput type="text" placeholder="Residential" [(ngModel)]="user.type"></ion-input>
       <!-- phone -->
       <span>Term</span>
-      <ion-input matInput type="text" placeholder="6 Months" [(ngModel)]="user.term"></ion-input>
+      <ion-input autofocus  matInput type="text" placeholder="6 Months" [(ngModel)]="user.term"></ion-input>
       <span>Rate</span>
-      <ion-input matInput type="text" placeholder="$0.57900" [(ngModel)]="user.rate"></ion-input>
+      <ion-input autofocus  matInput type="text" placeholder="$0.57900" [(ngModel)]="user.rate"></ion-input>
       <span>Signature date</span>
-      <ion-input matInput type="text" placeholder="Sep 17, 2018 01:42 PM" [(ngModel)]="user.signaturedate"></ion-input>
+      <ion-input autofocus  matInput type="text" placeholder="Sep 17, 2018" [(ngModel)]="user.signaturedate"(click)="openCalendar(1)"></ion-input>
       <span>Start Date</span>
-      <ion-input matInput type="text" placeholder="Oct 01, 2018" [(ngModel)]="user.startdate"></ion-input>
+      <ion-input autofocus  matInput type="text" placeholder="Oct 01, 2018" [(ngModel)]="user.startdate"(click)="openCalendar(2)"></ion-input>
     </div>
 
     <div class="input-box-md" *ngIf="!gs.isIosPlatform">
@@ -253,10 +252,10 @@
       <mat-form-field class="full-width">
         <input matInput type="text" placeholder="Rate" [(ngModel)]="user.rate">
       </mat-form-field>
-      <mat-form-field class="full-width">
+      <mat-form-field class="full-width" (click)="openCalendar(1)">
         <input matInput type="text" placeholder="Signature date" [(ngModel)]="user.signaturedate">
       </mat-form-field>
-      <mat-form-field class="full-width">
+      <mat-form-field class="full-width" (click)="openCalendar(2)">
         <input matInput type="text" placeholder="Start Date" [(ngModel)]="user.startdate">
       </mat-form-field>
     </div>

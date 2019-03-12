@@ -1,7 +1,7 @@
 import { NgModule, ErrorHandler, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpModule } from "@angular/http";
-import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
+import { IonicApp, IonicModule, IonicErrorHandler, ModalController } from 'ionic-angular';
 import { MyApp } from './app.component';
 
 import { StatusBar } from '@ionic-native/status-bar';
@@ -121,7 +121,7 @@ import { NewentityrelationPage } from '../pages/tabs/entities/newcontract/newent
     SignaturePadModule,
     PipesModule,
     HttpModule,
-    CalendarModule,
+    CalendarModule,   
     EmojiPickerComponentModule,
     IonicModule.forRoot(MyApp)
   ],
