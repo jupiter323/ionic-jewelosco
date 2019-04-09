@@ -243,12 +243,27 @@
           </ion-col>
           <ion-col no-padding col-10>
             <ion-row class="go-arrow-configure" (click)="true">
-              <span>Index</span>
-              <ion-icon name="ios-arrow-forward"></ion-icon>
+              <ion-row class="cat-drop">
+                <ion-select no-padding [interfaceOptions]="customPopoverOptions" interface="popover"
+                  placeholder="Type of contract">
+                  <ion-option value="fixedallin">Fixed all-in</ion-option>
+                  <ion-option value="indexplus">Index plus(Includes everything expect energy)</ion-option>
+                  <ion-option value="block">Block</ion-option>
+                  <ion-option value="capacityunbundled">Capacity Unbundled</ion-option>
+                  <ion-option value="indexadderonly">Index Adder Only</ion-option>
+                  <ion-option value="energyonly">Energy Only</ion-option>
+                </ion-select>
+                <ion-icon name="ios-arrow-forward"></ion-icon>
+              </ion-row>
             </ion-row>
             <ion-row class="go-arrow-configure" (click)="true">
-              <span>36 months</span>
-              <ion-icon name="ios-arrow-forward"></ion-icon>
+              <ion-row class="cat-drop">
+                <ion-select no-padding [interfaceOptions]="customPopoverOptions" interface="popover"
+                  placeholder="Terms or length of contract">
+                  <ion-option *ngFor="let i of monthArray" [value]="i">Always {{i}} Months</ion-option>
+                </ion-select>
+                <ion-icon name="ios-arrow-forward"></ion-icon>
+              </ion-row>
             </ion-row>
           </ion-col>
         </ion-row>
@@ -276,12 +291,27 @@
           </ion-col>
           <ion-col no-padding col-10>
             <ion-row class="go-arrow-configure" (click)="true">
-              <span>Energy Only</span>
-              <ion-icon name="ios-arrow-forward"></ion-icon>
+              <ion-row class="cat-drop">
+                <ion-select no-padding [interfaceOptions]="customPopoverOptions" interface="popover"
+                  placeholder="Type of contract">
+                  <ion-option value="fixedallin">Fixed all-in</ion-option>
+                  <ion-option value="indexplus">Index plus(Includes everything expect energy)</ion-option>
+                  <ion-option value="block">Block</ion-option>
+                  <ion-option value="capacityunbundled">Capacity Unbundled</ion-option>
+                  <ion-option value="indexadderonly">Index Adder Only</ion-option>
+                  <ion-option value="energyonly">Energy Only</ion-option>
+                </ion-select>
+                <ion-icon name="ios-arrow-forward"></ion-icon>
+              </ion-row>
             </ion-row>
             <ion-row class="go-arrow-configure" (click)="true">
-              <span>24 months</span>
-              <ion-icon name="ios-arrow-forward"></ion-icon>
+              <ion-row class="cat-drop">
+                <ion-select no-padding [interfaceOptions]="customPopoverOptions" interface="popover"
+                  placeholder="Terms or length of contract">
+                  <ion-option *ngFor="let i of monthArray" [value]="i">Always {{i}} Months</ion-option>
+                </ion-select>
+                <ion-icon name="ios-arrow-forward"></ion-icon>
+              </ion-row>
             </ion-row>
           </ion-col>
         </ion-row>
@@ -309,12 +339,27 @@
           </ion-col>
           <ion-col no-padding col-10>
             <ion-row class="go-arrow-configure" (click)="true">
-              <span>Fixed all-in</span>
-              <ion-icon name="ios-arrow-forward"></ion-icon>
+              <ion-row class="cat-drop">
+                <ion-select no-padding interface="popover"
+                  placeholder="Type of contract">
+                  <ion-option value="fixedallin">Fixed all-in</ion-option>
+                  <ion-option value="indexplus">Index plus(Includes everything expect energy)</ion-option>
+                  <ion-option value="block">Block</ion-option>
+                  <ion-option value="capacityunbundled">Capacity Unbundled</ion-option>
+                  <ion-option value="indexadderonly">Index Adder Only</ion-option>
+                  <ion-option value="energyonly">Energy Only</ion-option>
+                </ion-select>
+                <ion-icon name="ios-arrow-forward"></ion-icon>
+              </ion-row>
             </ion-row>
             <ion-row class="go-arrow-configure" (click)="true">
-              <span>12 months</span>
-              <ion-icon name="ios-arrow-forward"></ion-icon>
+              <ion-row class="cat-drop">
+                <ion-select no-padding interface="popover"
+                  placeholder="Terms or length of contract">
+                  <ion-option *ngFor="let i of monthArray" [value]="i">Always {{i}} Months</ion-option>
+                </ion-select>
+                <ion-icon name="ios-arrow-forward"></ion-icon>
+              </ion-row>
             </ion-row>
           </ion-col>
         </ion-row>

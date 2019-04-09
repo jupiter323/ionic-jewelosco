@@ -57,6 +57,8 @@ export class AuctionPage {
     monthFormat: "MMMM YYYY",
     // monthPickerFormat: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
   };
+
+  monthArray = [];
   constructor(public navCtrl: NavController, public navParams: NavParams, private gs: GlobaldataProvider,
     private menuCtl: MenuController,
     private altCtrl: AlertController
@@ -98,6 +100,9 @@ export class AuctionPage {
       ]
     ]
 
+    for (let i = 0; i < 60; i++) {
+      this.monthArray.push(i+1);
+    }
   }
   ionViewDidLoad() {
     console.log('ionViewDidLoad AuctionPage');
