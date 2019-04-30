@@ -1,0 +1,58 @@
+page-contractsreview {
+    ion-header {
+        .detail-title {
+            padding-bottom: 10px;
+            color: #A3ADB7;
+            font-size: 10px;
+            font-family: Montserrat-SemiBold;
+            width: 80%;
+            margin: auto;
+            text-align: center;
+        }
+    }
+
+    ion-content {
+        background: #E9EBED !important;
+        ion-card {
+            .top-row {
+                align-items: center;
+                justify-content: space-between;
+                .item-des {
+                    ion-label {
+                        margin: 0;
+                    }
+                    .loc-row {
+                        color: #43535F!important;
+                        font-size: 12px;
+                        font-family: Montserrat-Bold;
+                    }
+                    .month-row {
+                        color: #43535F;
+                        font-size: 12px;
+                        font-family: Montserrat-Medium;
+                    }
+                    .note-row {
+                        color: #43535F;
+                        font-size: 12px;
+                        font-family: Montserrat-Bold;
+                    }
+                }            
+                svg {
+                    // margin-right: 20px;
+                    margin: auto;
+                }
+            }
+            .detail-block {
+                border: 1px solid #E5E9EC;
+                padding: 15px 10px 15px 10px;               
+            }
+            .normal-button {
+                margin: 0!important;
+
+            }
+        }
+        .card-ios .detail-block {
+            border-radius: 10px;
+        }
+    }
+}

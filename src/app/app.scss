@@ -620,7 +620,22 @@ ion-tabs {
         padding-bottom: 10px;
     }
 }
-
+.terms-cond {
+    padding: 15px;
+    ion-label {
+        font-size: 12px;
+        font-family: Montserrat-Bold;
+    }
+    p {
+        font-size: 12px;
+        font-family: Montserrat-Medium;
+    }
+    .sub-des {
+        span {
+            padding-left: 15px;
+        }
+    }
+}
 ion-icon {
     &[class*="custom-"] {
         // Instead of using the font-based icons

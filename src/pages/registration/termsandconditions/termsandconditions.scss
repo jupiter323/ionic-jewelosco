@@ -1,22 +1,7 @@
 page-termsandconditions {
     ion-content {
         background-color: white !important;
-        .terms-cond {
-            padding: 15px;
-            ion-label {
-                font-size: 12px;
-                font-family: Montserrat-Bold;
-            }
-            p {
-                font-size: 12px;
-                font-family: Montserrat-Medium;
-            }
-            .sub-des {
-                span {
-                    padding-left: 15px;
-                }
-            }
-        }
+     
         .agree-btn {
             background: #E9EBED;
             width: 100%;

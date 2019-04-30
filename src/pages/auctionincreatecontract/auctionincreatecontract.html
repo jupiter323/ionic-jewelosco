@@ -17,112 +17,387 @@
       </ion-col>
     </ion-row>
   </ion-row>
-  <ion-row class="header-detail-wrap">
-    <ion-row class="header-detail">
-      <ion-col col-12>
-        <p class="header-detail-title center">You will be notified by email with instructions on how to view your
-          contract
-          online after enrollment</p>
-      </ion-col>
-      <ion-col no-padding col-6>
-        <span class="header-detail-title" no-padding>Effective Data</span><br>
-        <span class="header-detail-des" no-padding>Jan 14,2019</span><br><br>
-        <span class="header-detail-title" no-padding>Utility</span><br>
-        <span class="header-detail-des" no-padding>COMED</span><br><br>
-        <span class="header-detail-title" no-padding>Rate per kWh</span><br>
-        <ion-row class="header-detail-des">
-          <span class="big" no-padding>{{auction.rate}}¢</span>
-        </ion-row>
 
-      </ion-col>
-      <ion-col no-padding col-6>
-        <span class="header-detail-title" no-padding>Term (Duration)</span><br>
-        <span class="header-detail-des" no-padding>12 month</span><br><br>
-        <span class="header-detail-title" no-padding>Supplier</span><br>
-        <span class="header-detail-des" no-padding>Mega Energy</span><br><br>
-        <span class="header-detail-title" no-padding>Projected Yearly Spending (Est.)</span><br>
-        <ion-row class="header-detail-des">
-          <span class="big" no-padding>$1617</span>
-          <div class="top">.68</div>
-        </ion-row>
-      </ion-col>
-    </ion-row>
-  </ion-row>
+
+  <div *ngIf="stepIndex==1" class="step">
+    <svg xmlns="http://www.w3.org/2000/svg" width="317.754" height="30.5" viewBox="0 0 317.754 30.5">
+      <g id="Group_1104" data-name="Group 1104" transform="translate(-24.764 -99.5)">
+        <g id="Ellipse_8" data-name="Ellipse 8" transform="translate(307 99.5) rotate(90)" fill="#19264d"
+          stroke="rgba(255,255,255,0.2)" stroke-width="1.5">
+          <circle cx="6.5" cy="6.5" r="6.5" stroke="none" />
+          <circle cx="6.5" cy="6.5" r="5.75" fill="none" />
+        </g>
+        <g id="Ellipse_10" data-name="Ellipse 10" transform="translate(194 99.5) rotate(90)" fill="#19264d"
+          stroke="rgba(255,255,255,0.2)" stroke-width="1.5">
+          <circle cx="6.5" cy="6.5" r="6.5" stroke="none" />
+          <circle cx="6.5" cy="6.5" r="5.75" fill="none" />
+        </g>
+        <g id="Ellipse_9" data-name="Ellipse 9" transform="translate(81 99.5) rotate(90)" fill="#1eb8e3"
+          stroke="#1eb8e3" stroke-width="1.5">
+          <circle cx="6.5" cy="6.5" r="6.5" stroke="none" />
+          <circle cx="6.5" cy="6.5" r="5.75" fill="none" />
+        </g>
+        <line id="Line_29" data-name="Line 29" x1="100" transform="translate(81.5 106)" fill="none"
+          stroke="rgba(255,255,255,0.4)" stroke-linecap="round" stroke-width="1.5" stroke-dasharray="1 5" />
+        <line id="Line_30" data-name="Line 30" x1="100" transform="translate(194.5 106)" fill="none"
+          stroke="rgba(255,255,255,0.4)" stroke-linecap="round" stroke-width="1.5" stroke-dasharray="1 5" />
+        <text id="Terms_Conditions" data-name="Terms &amp; Conditions" transform="translate(74.764 127)" fill="#40d4fd"
+          font-size="10" font-family="Montserrat-SemiBold, Montserrat" font-weight="600">
+          <tspan x="-49.93" y="0">Terms &amp; Conditions</tspan>
+        </text>
+        <text id="Billing_info" data-name="Billing info" transform="translate(188 127)" fill="rgba(255,255,255,0.4)"
+          font-size="10" font-family="Montserrat-SemiBold, Montserrat" font-weight="600">
+          <tspan x="-27.785" y="0">Billing info</tspan>
+        </text>
+        <text id="Payment_details" data-name="Payment details" transform="translate(300.518 127)"
+          fill="rgba(255,255,255,0.4)" font-size="10" font-family="Montserrat-SemiBold, Montserrat" font-weight="600">
+          <tspan x="-41.92" y="0">Payment details</tspan>
+        </text>
+      </g>
+    </svg>
+  </div>
+
+  <div *ngIf="stepIndex==2" class="step">
+    <svg xmlns="http://www.w3.org/2000/svg" width="317.754" height="30.5" viewBox="0 0 317.754 30.5">
+      <g id="Group_1104" data-name="Group 1104" transform="translate(-24.764 -99.5)">
+        <g id="Ellipse_8" data-name="Ellipse 8" transform="translate(307 99.5) rotate(90)" fill="#19264d"
+          stroke="rgba(255,255,255,0.2)" stroke-width="1.5">
+          <circle cx="6.5" cy="6.5" r="6.5" stroke="none" />
+          <circle cx="6.5" cy="6.5" r="5.75" fill="none" />
+        </g>
+        <g id="Ellipse_10" data-name="Ellipse 10" transform="translate(194 99.5) rotate(90)" fill="#1eb8e3"
+          stroke="#1eb8e3" stroke-width="1.5">
+          <circle cx="6.5" cy="6.5" r="6.5" stroke="none" />
+          <circle cx="6.5" cy="6.5" r="5.75" fill="none" />
+        </g>
+        <g id="Ellipse_9" data-name="Ellipse 9" transform="translate(81 99.5) rotate(90)" fill="#1eb8e3"
+          stroke="#1eb8e3" stroke-width="1.5">
+          <circle cx="6.5" cy="6.5" r="6.5" stroke="none" />
+          <circle cx="6.5" cy="6.5" r="5.75" fill="none" />
+        </g>
+        <line id="Line_29" data-name="Line 29" x1="100" transform="translate(81.5 106)" fill="none" stroke="#1eb8e3"
+          stroke-linecap="round" stroke-width="1.5" stroke-dasharray="1 5" />
+        <line id="Line_30" data-name="Line 30" x1="100" transform="translate(194.5 106)" fill="none"
+          stroke="rgba(255,255,255,0.4)" stroke-linecap="round" stroke-width="1.5" stroke-dasharray="1 5" />
+        <text id="Terms_Conditions" data-name="Terms &amp; Conditions" transform="translate(74.764 127)" fill="#40d4fd"
+          font-size="10" font-family="Montserrat-SemiBold, Montserrat" font-weight="600">
+          <tspan x="-49.93" y="0">Terms &amp; Conditions</tspan>
+        </text>
+        <text id="Billing_info" data-name="Billing info" transform="translate(188 127)" fill="#40d4fd" font-size="10"
+          font-family="Montserrat-SemiBold, Montserrat" font-weight="600">
+          <tspan x="-27.785" y="0">Billing info</tspan>
+        </text>
+        <text id="Payment_details" data-name="Payment details" transform="translate(300.518 127)"
+          fill="rgba(255,255,255,0.4)" font-size="10" font-family="Montserrat-SemiBold, Montserrat" font-weight="600">
+          <tspan x="-41.92" y="0">Payment details</tspan>
+        </text>
+      </g>
+    </svg>
+
+  </div>
+
+  <div *ngIf="stepIndex==3" class="step">
+    <svg xmlns="http://www.w3.org/2000/svg" width="317.754" height="30.5" viewBox="0 0 317.754 30.5">
+      <g id="Group_1105" data-name="Group 1105" transform="translate(-24.764 -99.5)">
+        <g id="Ellipse_8" data-name="Ellipse 8" transform="translate(307 99.5) rotate(90)" fill="#1eb8e3"
+          stroke="#1eb8e3" stroke-width="1.5">
+          <circle cx="6.5" cy="6.5" r="6.5" stroke="none" />
+          <circle cx="6.5" cy="6.5" r="5.75" fill="none" />
+        </g>
+        <g id="Ellipse_10" data-name="Ellipse 10" transform="translate(194 99.5) rotate(90)" fill="#1eb8e3"
+          stroke="#1eb8e3" stroke-width="1.5">
+          <circle cx="6.5" cy="6.5" r="6.5" stroke="none" />
+          <circle cx="6.5" cy="6.5" r="5.75" fill="none" />
+        </g>
+        <g id="Ellipse_9" data-name="Ellipse 9" transform="translate(81 99.5) rotate(90)" fill="#1eb8e3"
+          stroke="#1eb8e3" stroke-width="1.5">
+          <circle cx="6.5" cy="6.5" r="6.5" stroke="none" />
+          <circle cx="6.5" cy="6.5" r="5.75" fill="none" />
+        </g>
+        <line id="Line_29" data-name="Line 29" x1="100" transform="translate(81.5 106)" fill="none" stroke="#1eb8e3"
+          stroke-linecap="round" stroke-width="1.5" stroke-dasharray="1 5" />
+        <line id="Line_30" data-name="Line 30" x1="100" transform="translate(194.5 106)" fill="none" stroke="#1eb8e3"
+          stroke-linecap="round" stroke-width="1.5" stroke-dasharray="1 5" />
+        <text id="Terms_Conditions" data-name="Terms &amp; Conditions" transform="translate(74.764 127)" fill="#40d4fd"
+          font-size="10" font-family="Montserrat-SemiBold, Montserrat" font-weight="600">
+          <tspan x="-49.93" y="0">Terms &amp; Conditions</tspan>
+        </text>
+        <text id="Billing_info" data-name="Billing info" transform="translate(188 127)" fill="#40d4fd" font-size="10"
+          font-family="Montserrat-SemiBold, Montserrat" font-weight="600">
+          <tspan x="-27.785" y="0">Billing info</tspan>
+        </text>
+        <text id="Payment_details" data-name="Payment details" transform="translate(300.518 127)" fill="#40d4fd"
+          font-size="10" font-family="Montserrat-SemiBold, Montserrat" font-weight="600">
+          <tspan x="-41.92" y="0">Payment details</tspan>
+        </text>
+      </g>
+    </svg>
+  </div>
+
 </ion-header>
 
 
 <ion-content>
-  <div class="input-box-ios" *ngIf="gs.isIosPlatform">
-    <!-- Name -->
-    <span>Name</span>
-    <ion-input autofocus  matInput type="text" placeholder="Zaid Marsala" [(ngModel)]="user.name"></ion-input>
-    <!-- Email -->
-    <span>Email</span>
-    <ion-input autofocus  matInput type="email" placeholder="zaid.marsala@amli.com" [(ngModel)]="user.email"></ion-input>
-    <!-- phone -->
-    <ion-row>
-      <ion-col col-6 no-padding>
-          <span>Cell phone</span>
-      </ion-col>
-      <ion-col col-6 class="c-phone" no-padding>
-          <span>Company / Organization</span>
-      </ion-col>
-    </ion-row>
+  <!-- first step start -->
+  <div class="first-step" *ngIf="stepIndex==1">
+    <div class="terms-cond">
+      <ion-label>1. General</ion-label>
+      <p>
+        These Terms and Conditions ("Agreement") governs the use of the services ("Service") that are made available by
+        Website.com Solutions Inc. ("Website.com", "we" or "us"). These Terms and Conditions represent the whole
+        agreement
+        and understanding between Website.com and the individual or entity who subscribes to our service ("Subscriber"
+        or
+        "you").
+      </p>
+      <p>
+        PLEASE READ THIS AGREEMENT CAREFULLY. By submitting your application and by your use of the Service, you agree
+        to
+        comply with all of the terms and conditions set out in this Agreement. Website.com may terminate your account at
+        any time, with or without notice, for conduct that is in breach of this Agreement, for conduct that Website.com
+        believes is harmful to its business, or for conduct where the use of the Service is harmful to any other party.
+      </p>
+      <p>
+        Website.com may, in its sole discretion, change or modify this Agreement at any time, with or without notice.
+        Such
+        changes or modifications shall be made effective for all Subscribers upon posting of the modified Agreement to
+        this
+        web address (URL): http://www.website.com/terms-and-conditions/. You are responsible to read this document from
+        time to time to ensure that your use of the Service remains in compliance with this Agreement.
+      </p>
+
+      <ion-label> 2. Services</ion-label>
+      <p>
+        Website.com offers Subscribers domain name registration, website hosting, and email hosting services for the
+        duration of the service term purchased from Website.com.
+      </p>
+      <p>
+        Services are provided on the basis of facility and equipment availability. Website.com reserves the right to
+        modify, change, or discontinue any aspect of the Services at any time.
+      </p>
+      <p>
+        Access to the web and email servers is terminated upon expiry of the Service.
+      </p>
+      <p>
+        Details regarding your account can be found in your account control panel (https://www.website.com/sign-in/)
+      </p>
+      <ion-label>
+        3. Web Hosting
+      </ion-label>
+      <p>
+        All Website.com web hosting accounts will display a "Coming Soon" web page by default when activated. This page
+        informs visitors that the Subscriber has recently setup their account with Website.com. The "Coming Soon"
+        default
+        index web page may be removed by the Subscriber at any time once they have access to the web server. The "Coming
+        Soon" web page may include, but without limitation to, the following:
+      </p>
+      <p class="sub-des">
+        <span>Links to additional products and services offered by Website.com.</span><br>
+        <span>Advertisements for products and services offered by third-parties.</span><br>
+        <span>An internet search engine interface.</span>
+      </p>
+      <p>
+        All web page error requests (such as 403 errors or 404 errors) will direct traffic to a default Website.com
+        error
+        page. This error page informs visitors that the web page they are looking for cannot be found, and may include,
+        but without limitation to, the following:
+      </p>
+      <p class="sub-des">
+        <span>Links to additional products and services offered by Website.com.</span><br>
+        <span>Advertisements for products and services offered by third-parties.</span><br>
+        <span>An internet search engine interface.</span><br>
+      </p>
+      <p>
+        At its sole discretion, Website.com may place advertisements or other commercial content on your website, emails
+        or anywhere it deems fit.
+      </p>
+      <p>
+        Depending on which hosting plan you choose, you may request to change the billing term of your hosting service
+        through your account control panel. In such cases, the expiry date of your hosting service will be adjusted
+        according to the billing term that you have requested. Any optional features for your hosting plan will be
+        billed
+        according to the term that you have requested.
+      </p>
+      <p>
+        If your hosting plan includes a free domain name, you will be required to pay a fee to reimburse Website.com for
+        the domain name registration upon changing to another hosting plan or a billing term that does not include a
+        free
+        domain name. The amount of this fee will vary depending on the domain extension and on the registration term.
+      </p>
+      <p>
+        All Website.com web hosting services, including service trials and promotional hosting offers, and their billing
+        terms may be prorated and adjusted to expire on the last day of a month.
+      </p>
+      <p>
+        All service trials and promotion offers are considered to be delivered in full upon the completion of the
+        service
+        term stated on the trial or offer invoice found in your account control panel. Website.com is not obligated to
+        provide reimbursement for any proration or service term adjustment on service trials or promotional offers.
+      </p>
+      <p>
+        Promotional offers, including special introductory rates, promotional rates, or any non-regular pricing, are
+        only
+        available to new customers and are only valid for the initial term. All hosting services will renew at the
+        regular renewal rate.
+      </p>
+      <p>
+        In the absence of a cancellation request from you, your hosting service will be renewed for a successive term,
+        at
+        the regular renewal rate, on the 16th of the expiry month.
+      </p>
+    </div>
     
-    <ion-row>
-      <ion-col col-6 no-padding>
-        <ion-input autofocus  matInput type="phone" placeholder="(203) 283-2849" [(ngModel)]="user.phone"></ion-input>
-      </ion-col>
-      <ion-col col-6 class="c-phone" no-padding>
-        <ion-input autofocus  matInput type="phone" placeholder="(312) 340-5720" [(ngModel)]="user.company"></ion-input>
-      </ion-col>
+    <ion-row class="go-arrow-configure">
+      <ion-toggle></ion-toggle>
+      <span>Agree with Terms & Conditions</span>
+      <ion-icon name="ios-arrow-forward"></ion-icon>
+    </ion-row>
+    <div class="step-btn">
+      <button class="normal-button" ion-button color=secondary (click)="next()">Next step</button>
+    </div>
+  </div>
+  <!-- first step end -->
+
+  <!-- second step start -->
+  <div class="second-step" *ngIf="stepIndex==2">
+
+    <div class="input-box-ios" *ngIf="gs.isIosPlatform">
+      <span>Contact Name</span>
+      <ion-input autofocus type="text" placeholder="Zaid Marsala" [(ngModel)]="user.name"></ion-input>
+      <span>Email</span>
+      <ion-input autofocus type="text" placeholder="zaid.marsala@amli.com" [(ngModel)]="user.email"></ion-input>
+      <span>Cell Phone</span>
+      <ion-input autofocus type="text" placeholder="(203) 283-2849" [(ngModel)]="user.cphone"></ion-input>
+      <span>Company / Organization Phone</span>
+      <ion-input autofocus type="text" placeholder="(312) 340-5720" [(ngModel)]="user.ophone"></ion-input>
+      <!-- bill -->
+      <span>Billing address</span>
+      <ion-input autofocus matInput type="text" placeholder="141 W Jackson Blvd, #300, Chicago, IL"
+        [(ngModel)]="user.billaddress"></ion-input>
+      <!-- mail -->
+      <span>Mailing address</span>
+      <ion-input autofocus matInput type="text" placeholder="141 W Jackson Blvd, #300, Chicago, IL"
+        [(ngModel)]="user.mailaddress"></ion-input>
+    </div>
+
+    <div class="input-box-md" *ngIf="!gs.isIosPlatform">
+      <mat-form-field class="full-width">
+        <input matInput type="text" placeholder="Contact Name" [(ngModel)]="user.name">
+      </mat-form-field>
+      <mat-form-field class="full-width">
+        <input matInput type="text" placeholder="Email" [(ngModel)]="user.email">
+      </mat-form-field>
+      <mat-form-field class="full-width">
+        <input matInput type="text" placeholder="Cell Phone" [(ngModel)]="user.cphone">
+      </mat-form-field>
+      <mat-form-field class="full-width">
+        <input matInput type="text" placeholder="Company / Organization Phone" [(ngModel)]="user.ophone">
+      </mat-form-field>
+      <!-- bill -->
+      <mat-form-field class="full-width">
+        <input matInput type="text" placeholder="Billing address" [(ngModel)]="user.billaddress">
+      </mat-form-field>
+      <!-- mail -->
+      <mat-form-field class="full-width">
+        <input matInput type="text" placeholder="Mailing address" [(ngModel)]="user.mailaddress">
+      </mat-form-field>
+    </div>
+    <div class="step-btn">
+      <ion-row>
+        <ion-col col-6>
+          <button class="normal-button" ion-button color=secondary (click)="previous()">Previous step</button>
+        </ion-col>
+
+        <ion-col col-6>
+          <button class="normal-button" ion-button color=secondary (click)="next()">Next step</button>
+        </ion-col>
+      </ion-row>
+    </div>
+  </div>
+  <!-- second step end -->
+
+  <!-- third step start -->
+  <div class="third-step" *ngIf="stepIndex==3">
+    <ion-row class="third-detail-wrap">
+      <ion-row class="detail">
+        <ion-col no-padding col-6>
+          <span class="detail-title" no-padding>Effective Data</span><br>
+          <span class="detail-des" no-padding>Jan 14,2019</span><br><br>
+          <span class="detail-title" no-padding>Utility</span><br>
+          <span class="detail-des" no-padding>COMED</span><br><br>
+          <span class="detail-title" no-padding>Rate per kWh</span><br>
+          <ion-row class="detail-des">
+            <span class="big" no-padding>{{auction.rate}}¢</span>
+          </ion-row>
+
+        </ion-col>
+        <ion-col no-padding col-6>
+          <span class="detail-title" no-padding>Term (Duration)</span><br>
+          <span class="detail-des" no-padding>12 month</span><br><br>
+          <span class="detail-title" no-padding>Supplier</span><br>
+          <span class="detail-des" no-padding>Mega Energy</span><br><br>
+          <span class="detail-title" no-padding>Projected Yearly Spending (Est.)</span><br>
+          <ion-row class="detail-des">
+            <span class="big" no-padding>$1617</span>
+            <div class="top">.68</div>
+          </ion-row>
+        </ion-col>
+      </ion-row>
     </ion-row>
 
-    <!-- bill -->
-    <span>Billing address</span>
-    <ion-input autofocus  matInput type="text" placeholder="141 W Jackson Blvd, #300, Chicago, IL" [(ngModel)]="user.billaddress">
-    </ion-input>
-    <!-- mail -->
-    <span>Mailing address</span>
-    <ion-input autofocus  matInput type="text" placeholder="141 W Jackson Blvd, #300, Chicago, IL" [(ngModel)]="user.mailaddress">
-    </ion-input>
-  </div>
+    <ion-row class="go-arrow">
+      <ion-row class="go-row">
+        <ion-col no-padding col-8>
+          <span class="top-des">Risk Tolerance</span><br>
+          <span class="visa-num">{{1928}} ●●●● ●●●● {{1928}}</span>
+        </ion-col>
+        <!-- visa icon -->
+        <ion-col no-padding col-4>
+          <ion-row class="-icon">
+            <svg id="Icons_1_" xmlns="http://www.w3.org/2000/svg" width="52" height="34" viewBox="0 0 52 34">
+              <g id="Group_829" data-name="Group 829">
+                <path id="Path_53" data-name="Path 53"
+                  d="M24.37,8.36c-.539,1.465-1.061,2.93-1.6,4.428h2.576c-.32-1.5-.623-2.963-.926-4.428Z"
+                  transform="translate(16.36 5.963)" fill="#b5bec5" />
+                <path id="Path_54" data-name="Path 54"
+                  d="M47.863,0H4.137A4.131,4.131,0,0,0,0,4.12V29.88A4.131,4.131,0,0,0,4.137,34H47.863A4.131,4.131,0,0,0,52,29.88V4.12A4.153,4.153,0,0,0,47.863,0ZM30.627,18.752a6.811,6.811,0,0,0-1.064-.65,10.478,10.478,0,0,1-1.768-1.094,3.064,3.064,0,0,1-.5-4.274,4.628,4.628,0,0,1,2.815-1.795c.361-.085.738-.12,1.116-.188a.5.5,0,0,1,.155-.034H32.6c.361.051.7.1,1.064.171.343.068.687.171,1.03.274a1.007,1.007,0,0,1,.258.1c-.189.855-.361,1.692-.549,2.53-.412-.137-.807-.274-1.219-.376a4.489,4.489,0,0,0-2.232-.051,1.923,1.923,0,0,0-.755.41.681.681,0,0,0-.017,1.077,4.167,4.167,0,0,0,.79.564c.549.325,1.133.6,1.682.94a3.362,3.362,0,0,1,1.6,1.9,3.668,3.668,0,0,1-1.442,3.932,5.7,5.7,0,0,1-2.7,1.009,9.736,9.736,0,0,1-4.481-.462c-.086-.034-.155-.068-.258-.1.189-.889.378-1.761.567-2.65.12.051.223.1.326.137a6.346,6.346,0,0,0,2.85.615,2.72,2.72,0,0,0,1.322-.291A.944.944,0,0,0,30.627,18.752ZM25.545,12.12c-.755,3.556-1.528,7.111-2.283,10.667-.052.222-.137.291-.361.291-.858-.017-1.717,0-2.575,0h-.275c.876-4.068,1.734-8.1,2.609-12.12H25.8C25.717,11.35,25.631,11.744,25.545,12.12Zm-4.429-.752c-1.614,3.846-3.227,7.675-4.841,11.521a.267.267,0,0,1-.292.188H13.047c-.155,0-.206-.034-.24-.188-.824-3.162-1.648-6.308-2.455-9.47a1.617,1.617,0,0,0-.979-1.2,14.292,14.292,0,0,0-2.781-.906.438.438,0,0,1-.12-.034V11.2c.034-.239.189-.256.395-.256,1.648.017,3.313,0,4.961,0a1.467,1.467,0,0,1,1.545,1.265c.429,2.222.841,4.444,1.27,6.684a.486.486,0,0,0,.1.239q1.6-4.1,3.227-8.171h3.3A2.9,2.9,0,0,1,21.116,11.368ZM42.609,23.06c-.086-.427-.189-.872-.275-1.3-.1-.513-.1-.513-.635-.513H38.386a.248.248,0,0,0-.275.188c-.172.5-.343.974-.532,1.453-.034.068-.12.154-.189.154-1.047.017-2.094,0-3.159,0a1.3,1.3,0,0,0,.069-.188c1.545-3.658,3.09-7.333,4.618-10.991a1.429,1.429,0,0,1,1.408-.94h2.627c.841,4.034,1.7,8.068,2.541,12.12C44.532,23.06,43.571,23.06,42.609,23.06Z"
+                  fill="#b5bec5" />
+              </g>
+            </svg>
+            <ion-icon name="ios-arrow-forward"></ion-icon>
+          </ion-row>
+        </ion-col>
 
-  <div class="input-box-md" *ngIf="!gs.isIosPlatform">
-    <!-- name -->
-    <mat-form-field class="full-width">
-      <input matInput type="text" placeholder="Name" [(ngModel)]="user.name">
-    </mat-form-field>
-    <!-- Email -->
-    <mat-form-field class="full-width">
-      <input matInput type="email" placeholder="Email" [(ngModel)]="user.email">
-    </mat-form-field>
-    <!-- phone -->
-    <ion-row>
-      <ion-col col-6 no-padding>
-        <mat-form-field class="full-width">
-          <input matInput type="phone" placeholder="Cell phone" [(ngModel)]="user.phone">
-        </mat-form-field>
-      </ion-col>
-      <ion-col col-6 class="c-phone" no-padding>
-        <mat-form-field class="full-width">
-          <input matInput type="phone" placeholder="Company / Organization" [(ngModel)]="user.company">
-        </mat-form-field>
-      </ion-col>
+      </ion-row>
     </ion-row>
 
-    <!-- bill -->
-    <mat-form-field class="full-width">
-      <input matInput type="text" placeholder="Billing address" [(ngModel)]="user.billaddress">
-    </mat-form-field>
-    <!-- mail -->
-    <mat-form-field class="full-width">
-      <input matInput type="text" placeholder="Mailing address" [(ngModel)]="user.mailaddress">
-    </mat-form-field>
-  </div>
+    <div class="tird-rest-div">
+      <div>Service Fees ............................................................... <span>6.79¢</span></div>
+      <div>Surcharges ................................................................. <span>6.79¢</span></div>
+      <div>Fees ................................................................................ <span>6.79¢</span>
+      </div>
+      <div>divower Kiosk Fee .................................................. <span>6.79¢</span></div>
+      <div>Monthly Fees ............................................................ <span>6.79¢</span></div>
+      <div>Contract Fees ........................................................... <span>6.79¢</span></div>
+      <div>Contract Term Fees ............................................... <span>6.79¢</span></div>
+      <strong>
+        <div>Order Total (with divricing Details) .............. <span>6.79¢</span></div>
+      </strong>
+    </div>
 
-  <div class="step-btn">
-    <ion-label>To e-sign, we'll send a separate email.</ion-label>
-    <button class="normal-button" ion-button color="secondary" (click)="goCreateContract()">Approve via e-Signature</button>
+    <div class="step-btn">
+      <ion-row>
+        <ion-col col-6>
+          <button class="normal-button" ion-button color=secondary (click)="previous()">Previous step</button>
+        </ion-col>
+
+        <ion-col col-6>
+          <button class="normal-button" ion-button color=danger (click)="approveViaSign()">Approve via e-Sign</button>
+        </ion-col>
+      </ion-row>
+    </div>
+
   </div>
+  <!-- third step end -->
+
 </ion-content>

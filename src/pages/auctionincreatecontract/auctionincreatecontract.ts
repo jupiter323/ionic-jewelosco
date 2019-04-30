@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
 import { GlobaldataProvider } from '../../providers/globaldata/globaldata';
 
 /**
@@ -17,8 +17,10 @@ import { GlobaldataProvider } from '../../providers/globaldata/globaldata';
 export class AuctionincreatecontractPage {
   auction;
   user = {}
+  public stepIndex = 2;
   constructor(public navCtrl: NavController, public navParams: NavParams,
-    private gs:GlobaldataProvider) {
+    private gs: GlobaldataProvider,
+    private altCtrl: AlertController) {
   }
 
   ionViewWillLoad() {
@@ -32,6 +34,29 @@ export class AuctionincreatecontractPage {
   }
   ionViewDidLoad() {
     console.log('ionViewDidLoad AuctionincreatecontractPage');
+  }
+
+  next() {
+    if (++this.stepIndex > 3) this.stepIndex = 3;
+  }
+
+  previous() {
+    if (--this.stepIndex < 1) this.stepIndex = 1;
+
+  }
+  approveViaSign() {
+    let alert = this.altCtrl.create({
+      title: 'Approvement',
+      message: 'A separate email has been sent to zaid.marsala@amil.com. You have until 4 pm ET to complete the e-signature document.', buttons: [
+        {
+          text: 'OK',
+          handler: data => {
+
+          }
+        }
+      ]
+    });
+    alert.present();
   }
 
 }

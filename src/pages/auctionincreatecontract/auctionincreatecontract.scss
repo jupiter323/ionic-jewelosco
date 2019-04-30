@@ -1,13 +1,143 @@
 page-auctionincreatecontract {
+    ion-header {
+        .step {
+            margin-top: 15px;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+    }
+
     ion-content {
-        background: white!important;
-        .c-phone {
-            padding-left: 10px;
+        background: white !important;
+
+        .first-step {
+            .go-arrow-configure {
+                color: #43535F;
+                font-size: 12px;
+                font-family: Montserrat-Medium;
+                padding: 15px;
+                justify-content: space-between;
+                align-items: center;
+                background: #E9EBED;
+
+                ion-icon {
+                    color: #B5BEC5;
+                    font-size: 19px;
+                    font-weight: 800;
+                    margin-right: 0;
+                }
+
+                border-bottom: 1px solid #B6C0C9;
+            }
+        }
+
+  
+
+        .third-step {
+            .go-arrow {
+                padding: 10px 15px 10px 15px;
+                justify-content: space-between;
+                align-items: center;
+                border-bottom: 1px solid #E5E9EC;
+                border-top: 1px solid #E5E9EC;
+                color: #43535F;
+
+                ion-icon {
+                    color: #B5BEC5;
+                    font-size: 19px;
+                    font-weight: 800;
+                    margin-right: 0;
+                }
+
+                .go-row {
+                    align-items: center;
+                    justify-content: space-between;
+
+                    .top-des {
+                        font-size: 12px;
+                        font-family: Montserrat-Bold;
+                    }
+
+                    .visa-num {
+                        font-size: 16px;
+                        font-family: Montserrat-Medium;
+                    }
+
+                    .-icon {
+                        justify-content: space-between;
+                        align-items: center;
+                    }
+                }
+            }
+
+            .third-detail-wrap {
+                padding-left: 18px;
+                padding-bottom: 20px;
+                padding-top: 25px;
+
+                .detail {
+                    .detail-title {
+                        margin-top: 0 !important;
+                        margin-bottom: 0 !important;
+                        color: #A3ADB7;
+                        font-size: 9px;
+                        font-family: Montserrat-SemiBold;
+                    }
+
+                    .detail-des {
+                        margin-top: 0 !important;
+                        margin-bottom: 0 !important;
+                        color: #43535F;
+                        font-size: 12px;
+                        font-family: Montserrat-Bold;
+                    }
+
+                    .detail-des.hilited {
+                        margin-top: 0 !important;
+                        margin-bottom: 0 !important;
+                        font-size: 12px;
+                        font-family: Montserrat-Bold;
+                        color: #40D4FD !important;
+                    }
+
+                    .big {
+                        color: #40D4FD;
+                        font-family: Montserrat-Medium !important;
+                        font-size: 42px !important;
+                    }
+
+                    .top {
+                        padding-top: 10px;
+                        color: #40D4FD;
+                    }
+
+                    .center {
+                        text-align: center !important;
+                        width: 75%;
+                        margin: auto;
+                        font-size: 12px;
+                        line-height: 14px;
+                    }
+                }
+            }
+
+            .tird-rest-div {
+                padding: 15px;
+                background: #E9EBED;
+                font-size: 12px;
+                font-family: Montserrat-Medium;
+                color: #43535F;
+
+                span {
+                    font-size: 16px !important;
+                }
+            }
         }
         .step-btn {
             background: #E9EBED;
             padding: 0px 10px 20px 10px;
             margin-bottom: 0;
+
             ion-label {
                 color: #A3ADB7;
                 font-size: 12px;
@@ -18,22 +148,8 @@ page-auctionincreatecontract {
             }
         }
     }
-    .header-detail {     
-        .big {
-            color: #40D4FD;
-            font-family: Montserrat-Medium !important;
-            font-size: 42px !important;
-        }
-        .top {
-            padding-top: 10px;
-            color: #40D4FD;
-        }
-        .center{
-            text-align: center!important;
-            width: 75%;
-            margin: auto;
-            font-size: 12px;
-            line-height: 14px;
-        }
-    }
+
+
+
+
 }
