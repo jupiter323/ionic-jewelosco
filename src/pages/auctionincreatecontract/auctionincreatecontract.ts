@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
 import { GlobaldataProvider } from '../../providers/globaldata/globaldata';
-
+import { DomSanitizer } from '@angular/platform-browser';
 /**
  * Generated class for the AuctionincreatecontractPage page.
  *
@@ -17,10 +17,16 @@ import { GlobaldataProvider } from '../../providers/globaldata/globaldata';
 export class AuctionincreatecontractPage {
   auction;
   user = {}
-  public stepIndex = 2;
+  public stepIndex = 1;
+  pdfLink: any;
+
   constructor(public navCtrl: NavController, public navParams: NavParams,
     private gs: GlobaldataProvider,
-    private altCtrl: AlertController) {
+    private altCtrl: AlertController,
+    private sanitizer: DomSanitizer) {
+    // this.pdfLink = this.sanitizer.bypassSecurityTrustResourceUrl('https://www.termsfeed.com/blog/wp-content/uploads/2019/04/terms-and-conditions-template.pdf');
+    this.pdfLink = this.sanitizer.bypassSecurityTrustResourceUrl('assets/pdf/terms-and-conditions-template.pdf');  // local assets
+
   }
 
   ionViewWillLoad() {

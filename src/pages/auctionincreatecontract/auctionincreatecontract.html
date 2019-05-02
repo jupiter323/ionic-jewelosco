@@ -140,7 +140,10 @@
 <ion-content>
   <!-- first step start -->
   <div class="first-step" *ngIf="stepIndex==1">
-    <div class="terms-cond">
+    <iframe [src]="pdfLink" id="conditionframe" scrolling="no" frameborder="0"></iframe>
+
+    <!-- hard code of terms cond -->
+    <!-- <div class="terms-cond">
       <ion-label>1. General</ion-label>
       <p>
         These Terms and Conditions ("Agreement") governs the use of the services ("Service") that are made available by
@@ -245,8 +248,8 @@
         at
         the regular renewal rate, on the 16th of the expiry month.
       </p>
-    </div>
-    
+    </div> -->
+
     <ion-row class="go-arrow-configure">
       <ion-toggle></ion-toggle>
       <span>Agree with Terms & Conditions</span>
