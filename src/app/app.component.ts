@@ -3,7 +3,8 @@ import { Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { AuctionincreatecontractPage } from './../pages/auctionincreatecontract/auctionincreatecontract';
-import { ContractsreviewPage } from './../pages/contractsreview/contractsreview';
+import { LoginPage } from './../pages/login/login';
+
 
 
 @Component({

@@ -2,6 +2,15 @@ page-entitiesdetail {
   
     ion-content {
         background: #E9EBED !important;
+        .button-new {
+            background-color: #1eb8e3;
+            color: white;
+            border-radius: 5px;
+            font-size: 10px;
+            font-family: Montserrat-Bold;
+            vertical-align: middle;        
+            padding: 5px;
+        }
     }
     .big {
         height: 200px !important;
@@ -42,8 +51,8 @@ page-entitiesdetail {
         background: white;
         border-radius: 10px;
         height: 68px;
-        padding-left: 15px;
-        padding-right: 15px;
+        padding-left: 10px;
+        padding-right:0px;
         align-items: center;
         justify-content: space-between;
         margin-bottom: 20px;

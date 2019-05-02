@@ -294,5 +294,9 @@ export class EntitiesdetailPage {
 
   }
 
+  viewAuction() {
+    // go stats/result
+  }
+
 
 }

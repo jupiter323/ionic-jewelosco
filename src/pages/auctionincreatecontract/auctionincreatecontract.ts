@@ -25,7 +25,7 @@ export class AuctionincreatecontractPage {
     private altCtrl: AlertController,
     private sanitizer: DomSanitizer) {
     // this.pdfLink = this.sanitizer.bypassSecurityTrustResourceUrl('https://www.termsfeed.com/blog/wp-content/uploads/2019/04/terms-and-conditions-template.pdf');
-    this.pdfLink = this.sanitizer.bypassSecurityTrustResourceUrl('assets/pdf/terms-and-conditions-template.pdf');  // local assets
+    this.pdfLink = this.sanitizer.bypassSecurityTrustResourceUrl('assets/pdf/mydes.pdf');  // local assets
 
   }
 

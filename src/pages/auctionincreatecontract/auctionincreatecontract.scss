@@ -9,29 +9,11 @@ page-auctionincreatecontract {
 
     ion-content {
         background: white !important;
-        .go-arrow-configure {
-            color: #43535F;
-            font-size: 12px;
-            font-family: Montserrat-Medium;
-            padding: 10px 15px;
-            justify-content: space-between;
-            align-items: center;
-            background: #E9EBED;
-
-            ion-icon {
-                color: #B5BEC5;
-                font-size: 19px;
-                font-weight: 800;
-                margin-right: 0;
-            }
-
-            border-bottom: 1px solid #B6C0C9;
-        }
-
+     
         .first-step {
             #conditionframe {
                 //set the height to 100% of the viewport less the height of the header
-                height: calc( 100vh - 253px);
+                height: calc( 100vh - 206px);
 
                 //set the width to 100% of the viewport width
                 width: 100vw;
@@ -40,7 +22,27 @@ page-auctionincreatecontract {
                 border: none;
                 padding: 0;
                 margin: 0;
+                margin-top: -62px;
             }
+            .go-arrow-configure {
+                color: #43535F;
+                font-size: 12px;
+                font-family: Montserrat-Medium;
+                padding: 10px 15px;
+                justify-content: space-between;
+                align-items: center;
+                background: #E9EBED;
+    
+                ion-icon {
+                    color: #B5BEC5;
+                    font-size: 19px;
+                    font-weight: 800;
+                    margin-right: 0;
+                }
+    
+                border-bottom: 1px solid #B6C0C9;
+            }
+    
 
 
         }
