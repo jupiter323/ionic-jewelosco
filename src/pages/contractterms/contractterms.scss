@@ -1,0 +1,187 @@
+page-contractterms {
+    ion-content {
+        background: #E9EBED !important;
+
+        .wrap-block {
+            border: 2px solid #19264D;
+        }
+        .logo-wrap {
+            justify-content: center;
+            align-items: center;
+            margin-top: 30px;
+        }
+
+        .check-wrap {
+            // line-height: 28px;
+            height: 28px;
+            text-align: right;
+            width: 100%;
+            justify-content: flex-end;
+            align-items: center;
+            padding-right: 10px;
+        }
+
+        .title {
+            color: #A3ADB7;
+            font-size: 10px;
+            font-family: Montserrat-SemiBold;
+            margin-bottom: 2px;
+            margin-top: 20px;
+        }
+
+        .sub-des {
+            font-size: 12px;
+            font-family: Montserrat-Medium;
+            color: #A3ADB7;
+        }
+
+        .des {
+            color: #43535F;
+            font-size: 18px;
+            font-family: Montserrat-Medium;
+        }
+
+        .date-wrap {
+            text-align: center;
+            width: 100%;
+
+        }
+
+        .-date {
+            color: #43535F;
+            font-size: 22px;
+            font-family: Montserrat-SemiBold;
+        }
+
+        .date-des {
+            color: #43535F;
+            font-size: 10px;
+            font-family: Montserrat-SemiBold;
+        }
+
+        .month-rate-des {
+            color: #1EB8E3;
+            font-size: 16px;
+            width: 100%;
+            font-family: Montserrat-Bold;
+        }
+
+        .bottom-row {
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 30px;
+        }
+
+        .detail-box-wrap {
+
+            height: 136px;
+
+            .detail-block {
+                height: 100%;
+                background: white;
+                margin-top: 0px;
+                padding-top: 0px;
+                border: 1px solid #E5E9EC;
+
+                .fee-wrap {
+                    text-align: center;
+                    width: 100%;
+                    flex-direction: column;
+                    justify-content: space-between;
+
+                    .-fee {
+                        color: #43535F;
+                        font-size: 22px;
+                        font-family: Montserrat-SemiBold;
+
+                        ion-label {
+                            font-size: 10px !important;
+                            font-family: Montserrat-SemiBold;
+                            text-align: center;
+                        }
+                    }
+
+                    .fee-des {
+                        color: #43535F;
+                        font-size: 10px;
+                        font-family: Montserrat-SemiBold;
+                    }
+                }
+
+                ion-row {
+                    justify-content: center;
+                }
+
+                .detail-title {
+                    font-size: 12px;
+                    font-family: Montserrat-SemiBold;
+                    color: #A3ADB7;
+                    text-align: center;
+                }
+
+                .rate-des {
+                    font-size: 22px;
+                    color: #1EB8E3;
+                    font-family: Montserrat-SemiBold;
+
+                    ion-label {
+                        font-size: 10px !important;
+                        font-family: Montserrat-SemiBold;
+                        text-align: center;
+                    }
+                }
+
+                .current-rate-des {
+                    font-size: 22px;
+                    color: #FC8F3B;
+                    font-family: Montserrat-SemiBold;
+
+                    ion-label {
+                        font-size: 10px !important;
+                        font-family: Montserrat-SemiBold;
+                        text-align: center;
+                    }
+                }
+
+                ion-icon {
+                    color: #B5BEC5;
+                    font-size: 19px;
+                    font-weight: 800;
+                    margin-right: 0;
+                }
+            }
+        }
+
+    }
+
+    ion-footer {
+        .step-btn {
+            background: #E9EBED;
+            padding: 0px 10px 20px 10px;
+            margin-bottom: 0;
+        }
+
+        .go-arrow-configure {
+            color: #43535F;
+            font-size: 12px;
+            font-family: Montserrat-Medium;
+            padding: 15px;
+            justify-content: space-between;
+            align-items: center;
+            background: #E9EBED;
+
+            ion-icon {
+                color: #B5BEC5;
+                font-size: 19px;
+                font-weight: 800;
+                margin-right: 0;
+            }
+
+            border-bottom: 1px solid #B6C0C9;
+        }
+    }
+}
+
+.ios .detail-block {
+    border-radius: 10px;
+}

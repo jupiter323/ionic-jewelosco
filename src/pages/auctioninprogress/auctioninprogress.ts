@@ -19,6 +19,7 @@ import { AuctioninvitedPage } from '../auctioninvited/auctioninvited';
 export class AuctioninprogressPage {
   public showHeaderDtail: any
   public auctions: any
+  public expandIndex = -1
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
   ionViewWillLoad() {
@@ -34,21 +35,24 @@ export class AuctioninprogressPage {
         loc: "Best plan",
         rate: "6.79",
         fee: "50.00",
-        supplier: "assets/imgs/enegylogo.png"
+        supplier: "assets/imgs/enegylogo.png",
+        others: [{ rate: "5.79", fee: "40.00", supplier: "assets/imgs/enegylogo.png" }, { rate: "6.79", fee: "50.00", supplier: "assets/imgs/enegylogo.png" }, { rate: "3.79", fee: "30.00", supplier: "assets/imgs/enegylogo.png" }, { rate: "6.79", fee: "50.00", supplier: "assets/imgs/enegylogo.png" }]
       },
       {
         title: "Energy Only — 24 months",
         loc: "Best plan",
         rate: "7.09",
         fee: "38.98",
-        supplier: "assets/imgs/enegylogo.png"
+        supplier: "assets/imgs/enegylogo.png",
+        others: [{ rate: "5.79", fee: "40.00", supplier: "assets/imgs/enegylogo.png" }, { rate: "6.79", fee: "50.00", supplier: "assets/imgs/enegylogo.png" }, { rate: "3.79", fee: "30.00", supplier: "assets/imgs/enegylogo.png" }, { rate: "6.79", fee: "50.00", supplier: "assets/imgs/enegylogo.png" }]
       },
       {
         title: "Index — 36 months",
         loc: "Best plan",
         rate: "7.35",
         fee: "25.00",
-        supplier: "assets/imgs/enegylogo.png"
+        supplier: "assets/imgs/enegylogo.png",
+        others: [{ rate: "5.79", fee: "40.00", supplier: "assets/imgs/enegylogo.png" }, { rate: "6.79", fee: "50.00", supplier: "assets/imgs/enegylogo.png" }, { rate: "3.79", fee: "30.00", supplier: "assets/imgs/enegylogo.png" }, { rate: "6.79", fee: "50.00", supplier: "assets/imgs/enegylogo.png" }]
       }
     ];
   }
@@ -67,5 +71,10 @@ export class AuctioninprogressPage {
     this.navCtrl.push(AuctionextendPage);
 
   }
-
+  setExpandIndex(index) {
+    if (this.expandIndex == index)
+      this.expandIndex = -1
+    else
+      this.expandIndex = index
+  }
 }

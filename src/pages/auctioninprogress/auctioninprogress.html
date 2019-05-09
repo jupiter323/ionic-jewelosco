@@ -66,24 +66,41 @@
 
 
 <ion-content padding>
-  <ion-card *ngFor="let auction of auctions;let index=index" (click)="goInprogressDetail(index)">
+  <ion-card *ngFor="let auction of auctions;let index=index">
     <ion-row class="title-edit">
-      <span>{{auction.title}} {{index+1}}</span>
-      <ion-icon name="ios-arrow-forward"></ion-icon>
+      <span (click)="goInprogressDetail(index)">{{auction.title}} {{index+1}}</span>
+      <ion-icon (click)="setExpandIndex(index)" [name]="index!=expandIndex?'ios-arrow-down':'ios-arrow-up'"></ion-icon>
     </ion-row>
     <p class="location-detail">{{auction.loc}}</p>
 
-    <ion-row class="detail-block">
-      <ion-col col-6>
+    <ion-row class="detail-block first">
+      <ion-col col-5>
         <span class="detail-title" no-padding>Rate per kWh</span><br>
         <span class="rate-des" no-padding>{{auction.rate}}¢</span>
       </ion-col>
-      <ion-col col-6>
+      <ion-col col-5>
         <span class="detail-title" no-padding>Est.Savings/Month</span><br>
         <span class="fee-des" no-padding>${{auction.fee}}</span>
         <img [src]="auction.supplier">
       </ion-col>
+      <ion-icon *ngIf="expandIndex==index" name="ios-arrow-forward"></ion-icon>
     </ion-row>
+    <!-- other bids -->
+    <div *ngIf="expandIndex==index">
+      <ion-label class="other-bids-label">Other bids</ion-label>
+      <ion-row *ngFor="let other of auction.others" class="detail-block">
+        <ion-col col-5>
+          <span class="detail-title" no-padding>Rate per kWh</span><br>
+          <span class="rate-des" no-padding>{{other.rate}}¢</span>
+        </ion-col>
+        <ion-col col-5>
+          <span class="detail-title" no-padding>Est.Savings/Month</span><br>
+          <span class="fee-des" no-padding>${{other.fee}}</span>
+          <img [src]="other.supplier">
+        </ion-col>
+        <ion-icon name="ios-arrow-forward"></ion-icon>
+      </ion-row>
+    </div>
 
   </ion-card>
 </ion-content>

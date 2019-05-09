@@ -62,6 +62,7 @@ import { NewentityexistingcontractPage } from '../pages/tabs/entities/newentity/
 import { NewentityrelationPage } from '../pages/tabs/entities/newcontract/newentityrelation/newentityrelation';
 import { ContractsreviewPage } from '../pages/contractsreview/contractsreview';
 import { ReviewcontractPage } from '../pages/contractsreview/reviewcontract/reviewcontract';
+import { ContracttermsPage } from '../pages/contractterms/contractterms';
 
 @NgModule({
   declarations: [
@@ -110,7 +111,8 @@ import { ReviewcontractPage } from '../pages/contractsreview/reviewcontract/revi
     NewentityexistingcontractPage,
     NewentityrelationPage,
     ContractsreviewPage,
-    ReviewcontractPage
+    ReviewcontractPage,
+    ContracttermsPage
   ],
   imports: [
     BrowserModule,
@@ -175,7 +177,8 @@ import { ReviewcontractPage } from '../pages/contractsreview/reviewcontract/revi
     NewentityexistingcontractPage,
     NewentityrelationPage,
     ContractsreviewPage,
-    ReviewcontractPage
+    ReviewcontractPage,
+    ContracttermsPage
   ],
   providers: [
     StatusBar,
