@@ -10,7 +10,7 @@ import { ContracttermsPage } from './../pages/contractterms/contractterms';
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage: any = AuctioninprogressPage;
+  rootPage: any = ContracttermsPage;
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
     platform.ready().then(() => {

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ModalController } from 'ionic-angular';
+import { CustommodalPage } from '../custommodal/custommodal';
 
 /**
  * Generated class for the ContracttermsPage page.
@@ -18,7 +19,7 @@ export class ContracttermsPage {
   cardIndex = 0
   auction: any
   auctionDetail: any
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public modalCtl:ModalController) {
   }
 
   ionViewWillLoad() {
@@ -33,6 +34,10 @@ export class ContracttermsPage {
   }
   ionViewDidLoad() {
     console.log('ionViewDidLoad ContracttermsPage');
+  }
+  showModal() {
+    var modal = this.modalCtl.create(CustommodalPage);
+    modal.present();
   }
 
 }
