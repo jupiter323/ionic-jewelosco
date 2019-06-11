@@ -1,29 +1,61 @@
 page-home {
+
+
+    ion-header {
+        .right-icon {
+            position: absolute;
+            right: 20px;
+        }
+
+        .wrap-filterdes {
+            text-align: center;
+            font: 12px Montserrat-Medium;
+            color: rgba($color: white, $alpha: 0.4)
+        }
+    }
+
+    ion-header.header-ios {
+        .header-title-letter {
+            text-align: center !important;
+
+            span {
+                margin-left: 0 !important;
+            }
+        }
+    }
+
     ion-content {
         background-color: #e9ebed !important;
+
         .tab-contacts {
             margin-top: 10px;
             margin-bottom: 20px;
+
             mat-accordion {
                 width: 100%; // border-radius: 10px;
+
                 .mat-expansion-panel-header {
                     height: 130px !important;
+
                     .response-card {
                         width: 100px;
                         height: 100px;
                         margin-right: 19px;
+
                         img {
                             height: 70px;
                             width: 70px;
                             margin: auto;
                         }
                     }
+
                     .card-title {
                         font-family: Montserrat-Bold;
                         font-size: 12px;
                         color: #43535F;
                         padding-top: 10px;
                     }
+
                     .card-expiration {
                         font-family: Montserrat-Medium;
                         font-size: 12px;
@@ -31,34 +63,42 @@ page-home {
                         margin-top: 5px;
                     }
                 }
+
                 .mat-expansion-panel-header.mat-expanded {
                     border-top-right-radius: 10px;
                     border-top-left-radius: 10px;
                 }
+
                 .mat-expansion-panel-body {
                     .card-panel {
                         width: 100%;
+
                         .response-card.panel {
                             width: 100%;
+
                             img {
                                 min-width: 100%;
                                 height: auto;
                             }
                         }
+
                         .panel-border-content {
                             border: 1.5px solid #e5e9ec;
                             border-radius: 5px;
+
                             .content-title {
                                 color: #A3ADB7;
                                 font-size: 10px;
                                 font-family: Montserrat-SemiBold;
                             }
+
                             .content-des {
                                 color: #43535F;
                                 font-size: 12px;
                                 font-family: Montserrat-Bold;
                             }
                         }
+
                         .panel-des {
                             font-size: 10px;
                             color: #43535f;
@@ -66,6 +106,7 @@ page-home {
                             margin-top: 10px;
                             line-height: 14px;
                         }
+
                         .panel-des-s {
                             font-size: 10px;
                             color: #43535f;
@@ -74,35 +115,45 @@ page-home {
                         }
                     }
                 }
+
                 .list-ios>.item-block:last-child,
                 .list-ios>.item-wrapper:last-child .item-block {
                     border-bottom: none !important;
                 }
+
                 .list-md>.item-block:last-child,
                 .list-md>.item-wrapper:last-child .item-block {
                     border-bottom: none !important;
                 }
+
                 .list-ios ion-item-options {
                     border-bottom: none !important;
                 }
+
                 .list-md ion-item-options {
                     border-bottom: none !important;
                 }
+
                 .item.item-block {
                     background: #E9EBED !important;
                     padding: 0;
+
                     .item-inner {
                         padding: 0;
+
                         .label.label-ios.ng-star-inserted {
                             margin: 0;
+
                             mat-expansion-panel {
                                 box-shadow: unset !important;
                                 border-radius: 10px;
                                 margin-bottom: 16px;
                             }
                         }
+
                         .label.label-md.ng-star-inserted {
                             margin: 0;
+
                             mat-expansion-panel {
                                 border-radius: 3px;
                                 margin-bottom: 16px;
@@ -111,6 +162,8 @@ page-home {
                     }
                 }
             }
+
+
             .remain-contracts {
                 background: #B6C0C9;
                 color: white;
@@ -124,19 +177,83 @@ page-home {
                 margin-bottom: 10px;
                 width: 100%;
             }
-        }
-        .alert-wrapper {
-            text-align: center !important;
-            border-radius: 10px !important;
-            .alert-title {
-                text-align: center !important;
+
+            .support {
+                background: #2F5597;
+
+                .support-title {
+                    justify-content: space-between;
+                    align-items: center;
+                    color: #40D4FD;
+                    font: 12px Montserrat-Bold;
+
+                    .date {
+                        height: 20px;
+                        color: rgba($color: white, $alpha: 0.4);
+                        font: 10px Montserrat-SemiBold;
+                        align-items: center;
+                        vertical-align: middle;
+                        line-height: 12px;
+
+                        ion-icon {
+                            color: white;
+                            font-size: 17px;
+                        }
+                    }
+                }
+
+                .button-issue {
+                    color: white;
+                    font: 10px Montserrat-Bold;
+                    height: 25px;
+                    width: 100px;
+                    margin-top: 20px;
+                }
+
+                .subject {
+                    font: 12px Montserrat-Medium;
+                    color: white !important
+                }
             }
-            .alert-button-md {
-                // padding-left: 0 !important;
-                margin: auto !important;
+
+            .ticket {
+                .ticket-support {
+                    color: #43535F;
+                    font: 12px Montserrat-Bold;
+
+                    .wrap-icon {
+                        text-align: right;
+
+                        ion-icon {
+                            color: #B6C0C9;
+                            font-size: 17px;
+                        }
+                    }
+
+
+                }
+
+                button {
+                    margin-top: 25px !important;
+                }
+            }
+
+            .remain-alerts {
+                background: #B6C0C9;
+                color: white;
+                border-radius: 17px;
+                font-size: 12px;
+                font-family: Montserrat-SemiBold;
+                vertical-align: middle;
+                height: 34px;
+                line-height: 20px;
+                margin-top: 0px;
+                margin-bottom: 10px;
+                width: 100%;
             }
         }
     }
+
     .button-new {
         background-color: #1eb8e3;
         color: white;
@@ -149,6 +266,7 @@ page-home {
         margin-top: 15px;
         margin-bottom: 15px
     }
+
     .button-expiring {
         background-color: #ff2116;
         color: white;
@@ -161,6 +279,7 @@ page-home {
         margin-top: 15px;
         margin-bottom: 15px
     }
+
     .button-marketdrop {
         background-color: #fc8f3b;
         color: white;
@@ -173,6 +292,7 @@ page-home {
         margin-top: 15px;
         margin-bottom: 15px
     }
+
     .button-third {
         background-color: #fc8f3b;
         color: white;

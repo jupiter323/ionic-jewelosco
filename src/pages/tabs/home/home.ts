@@ -1,13 +1,14 @@
 import { Component } from '@angular/core';
-import { NavController, ItemSliding } from 'ionic-angular';
+import { NavController, ItemSliding, AlertController, ActionSheetController } from 'ionic-angular';
+import { PksupportissuePage } from './pksupportissue/pksupportissue';
 
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
 })
 export class HomePage {
-
-  public selectedTab = 1;
+  public filteredBy;
+  public selectedTab = 0;
   public items: any = [
     {
       kind: "new",
@@ -145,20 +146,29 @@ export class HomePage {
       btntitle: "Create Quote"
     }
   ]
+  public alerts: any = [
+    {
+      "kind": "support",
+      "subject": "Dropped Contract",
+      "date": "7:50 PM, 10/11/2018",
+      "issue": "Issue # 4039394"
+    },
+    {
+      "kind": "ticket",
+      "subject": "There is an updated to your test 567 support inquiry.",
+      "date": "7:50 PM, 10/11/2018",
+      "issue": null
+    }
+  ]
   public ableRemainContracts: boolean = true;
-
-  constructor(public navCtrl: NavController) {
+  public ableRemainAlerts: boolean = true;
+  constructor(public navCtrl: NavController, public actionSheetCtrl: ActionSheetController) {
 
   }
-
-  selectContracts() {
-    this.selectedTab = 1;
+  selectTab($event) {
+    this.selectedTab = $event.index
   }
 
-  selectAlerts() {
-    this.selectedTab = 2;
-    
-  }
 
   dismiss(selectedItem: ItemSliding, index: any) {
     selectedItem.close();
@@ -174,6 +184,24 @@ export class HomePage {
   delete(selectedItem: ItemSliding, index: any) {
     selectedItem.close();
     this.items.splice(index, 1);
+  }
+
+  deleteAlert(selectedAlarm: ItemSliding, index: any) {
+    selectedAlarm.close();
+    this.alerts.splice(index, 1);
+  }
+  archiveAlert(selectedAlarm: ItemSliding, index: any) {
+    selectedAlarm.close();
+    this.alerts.splice(index, 1);
+  }
+  remainAlerts() {
+    let newObject = {
+      "kind": "ticket",
+      "subject": "There is an updated to your test 567 support inquiry.",
+      "date": "7:50 PM, 10/11/2018",
+      "issue": null
+    }
+    this.alerts.push(newObject);
   }
   remainContracts() {
     let newObject = {
@@ -203,6 +231,39 @@ export class HomePage {
     }
     this.items.push(newObject);
 
+  }
+
+  filter() {
+    let actionSheet = this.actionSheetCtrl.create({
+      // title: 'Modify your album',
+      buttons: [
+        {
+          text: 'Archived Alerts Only',
+          // role: 'destructive',
+          handler: () => {
+            this.filteredBy = 1
+          }
+        },
+        {
+          text: 'Support Messages Only',
+          handler: () => {
+            this.filteredBy = 2
+          }
+        },
+        {
+          text: 'Cancel',
+          role: 'cancel',
+          handler: () => {
+            console.log('Cancel clicked');
+          }
+        }
+      ]
+    });
+    actionSheet.present();
+
+  }
+  goPksupport() {
+    this.navCtrl.push(PksupportissuePage);
   }
 
 }

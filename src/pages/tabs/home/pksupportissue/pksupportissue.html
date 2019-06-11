@@ -1,0 +1,74 @@
+<!--
+  Generated template for the PksupportissuePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-row class="header-row">
+    <ion-row class="header-title">
+      <ion-col col-1>
+      </ion-col>
+      <ion-col col-10 no-padding class="header-title-letter">
+        <span>
+          DASHBOARD
+        </span>
+      </ion-col>
+      <ion-col col-1>
+      </ion-col>
+      <svg *ngIf="!filteredBy&&selectedTab==1" class="right-icon" (click)="filter()" xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink" width="28" height="28" viewBox="0 0 28 28">
+        <defs>
+          <clipPath id="clip-path">
+            <rect width="28" height="28" fill="none" />
+          </clipPath>
+        </defs>
+        <g id="Group_714" data-name="Group 714" transform="translate(-837 -1010)">
+          <g id="Icon-28_placeholder" transform="translate(837 1010)" clip-path="url(#clip-path)">
+            <rect id="Rectangle_307" data-name="Rectangle 307" width="28" height="28" fill="none" />
+          </g>
+          <g id="Group_1162" data-name="Group 1162" transform="translate(839 1012)">
+            <path id="Path_438" data-name="Path 438" d="M21,8V21H3V8" fill="none" stroke="#fff" stroke-linecap="round"
+              stroke-linejoin="round" stroke-width="1.5" />
+            <rect id="Rectangle_405" data-name="Rectangle 405" width="22" height="5" transform="translate(1 3)"
+              stroke-width="1.5" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+            <line id="Line_71" data-name="Line 71" x2="4" transform="translate(10 12)" fill="none" stroke="#fff"
+              stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+          </g>
+        </g>
+      </svg>
+      <svg *ngIf="filteredBy&&selectedTab==1" class="right-icon" (click)="filter()" xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink" width="28" height="28" viewBox="0 0 28 28">
+        <defs>
+          <clipPath id="clip-path">
+            <rect width="28" height="28" fill="none" />
+          </clipPath>
+        </defs>
+        <g id="Group_714" data-name="Group 714" transform="translate(-837 -1010)">
+          <g id="Icon-28_placeholder" transform="translate(837 1010)" clip-path="url(#clip-path)">
+            <rect id="Rectangle_307" data-name="Rectangle 307" width="28" height="28" fill="none" />
+          </g>
+          <g id="Group_1162" data-name="Group 1162" transform="translate(839 1012)">
+            <path id="Path_438" data-name="Path 438" d="M21,8V21H3V8" fill="none" stroke="#40d4fd"
+              stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+            <rect id="Rectangle_405" data-name="Rectangle 405" width="22" height="5" transform="translate(1 3)"
+              stroke-width="1.5" stroke="#40d4fd" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+            <line id="Line_71" data-name="Line 71" x2="4" transform="translate(10 12)" fill="none" stroke="#40d4fd"
+              stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+          </g>
+        </g>
+      </svg>
+    </ion-row>
+
+    <ion-row class="header-tab">
+      <mat-tab-group (selectedTabChange)="selectTab($event)">
+        <mat-tab label="Contracts that need attention" class="contracts-tab"></mat-tab>
+        <mat-tab label="Alerts" class="alert-tab"> </mat-tab>
+      </mat-tab-group>
+    </ion-row>
+  </ion-row>
+</ion-header>
+
+<ion-content padding>
+
+</ion-content>

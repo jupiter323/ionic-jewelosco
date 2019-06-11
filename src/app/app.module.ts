@@ -64,6 +64,7 @@ import { ContractsreviewPage } from '../pages/contractsreview/contractsreview';
 import { ReviewcontractPage } from '../pages/contractsreview/reviewcontract/reviewcontract';
 import { ContracttermsPage } from '../pages/contractterms/contractterms';
 import { CustommodalPage } from '../pages/custommodal/custommodal';
+import { PksupportissuePage } from '../pages/tabs/home/pksupportissue/pksupportissue';
 
 @NgModule({
   declarations: [
@@ -114,7 +115,8 @@ import { CustommodalPage } from '../pages/custommodal/custommodal';
     ContractsreviewPage,
     ReviewcontractPage,
     ContracttermsPage,
-    CustommodalPage
+    CustommodalPage,
+    PksupportissuePage
   ],
   imports: [
     BrowserModule,
@@ -181,7 +183,8 @@ import { CustommodalPage } from '../pages/custommodal/custommodal';
     ContractsreviewPage,
     ReviewcontractPage,
     ContracttermsPage,
-    CustommodalPage
+    CustommodalPage,
+    PksupportissuePage
   ],
   providers: [
     StatusBar,
