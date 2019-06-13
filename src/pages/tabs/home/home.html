@@ -264,7 +264,8 @@
       <ion-list>
         <ion-item-sliding #AlertId *ngFor="let alert of alerts;let index=index">
           <ion-item no-lines text-wrap>
-            <ion-card *ngIf="alert.kind=='support'&&(filteredBy==2||!filteredBy)" class="support" (click)="goPksupport()">
+            <ion-card *ngIf="alert.kind=='support'&&(filteredBy==2||!filteredBy)" class="support"
+              (click)="goPksupport(index)">
               <ion-row class="support-title">
                 <span>Power Kosk Support</span>
                 <span class="date"><span>{{alert.date}} </span>&nbsp;&nbsp; <ion-icon name="ios-arrow-forward">
@@ -275,7 +276,8 @@
               </ion-row>
               <button ion-button outline class="button-issue">{{alert.issue}}</button>
             </ion-card>
-            <ion-card *ngIf="alert.kind=='ticket'&&(filteredBy==1||!filteredBy)" class="ticket">
+            <ion-card *ngIf="alert.kind=='ticket'&&(filteredBy==1||!filteredBy)" class="ticket"
+              (click)="goEmailSupport()">
               <ion-row class="ticket-support">
                 <ion-col col-11>
                   <p> {{alert.subject}}</p>
@@ -292,7 +294,7 @@
               <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="172"
                 height="104" viewBox="0 0 172 104">
                 <defs>
-                  <clipPath id="clip-path">
+                  <clipPath id="clip-path-d">
                     <rect width="86" height="104" fill="none" />
                   </clipPath>
                 </defs>
@@ -315,7 +317,7 @@
                     </g>
                   </g>
                   <g id="Delete" (click)="deleteAlert(AlertId, index)" transform="translate(273 443)"
-                    clip-path="url(#clip-path)">
+                    clip-path="url(#clip-path-d)">
                     <rect id="Rectangle_11" data-name="Rectangle 11" width="86" height="104"
                       fill="rgba(255,255,255,0.01)" />
                     <g id="Group_7" data-name="Group 7" transform="translate(-274 -446)">
@@ -330,6 +332,7 @@
                   </g>
                 </g>
               </svg>
+
             </button>
           </ion-item-options>
         </ion-item-sliding>

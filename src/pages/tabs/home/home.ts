@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { NavController, ItemSliding, AlertController, ActionSheetController } from 'ionic-angular';
 import { PksupportissuePage } from './pksupportissue/pksupportissue';
+import { EmailsupportPage } from '../profile/messagecenter/emailsupport/emailsupport';
+import { PkemailsupportPage } from './pkemailsupport/pkemailsupport';
 
 @Component({
   selector: 'page-home',
@@ -262,8 +264,11 @@ export class HomePage {
     actionSheet.present();
 
   }
-  goPksupport() {
-    this.navCtrl.push(PksupportissuePage);
+  goPksupport(index) {
+    this.navCtrl.push(PksupportissuePage, { supportissue: this.alerts[index] });
   }
 
+  goEmailSupport() {
+    this.navCtrl.push(PkemailsupportPage);
+  }
 }

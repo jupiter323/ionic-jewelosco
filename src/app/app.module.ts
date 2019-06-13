@@ -65,6 +65,9 @@ import { ReviewcontractPage } from '../pages/contractsreview/reviewcontract/revi
 import { ContracttermsPage } from '../pages/contractterms/contractterms';
 import { CustommodalPage } from '../pages/custommodal/custommodal';
 import { PksupportissuePage } from '../pages/tabs/home/pksupportissue/pksupportissue';
+import { PkemailsupportPage } from '../pages/tabs/home/pkemailsupport/pkemailsupport';
+import { SampleutilitybillsPage } from '../pages/tabs/home/sampleutilitybills/sampleutilitybills';
+import { SamplebillPage } from '../pages/tabs/home/sampleutilitybills/samplebill/samplebill';
 
 @NgModule({
   declarations: [
@@ -116,7 +119,10 @@ import { PksupportissuePage } from '../pages/tabs/home/pksupportissue/pksupporti
     ReviewcontractPage,
     ContracttermsPage,
     CustommodalPage,
-    PksupportissuePage
+    PksupportissuePage,
+    PkemailsupportPage,
+    SampleutilitybillsPage,
+    SamplebillPage
   ],
   imports: [
     BrowserModule,
@@ -130,7 +136,7 @@ import { PksupportissuePage } from '../pages/tabs/home/pksupportissue/pksupporti
     SignaturePadModule,
     PipesModule,
     HttpModule,
-    CalendarModule,   
+    CalendarModule,
     EmojiPickerComponentModule,
     IonicModule.forRoot(MyApp)
   ],
@@ -184,7 +190,10 @@ import { PksupportissuePage } from '../pages/tabs/home/pksupportissue/pksupporti
     ReviewcontractPage,
     ContracttermsPage,
     CustommodalPage,
-    PksupportissuePage
+    PksupportissuePage,
+    PkemailsupportPage,
+    SampleutilitybillsPage,
+    SamplebillPage
   ],
   providers: [
     StatusBar,

@@ -1,0 +1,96 @@
+page-pkemailsupport {
+    ion-content {
+        .input-box {
+            margin-top: 0px !important;
+        }
+
+        .input-box.input-des {
+            margin-top: 15px !important;
+            height: 270px;
+
+            ion-textarea {
+                font-family: Montserrat-Medium;
+                font-size: 16px;
+                padding-left: 25px;
+
+                textarea {
+                    height: 250px;
+                }
+            }
+        }
+
+        .cat-drop {
+            margin-bottom: 15px;
+            height: 51px;
+
+            ion-item {
+                border-radius: 7px;
+                padding-left: 22px;
+
+                .item-inner {
+                    border-bottom: none;
+
+                    ion-select {
+                        max-width: 85%;
+                        padding-left: 0;
+                    }
+
+                    ion-label {
+                        font-family: Montserrat-Bold;
+                        font-size: 12px;
+                    }
+
+                    .select-text {
+                        font-family: Montserrat-Medium;
+                        font-size: 16px;
+                        color: #40D4FD;
+                    }
+                }
+            }
+        }
+
+        .attach-button {
+            background: rgba($color: white, $alpha: 0.2);
+        }
+
+    }
+
+    .content-md {
+        .cat-drop {
+            ion-item {
+                padding-left: 16px;
+                border-radius: 0px;
+                background: #19264D;
+                border-bottom: 2px solid rgba(255, 255, 255, 0.12);
+
+                .item-inner {
+                    border-bottom: none;
+
+                    .select-text {
+                        color: white;
+                        color: #40D4FD;
+                    }
+                }
+            }
+        }
+
+        .active {
+            border-bottom: 1px solid #1EB8E3 !important;
+        }
+
+        .input-box {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+            color: white;
+        }
+
+        .input-box.input-des {
+            border-radius: 0px !important;
+
+            ion-textarea {
+                font-family: Montserrat-Medium;
+                font-size: 16px;
+                padding-left: 0px !important;
+            }
+        }
+    }
+}

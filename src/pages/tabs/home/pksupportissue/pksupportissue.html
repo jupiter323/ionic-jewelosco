@@ -8,15 +8,16 @@
   <ion-row class="header-row">
     <ion-row class="header-title">
       <ion-col col-1>
+        <ion-icon name="ios-arrow-back" (click)="navCtrl.pop()"></ion-icon>
       </ion-col>
       <ion-col col-10 no-padding class="header-title-letter">
         <span>
-          DASHBOARD
+          PK Support {{supportissue.issue}}
         </span>
       </ion-col>
       <ion-col col-1>
       </ion-col>
-      <svg *ngIf="!filteredBy&&selectedTab==1" class="right-icon" (click)="filter()" xmlns="http://www.w3.org/2000/svg"
+      <svg class="right-icon" (click)="attache()" xmlns="http://www.w3.org/2000/svg"
         xmlns:xlink="http://www.w3.org/1999/xlink" width="28" height="28" viewBox="0 0 28 28">
         <defs>
           <clipPath id="clip-path">
@@ -37,7 +38,7 @@
           </g>
         </g>
       </svg>
-      <svg *ngIf="filteredBy&&selectedTab==1" class="right-icon" (click)="filter()" xmlns="http://www.w3.org/2000/svg"
+      <svg *ngIf="filteredBy&&selectedTab==1" class="right-icon" (click)="attache()" xmlns="http://www.w3.org/2000/svg"
         xmlns:xlink="http://www.w3.org/1999/xlink" width="28" height="28" viewBox="0 0 28 28">
         <defs>
           <clipPath id="clip-path">
@@ -59,16 +60,61 @@
         </g>
       </svg>
     </ion-row>
-
-    <ion-row class="header-tab">
-      <mat-tab-group (selectedTabChange)="selectTab($event)">
-        <mat-tab label="Contracts that need attention" class="contracts-tab"></mat-tab>
-        <mat-tab label="Alerts" class="alert-tab"> </mat-tab>
-      </mat-tab-group>
+    <ion-row>
+      <p no-padding class="subject">Subject: {{supportissue.subject}}</p>
+      <p no-padding class="startdate">Support Start Date: {{supportissue.date}}</p>
     </ion-row>
   </ion-row>
 </ion-header>
 
-<ion-content padding>
-
+<ion-content>
+  <div class="message-wrap">
+    <div *ngFor="let msg of msgList" class="message" [class.left]=" msg.userId === toUser.id "
+      [class.right]=" msg.userId === user.id ">
+      <img class="user-img" [src]="msg.userAvatar" alt="" src="">
+      <ion-spinner name="dots" *ngIf="msg.status === 'pending'"></ion-spinner>
+      <div class="msg-detail">
+        <div class="msg-info">
+          <!-- <p> {{msg.userName}}&nbsp;&nbsp;&nbsp;{{msg.time | relativeTime}}</p>   -->
+        </div>
+        <div class="msg-content">
+          <span class="triangle" *ngIf="gs.isIosPlatform"></span>
+          <p class="line-breaker ">{{msg.message}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
 </ion-content>
+
+<ion-footer no-border [style.height]="showEmojiPicker ? '255px' : '55px'">
+  <ion-row class="input-wrap">
+    <ion-col col-2>
+      <svg class="detail-up" (click)="switchEmojiPicker()" xmlns="http://www.w3.org/2000/svg" width="33" height="25"
+        viewBox="0 0 33 25">
+        <g id="Group_936" data-name="Group 936" transform="translate(-16 -481)">
+          <rect id="Rectangle_361" data-name="Rectangle 361" width="33" height="25" rx="5" transform="translate(16 481)"
+            fill="#a3adb7" />
+          <path id="Rectangle_2_copy_11" data-name="Rectangle 2 copy 11"
+            d="M5.56,7.6.389,2.319A1.38,1.38,0,0,1,.389.4,1.31,1.31,0,0,1,2.27.4L6.5,4.72,10.73.4a1.31,1.31,0,0,1,1.88,0,1.38,1.38,0,0,1,0,1.921L7.44,7.6a1.31,1.31,0,0,1-1.88,0Z"
+            transform="translate(28.5 500) rotate(-90)" fill="#fff" />
+        </g>
+      </svg>
+    </ion-col>
+    <ion-col col-10>
+      <ion-row class="send-text-area">
+        <ion-input autofocus #chat_input [(ngModel)]="editorMsg" (keyup.enter)="sendMsg()" (focus)="onFocus()">
+        </ion-input>
+        <svg (click)="sendMsg()" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+          <g id="Group_936" data-name="Group 936" transform="translate(-327 -478)">
+            <circle id="Ellipse_16" data-name="Ellipse 16" cx="15" cy="15" r="15" transform="translate(327 478)"
+              fill="#2F5597" />
+            <path id="Rectangle_2_copy_11" data-name="Rectangle 2 copy 11"
+              d="M5.56,7.6.389,2.319A1.38,1.38,0,0,1,.389.4,1.31,1.31,0,0,1,2.27.4L6.5,4.72,10.73.4a1.31,1.31,0,0,1,1.88,0,1.38,1.38,0,0,1,0,1.921L7.44,7.6a1.31,1.31,0,0,1-1.88,0Z"
+              transform="translate(349 497.5) rotate(180)" fill="#fff" />
+          </g>
+        </svg>
+      </ion-row>
+    </ion-col>
+  </ion-row>
+  <emoji-picker *ngIf="showEmojiPicker" [(ngModel)]="editorMsg"></emoji-picker>
+</ion-footer>

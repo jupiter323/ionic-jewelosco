@@ -1,0 +1,140 @@
+<!--
+  Generated template for the SampleutilitybillsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<div class="menus">
+  <ion-menu side="right" type="overlay" swipeEnabled=false [content]="mycontent" id="utility">
+    <ion-header>
+      <ion-row class="header-row">
+        <ion-row class="header-title">
+          <ion-col col-1>
+            <ion-icon name="ios-arrow-back" (click)="closeMenu()"></ion-icon>
+          </ion-col>
+          <span class="other-menu">
+            Utility
+          </span>
+          <ion-col col-1 (click)="closeMenu()">
+            <div class="right-icon">
+              Done
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-row>
+    </ion-header>
+
+    <ion-content>
+      <ion-row class="answer-row" *ngFor="let statu of items;let index=index" (click)="selectAnswerItem(index)">
+        <ion-col col-10>
+          <p [ngClass]="index==selecteddetailitem?'que-title checked':'que-title'">{{statu}}</p>
+        </ion-col>
+        <ion-col col-2>
+          <ion-row *ngIf="index==selecteddetailitem" class="check-row">
+            <ion-icon name="ios-checkmark"></ion-icon>
+          </ion-row>
+        </ion-col>
+      </ion-row>
+    </ion-content>
+  </ion-menu>
+</div>
+
+<ion-header>
+  <ion-row class="header-row">
+    <ion-row class="header-title">
+      <ion-col col-1>
+        <ion-icon name="ios-arrow-back" (click)="navCtrl.pop()"></ion-icon>
+      </ion-col>
+      <span>
+        Sample Utility Bills
+      </span>
+      <ion-col col-1></ion-col>
+    </ion-row>
+  </ion-row>
+</ion-header>
+
+
+<ion-content #mycontent>
+
+  <ion-row class="justify-space" padding>
+    <div [ngClass]="selectedSupport==1?'wrap-support checked':'wrap-support'" (click)="selectedSupport=1">
+      <div>
+        <svg xmlns="http://www.w3.org/2000/svg" width="38" height="74" viewBox="0 0 38 74">
+          <g id="Group_626" data-name="Group 626" transform="translate(0.023 0.012)">
+            <path id="Path_12" data-name="Path 12"
+              d="M6.935,73.507l30.622-39.1a1.922,1.922,0,0,0,.221-2.053,1.832,1.832,0,0,0-1.7-1.095H28.456a1.787,1.787,0,0,1-1.483-.753,1.965,1.965,0,0,1-.354-1.665l6.62-27.235A1.317,1.317,0,0,0,32.575.128,1.207,1.207,0,0,0,31.047.47L.4,39.589A1.972,1.972,0,0,0,.16,41.642a1.832,1.832,0,0,0,1.7,1.095H9.459a1.787,1.787,0,0,1,1.483.753,1.949,1.949,0,0,1,.354,1.665L4.743,72.366a1.3,1.3,0,0,0,.664,1.483,1.207,1.207,0,0,0,1.528-.342Z"
+              transform="translate(0 0)" fill="#ffb300" fill-rule="evenodd" />
+            <path id="Path_13" data-name="Path 13"
+              d="M52.9.3,36.525,31.5a3.936,3.936,0,0,0,.066,3.832,3.624,3.624,0,0,0,3.231,1.893h6.241a1.176,1.176,0,0,1,1.085.661,1.343,1.343,0,0,1-.022,1.323L26.3,74.2a1.2,1.2,0,0,0,1.129-.479l30.61-39.1a1.922,1.922,0,0,0,.221-2.053,1.831,1.831,0,0,0-1.7-1.095H48.942a1.786,1.786,0,0,1-1.483-.753,1.966,1.966,0,0,1-.354-1.665L53.723,1.851A1.317,1.317,0,0,0,53.059.368,1.062,1.062,0,0,0,52.9.3Z"
+              transform="translate(-20.482 -0.24)" fill="#fc8f3b" fill-rule="evenodd" />
+          </g>
+        </svg>
+      </div>
+      <svg *ngIf="selectedSupport==1" class="check" xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink" width="28" height="28" viewBox="0 0 28 28">
+        <defs>
+          <clipPath id="clip-path">
+            <rect width="28" height="28" fill="none" />
+          </clipPath>
+        </defs>
+        <g id="Group_837" data-name="Group 837" transform="translate(-303 -49)">
+          <g id="Icon-28_placeholder" transform="translate(303 49)" clip-path="url(#clip-path)">
+            <rect id="Rectangle_307" data-name="Rectangle 307" width="28" height="28" fill="none" />
+          </g>
+          <path id="Path_19" data-name="Path 19" d="M308.036,58.419l3.985,4.672,7.207-9.631"
+            transform="translate(3.801 4.496)" fill="none" stroke="#19264d" stroke-linecap="round"
+            stroke-linejoin="round" stroke-width="3" />
+        </g>
+      </svg>
+
+      <p>Electricity</p>
+    </div>
+
+    <div [ngClass]="selectedSupport==2?'wrap-support checked':'wrap-support'" (click)="selectedSupport=2">
+      <div>
+        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="68" viewBox="0 0 50 68">
+          <g id="Group_625" data-name="Group 625" transform="translate(0 0.063)">
+            <path id="Path_9" data-name="Path 9"
+              d="M49.985,45.418C50.554,28.89,35.194,8.792,23.209.16A1.211,1.211,0,0,0,21.838.139a1.236,1.236,0,0,0-.549,1.26c.8,3.906-.527,11.236-11.837,23.752-7.7,8.527-10,15.982-9.347,22.114,3.144,30.2,48.972,25.307,49.879-1.848Z"
+              transform="translate(0 0)" fill="#2f5597" fill-rule="evenodd" />
+            <path id="Path_10" data-name="Path 10"
+              d="M73.521,145.682c.57-9.1-5.659-19.78-12.184-26.711a3.734,3.734,0,0,0-3.21-1.18,3.236,3.236,0,0,0-2.64,1.917c-1.71,3.75-5.152,8.194-8.615,12.028-5.321,5.856-6.99,11-6.694,15.188,1.5,20.792,32.2,17.421,33.343-1.243Z"
+              transform="translate(-31.689 -93.213)" fill="#1eb8e3" fill-rule="evenodd" />
+            <path id="Path_11" data-name="Path 11"
+              d="M77.458,224.706c-5.667.021-11.607-6.509-8.237-14.43,2.38-5.6,6.973-7.415,9.248-11.67a.6.6,0,0,1,1.116.147c.758,3.771,2.254,4.3,3.6,8.215a.562.562,0,0,0,.548.4.6.6,0,0,0,.569-.379,18.928,18.928,0,0,0,1.159-4.7.6.6,0,0,1,.485-.548.638.638,0,0,1,.653.316c5.014,10.217,3.75,20.918-9.142,22.645Z"
+              transform="translate(-53.824 -156.775)" fill="#fff" fill-rule="evenodd" />
+          </g>
+        </svg>
+      </div>
+      <svg *ngIf="selectedSupport==2" class="check" xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink" width="28" height="28" viewBox="0 0 28 28">
+        <defs>
+          <clipPath id="clip-path">
+            <rect width="28" height="28" fill="none" />
+          </clipPath>
+        </defs>
+        <g id="Group_837" data-name="Group 837" transform="translate(-303 -49)">
+          <g id="Icon-28_placeholder" transform="translate(303 49)" clip-path="url(#clip-path)">
+            <rect id="Rectangle_307" data-name="Rectangle 307" width="28" height="28" fill="none" />
+          </g>
+          <path id="Path_19" data-name="Path 19" d="M308.036,58.419l3.985,4.672,7.207-9.631"
+            transform="translate(3.801 4.496)" fill="none" stroke="#19264d" stroke-linecap="round"
+            stroke-linejoin="round" stroke-width="3" />
+        </g>
+      </svg>
+      <p>Natural Gas</p>
+    </div>
+  </ion-row>
+  <ion-label class="sub-title">Zip Code</ion-label>
+  <ion-input class="zipcode" maxlength="5" autofocus type="tel" placeholder="00000" [(ngModel)]="zipcode">
+  </ion-input>
+  <ion-label class="sub-title">Utility</ion-label>
+  <ion-row class="utility-select"  (click)="openMenu()">
+    <ion-label>{{items[selecteddetailitem]||"Select One"}}</ion-label>
+    <ion-icon name="ios-arrow-forward"></ion-icon>
+  </ion-row>
+
+  <div class="bottom-btn">
+    <button class="normal-button" ion-button color=secondary (click)="goSamplebill()">Show</button>
+  </div>
+</ion-content>

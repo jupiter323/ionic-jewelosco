@@ -12,7 +12,7 @@ export class ChatMessage {
   messageId: string;
   userId: string;
   userName: string;
-  // userAvatar: string;
+  userAvatar: string;
   toUserId: string;
   time: number | string;
   message: string;
@@ -38,7 +38,7 @@ export class ChatServiceProvider {
       messageId: Date.now().toString(),
       userId: '210000198410281948',
       userName: 'Hancock',
-      // userAvatar: './assets/to-user.jpg',
+      userAvatar: 'assets/imgs/download.jpg',
       toUserId: '140000198202211138',
       time: Date.now(),
       message: msg.message,

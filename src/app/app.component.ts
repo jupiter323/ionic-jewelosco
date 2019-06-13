@@ -7,13 +7,14 @@ import { ContracttermsPage } from './../pages/contractterms/contractterms';
 import { AuctionincreatecontractPage } from '../pages/auctionincreatecontract/auctionincreatecontract';
 import { HomePage } from '../pages/tabs/home/home';
 import { LoginPage } from '../pages/login/login';
+import { SampleutilitybillsPage } from '../pages/tabs/home/sampleutilitybills/sampleutilitybills';
 
 
 @Component({
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage: any = HomePage;
+  rootPage: any = SampleutilitybillsPage;
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
     platform.ready().then(() => {

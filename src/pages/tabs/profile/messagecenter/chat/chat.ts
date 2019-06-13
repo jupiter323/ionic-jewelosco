@@ -107,7 +107,7 @@ export class ChatPage {
       messageId: Date.now().toString(),
       userId: this.user.id,
       userName: this.user.name,
-      // userAvatar: this.user.avatar,
+      userAvatar: this.user.avatar,
       toUserId: this.toUser.id,
       time: Date.now(),
       message: this.editorMsg,
