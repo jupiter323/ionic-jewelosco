@@ -75,11 +75,9 @@
       <img class="user-img" [src]="msg.userAvatar" alt="" src="">
       <ion-spinner name="dots" *ngIf="msg.status === 'pending'"></ion-spinner>
       <div class="msg-detail">
-        <div class="msg-info">
-          <!-- <p> {{msg.userName}}&nbsp;&nbsp;&nbsp;{{msg.time | relativeTime}}</p>   -->
-        </div>
         <div class="msg-content">
           <span class="triangle" *ngIf="gs.isIosPlatform"></span>
+          <p class="msg-info"> {{msg.time |  date: 'H:mm a, dd/MM/yyyy' }}</p>
           <p class="line-breaker ">{{msg.message}}</p>
         </div>
       </div>

@@ -1,6 +1,6 @@
 page-pksupportissue {
     $userBackgroundColor: #2F5597;
-    $toUserBackgroundColor: #A3ADB7;
+    $toUserBackgroundColor: white;
 
     ion-header {
         .right-icon {
@@ -101,10 +101,12 @@ page-pksupportissue {
                 }
 
                 .msg-info {
-                    p {
-                        font-size: .8em;
-                        color: #888;
-                    }
+
+                    font-size: .8em;
+                    color: #A3ADB7;
+                    font: 10px Montserrat-Medium;
+
+
                 }
 
                 .msg-content {
@@ -145,6 +147,8 @@ page-pksupportissue {
                 background-color: $toUserBackgroundColor;
                 float: left;
                 margin-left: 40px;
+                color: #43535F;
+
             }
 
             .msg-detail {
@@ -164,6 +168,7 @@ page-pksupportissue {
 
                 .msg-info {
                     text-align: left;
+                    color: rgba($color: white, $alpha: 0.4);
                 }
             }
 
