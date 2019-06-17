@@ -68,6 +68,7 @@ import { PksupportissuePage } from '../pages/tabs/home/pksupportissue/pksupporti
 import { PkemailsupportPage } from '../pages/tabs/home/pkemailsupport/pkemailsupport';
 import { SampleutilitybillsPage } from '../pages/tabs/home/sampleutilitybills/sampleutilitybills';
 import { SamplebillPage } from '../pages/tabs/home/sampleutilitybills/samplebill/samplebill';
+import { ArchivealertPage } from '../pages/tabs/home/archivealert/archivealert';
 
 @NgModule({
   declarations: [
@@ -122,7 +123,8 @@ import { SamplebillPage } from '../pages/tabs/home/sampleutilitybills/samplebill
     PksupportissuePage,
     PkemailsupportPage,
     SampleutilitybillsPage,
-    SamplebillPage
+    SamplebillPage,
+    ArchivealertPage
   ],
   imports: [
     BrowserModule,
@@ -193,7 +195,8 @@ import { SamplebillPage } from '../pages/tabs/home/sampleutilitybills/samplebill
     PksupportissuePage,
     PkemailsupportPage,
     SampleutilitybillsPage,
-    SamplebillPage
+    SamplebillPage,
+    ArchivealertPage
   ],
   providers: [
     StatusBar,

@@ -17,7 +17,7 @@
       </ion-col>
       <ion-col col-1>
       </ion-col>
-      <svg class="right-icon" (click)="attache()" xmlns="http://www.w3.org/2000/svg"
+      <svg class="right-icon" (click)="goArchive()" xmlns="http://www.w3.org/2000/svg"
         xmlns:xlink="http://www.w3.org/1999/xlink" width="28" height="28" viewBox="0 0 28 28">
         <defs>
           <clipPath id="clip-path">
@@ -38,8 +38,9 @@
           </g>
         </g>
       </svg>
-      <svg *ngIf="filteredBy&&selectedTab==1" class="right-icon" (click)="attache()" xmlns="http://www.w3.org/2000/svg"
-        xmlns:xlink="http://www.w3.org/1999/xlink" width="28" height="28" viewBox="0 0 28 28">
+      <svg *ngIf="filteredBy&&selectedTab==1" class="right-icon" (click)="goArchive()"
+        xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="28" height="28"
+        viewBox="0 0 28 28">
         <defs>
           <clipPath id="clip-path">
             <rect width="28" height="28" fill="none" />
@@ -89,7 +90,8 @@
 <ion-footer no-border [style.height]="showEmojiPicker ? '255px' : '55px'">
   <ion-row class="input-wrap">
     <ion-col col-2>
-      <svg class="detail-up" (click)="switchEmojiPicker()" xmlns="http://www.w3.org/2000/svg" width="33" height="25"
+      <!-- <svg class="detail-up" (click)="switchEmojiPicker()" xmlns="http://www.w3.org/2000/svg" width="33" height="25" -->
+      <svg class="detail-up" (click)="attache()" xmlns="http://www.w3.org/2000/svg" width="33" height="25"
         viewBox="0 0 33 25">
         <g id="Group_936" data-name="Group 936" transform="translate(-16 -481)">
           <rect id="Rectangle_361" data-name="Rectangle 361" width="33" height="25" rx="5" transform="translate(16 481)"

@@ -2,6 +2,7 @@ import { Component, ViewChild } from '@angular/core';
 import { IonicPage, NavController, NavParams, Events, Content, TextInput, ActionSheetController } from 'ionic-angular';
 import { ChatServiceProvider, ChatMessage, UserInfo } from "../../../../providers/chat-service/chat-service";
 import { GlobaldataProvider } from '../../../../providers/globaldata/globaldata';
+import { ArchivealertPage } from '../archivealert/archivealert';
 /**
  * Generated class for the PksupportissuePage page.
  *
@@ -166,6 +167,9 @@ export class PksupportissuePage {
         this.content.scrollToBottom();
       }
     }, 400)
+  }
+  goArchive() {
+    this.navCtrl.push(ArchivealertPage)
   }
   attache() {
     let actionSheet = this.actionSheetCtrl.create({

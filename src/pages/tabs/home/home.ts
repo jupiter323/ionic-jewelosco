@@ -3,6 +3,7 @@ import { NavController, ItemSliding, AlertController, ActionSheetController } fr
 import { PksupportissuePage } from './pksupportissue/pksupportissue';
 import { EmailsupportPage } from '../profile/messagecenter/emailsupport/emailsupport';
 import { PkemailsupportPage } from './pkemailsupport/pkemailsupport';
+import { ArchivealertPage } from './archivealert/archivealert';
 
 @Component({
   selector: 'page-home',
@@ -194,7 +195,33 @@ export class HomePage {
   }
   archiveAlert(selectedAlarm: ItemSliding, index: any) {
     selectedAlarm.close();
-    this.alerts.splice(index, 1);
+    let actionSheet = this.actionSheetCtrl.create({
+      // title: 'Modify your album',
+      buttons: [
+        {
+          text: 'Archived Alerts Only',
+          // role: 'destructive',
+          handler: () => {
+            this.filteredBy = 1
+          }
+        },
+        {
+          text: 'Support Messages Only',
+          handler: () => {
+            this.filteredBy = 2
+          }
+        },
+        {
+          text: 'Cancel',
+          role: 'cancel',
+          handler: () => {
+            console.log('Cancel clicked');
+          }
+        }
+      ]
+    });
+    actionSheet.present();
+    
   }
   remainAlerts() {
     let newObject = {
@@ -234,8 +261,10 @@ export class HomePage {
     this.items.push(newObject);
 
   }
-
-  filter() {
+  goArchive() {
+    this.navCtrl.push(ArchivealertPage)
+  }
+  archive() {
     let actionSheet = this.actionSheetCtrl.create({
       // title: 'Modify your album',
       buttons: [

@@ -10,7 +10,7 @@
       </ion-col>
       <ion-col col-1>
       </ion-col>
-      <svg *ngIf="!filteredBy&&selectedTab==1" class="right-icon" (click)="filter()" xmlns="http://www.w3.org/2000/svg"
+      <svg *ngIf="!filteredBy&&selectedTab==1" class="right-icon" (click)="goArchive()" xmlns="http://www.w3.org/2000/svg"
         xmlns:xlink="http://www.w3.org/1999/xlink" width="28" height="28" viewBox="0 0 28 28">
         <defs>
           <clipPath id="clip-path">
@@ -31,7 +31,7 @@
           </g>
         </g>
       </svg>
-      <svg *ngIf="filteredBy&&selectedTab==1" class="right-icon" (click)="filter()" xmlns="http://www.w3.org/2000/svg"
+      <svg *ngIf="filteredBy&&selectedTab==1" class="right-icon" (click)="goArchive()" xmlns="http://www.w3.org/2000/svg"
         xmlns:xlink="http://www.w3.org/1999/xlink" width="28" height="28" viewBox="0 0 28 28">
         <defs>
           <clipPath id="clip-path">
